@@ -4,7 +4,7 @@
     <link rel="icon" type="image/png" href="./favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B Or P System V1.0</title>
+    <title>BP System V0.2</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -116,6 +116,22 @@
             color: #a0a0c0;
             font-weight: 500;
             font-size: 14px;
+        }
+
+        select {
+            padding: 12px 15px;
+            background-color: #252542;
+            border: 1px solid #3a3a5a;
+            border-radius: 6px;
+            color: #e6e6e6;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #4361ee;
+            box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
         }
 
         input[type="text"],
@@ -959,6 +975,20 @@
             background: linear-gradient(90deg, #3a56d4, #2f0b8a);
             transform: translateY(-2px);
         }
+        
+        /* 規則相關輸入欄位 */
+        .rule-specific-input {
+            display: none;
+        }
+        
+        .rule-specific-input.active {
+            display: block;
+        }
+        
+        .w-plus-input,
+        .l-plus-input {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -966,7 +996,7 @@
     <div id="loginPage">
         <div class="login-container">
             <h2 class="login-header">
-                <i class="fas fa-dice"></i> B Or P System v1.0
+                <i class="fas fa-dice"></i> BP System v1.0
             </h2>
             
             <div class="login-input-group">
@@ -992,7 +1022,7 @@
     <!-- 主應用程式容器 -->
     <div class="container" style="display: none;">
         <header>
-            <h1><i class="fas fa-dice"></i> B Or P System v1.0</h1>
+            <h1><i class="fas fa-dice"></i> BP System v1.0</h1>
             <p class="subtitle">I have not come for what you hoped to do, I've come for what you've done.</p>
         </header>
 
@@ -1003,6 +1033,15 @@
             </div>
 
             <div class="input-grid">
+                <div class="input-group">
+                    <label for="bettingRule">投注規則</label>
+                    <select id="bettingRule">
+                        <option value="rule1">規則一</option>
+                        <option value="rule2">規則二</option>
+                        <option value="rule3">規則三</option>
+                    </select>
+                </div>
+                
                 <div class="input-group">
                     <label for="totalRounds" id="totalRoundsLabel">局數</label>
                     <input type="number" id="totalRounds" value="78" min="1" max="10000">
@@ -1019,8 +1058,20 @@
                 </div>
                 
                 <div class="input-group">
-                    <label for="incrementRate">每2關+？</label>
-                    <input type="number" id="incrementRate" value="10" min="1">
+                    <div class="rule-specific-input" id="incrementRateGroup">
+                        <label for="incrementRate">每2關+？</label>
+                        <input type="number" id="incrementRate" value="10" min="1">
+                    </div>
+                    
+                    <div class="rule-specific-input" id="wPlusGroup">
+                        <label for="wPlus">W+</label>
+                        <input type="text" id="wPlus" class="w-plus-input" placeholder="輸入W+值">
+                    </div>
+                    
+                    <div class="rule-specific-input" id="lPlusGroup">
+                        <label for="lPlus">L+</label>
+                        <input type="text" id="lPlus" class="l-plus-input" placeholder="輸入L+值">
+                    </div>
                 </div>
             </div>
 
@@ -1133,7 +1184,7 @@
                 <button class="close-btn" id="closeBaccaratBtn">&times;</button>
             </div>
             
-            <div class="baccarat-content">                
+            <div class="baccarat-content">
                 <div class="baccarat-section">
                     <h3>大路</h3>
                     <div class="road-viewport">
@@ -1178,13 +1229,19 @@
         let baccaratHistory = []; // 百家樂結果歷史
 
         // DOM元素
+        const bettingRuleSelect = document.getElementById('bettingRule');
         const randomModeBtn = document.getElementById('randomModeBtn');
         const manualModeBtn = document.getElementById('manualModeBtn');
         const totalRoundsInput = document.getElementById('totalRounds');
         const totalRoundsLabel = document.getElementById('totalRoundsLabel');
         const initialCapitalInput = document.getElementById('initialCapital');
         const baseBetInput = document.getElementById('baseBet');
+        const incrementRateGroup = document.getElementById('incrementRateGroup');
         const incrementRateInput = document.getElementById('incrementRate');
+        const wPlusGroup = document.getElementById('wPlusGroup');
+        const wPlusInput = document.getElementById('wPlus');
+        const lPlusGroup = document.getElementById('lPlusGroup');
+        const lPlusInput = document.getElementById('lPlus');
         const multiSimulationGroup = document.getElementById('multiSimulationGroup');
         const multiSimulationCheckbox = document.getElementById('multiSimulation');
         const simulationTimesInput = document.getElementById('simulationTimes');
@@ -1260,6 +1317,7 @@
                 initBettingRules();
                 setupEventListeners();
                 updateUIForMode();
+                updateRuleSpecificInputs();
                 showMessage('系統已就緒，請設定參數並開始模擬。', 'info');
             } else {
                 // 未登入，顯示登入頁面
@@ -1283,6 +1341,7 @@
                 initBettingRules();
                 setupEventListeners();
                 updateUIForMode();
+                updateRuleSpecificInputs();
                 showMessage('登入成功！系統已就緒，請設定參數並開始模擬。', 'success');
             } else {
                 // 登入失敗
@@ -1420,6 +1479,25 @@
             saveBettingRulesToStorage();
         }
 
+        // 更新規則特定輸入框顯示
+        function updateRuleSpecificInputs() {
+            const selectedRule = bettingRuleSelect.value;
+            
+            // 隱藏所有規則特定輸入框
+            incrementRateGroup.classList.remove('active');
+            wPlusGroup.classList.remove('active');
+            lPlusGroup.classList.remove('active');
+            
+            // 根據選擇的規則顯示對應的輸入框
+            if (selectedRule === 'rule1') {
+                incrementRateGroup.classList.add('active');
+            } else if (selectedRule === 'rule2') {
+                wPlusGroup.classList.add('active');
+                lPlusGroup.classList.add('active');
+            }
+            // rule3 目前沒有特定輸入框
+        }
+
         // 儲存投注規則到sessionStorage
         function saveBettingRulesToStorage() {
             sessionStorage.setItem('bettingSimulation_rules', JSON.stringify(bettingRules));
@@ -1450,6 +1528,9 @@
             // 模式切換
             randomModeBtn.addEventListener('click', () => switchMode('random'));
             manualModeBtn.addEventListener('click', () => switchMode('manual'));
+            
+            // 規則選擇變化
+            bettingRuleSelect.addEventListener('change', updateRuleSpecificInputs);
             
             // 多模擬複選框
             multiSimulationCheckbox.addEventListener('change', function() {
@@ -1560,7 +1641,7 @@
         }
 
         // 更新百家樂顯示
-        function updateBaccaratDisplay() {           
+        function updateBaccaratDisplay() {
             // 渲染大路
             renderBaccaratBigRoad();
             
@@ -1859,24 +1940,27 @@
             const totalRounds = parseInt(totalRoundsInput.value) || 100;
             const initialCapital = parseFloat(initialCapitalInput.value) || 1000;
             const simulationTimes = multiSimulationCheckbox.checked ? parseInt(simulationTimesInput.value) || 1 : 1;
+            const selectedRule = bettingRuleSelect.value;
             
             // 儲存表單資料到sessionStorage
             saveFormDataToStorage();
             
-            // 初始化投注規則
-            initBettingRules();
+            // 初始化投注規則（僅規則一需要）
+            if (selectedRule === 'rule1') {
+                initBettingRules();
+            }
             
             // 清除之前的結果
             clearResults();
             
             if (simulationTimes > 1) {
                 // 批次模擬
-                await runBatchSimulation(totalRounds, initialCapital, simulationTimes);
+                await runBatchSimulation(totalRounds, initialCapital, simulationTimes, selectedRule);
             } else {
                 // 單次模擬
                 const result = currentMode === 'random' 
-                    ? runRandomSimulation(totalRounds, initialCapital)
-                    : runManualSimulation(initialCapital);
+                    ? runRandomSimulation(totalRounds, initialCapital, selectedRule)
+                    : runManualSimulation(initialCapital, selectedRule);
                 
                 if (result) {
                     simulationResults = [result];
@@ -1897,7 +1981,20 @@
         }
 
         // 執行隨機模擬
-        function runRandomSimulation(totalRounds, initialCapital) {
+        function runRandomSimulation(totalRounds, initialCapital, selectedRule) {
+            // 根據選擇的規則進行模擬
+            if (selectedRule === 'rule1') {
+                return runRule1Simulation(totalRounds, initialCapital);
+            } else if (selectedRule === 'rule2') {
+                return runRule2Simulation(totalRounds, initialCapital);
+            } else {
+                // 規則三（暫未實現）
+                return runRule1Simulation(totalRounds, initialCapital); // 暫用規則一
+            }
+        }
+
+        // 規則一模擬
+        function runRule1Simulation(totalRounds, initialCapital) {
             // 1. 生成B列（局數）和C列（隨機A/B結果）
             const rounds = [];
             for (let i = 1; i <= totalRounds; i++) {
@@ -2094,12 +2191,180 @@
                 totalWin: sumWin,
                 feeFromAWins: feeFromAWins,
                 totalRounds: totalRounds,
-                initialCapital: initialCapital
+                initialCapital: initialCapital,
+                ruleUsed: 'rule1'
+            };
+        }
+
+        // 規則二模擬（簡化版本，根據W+和L+值調整）
+        function runRule2Simulation(totalRounds, initialCapital) {
+            // 1. 生成B列（局數）和C列（隨機A/B結果）
+            const rounds = [];
+            for (let i = 1; i <= totalRounds; i++) {
+                rounds.push({
+                    round: i,
+                    result: Math.random() >= 0.5 ? 'A' : 'B',
+                    protectMark: 'V', // 預設有保護標記
+                    betAmount: 0,
+                    outcome: '',
+                    profitLoss: 0,
+                    cumulativeBalance: initialCapital,
+                    currentGuan: 0,
+                    currentLevel: 0
+                });
+            }
+            
+            // 2. 生成F列（勝負）
+            for (let i = 0; i < totalRounds - 1; i++) {
+                if (rounds[i].result === rounds[i + 1].result) {
+                    rounds[i].outcome = 'W'; // 相同 → 贏
+                } else {
+                    rounds[i].outcome = 'L'; // 不同 → 輸
+                }
+            }
+            
+            // 3. 修改保護規則：連續3個L時，清除下一個V標記（原本是4個L）
+            if (totalRounds >= 4) {
+                for (let i = 2; i < totalRounds - 1; i++) {
+                    let isThreeL = true;
+                    
+                    for (let k = 0; k <= 2; k++) {
+                        if (rounds[i - k].outcome !== 'L') {
+                            isThreeL = false;
+                            break;
+                        }
+                    }
+                    
+                    if (isThreeL) {
+                        rounds[i + 1].protectMark = ''; // 清除V標記
+                    }
+                }
+            }
+            
+            // 4. D欄沒有V時，對應的F欄清空
+            for (let i = 0; i < totalRounds; i++) {
+                if (rounds[i].protectMark !== 'V') {
+                    rounds[i].outcome = '';
+                }
+            }
+            
+            // 5. 獲取W+和L+值
+            const wPlusValue = wPlusInput.value.trim();
+            const lPlusValue = lPlusInput.value.trim();
+            
+            // 6. 生成E欄：投注金額（簡化規則二邏輯）
+            let currentGuan = 1;
+            let currentLevel = 1;
+            let winStreak = 0;
+            const baseBet = parseInt(baseBetInput.value) || 10;
+            
+            for (let i = 0; i < totalRounds; i++) {
+                const round = rounds[i];
+                
+                // 記錄當前關數和注數
+                round.currentGuan = currentGuan;
+                round.currentLevel = currentLevel;
+                
+                // 如果沒有V標記或沒有勝負結果，清除投注金額
+                if (round.protectMark !== 'V' || (round.outcome !== 'W' && round.outcome !== 'L')) {
+                    round.betAmount = 0;
+                    continue;
+                }
+                
+                // 根據規則二計算投注金額（簡化版本）
+                let betAmount = 0;
+                
+                // 這裡可以根據W+和L+值來調整投注邏輯
+                // 目前先使用固定公式
+                if (currentLevel === 1) {
+                    betAmount = baseBet;
+                } else if (currentLevel === 2) {
+                    betAmount = baseBet * 2;
+                } else if (currentLevel === 3) {
+                    betAmount = baseBet * 4;
+                }
+                
+                if (betAmount > 0) {
+                    round.betAmount = betAmount;
+                } else {
+                    round.betAmount = 0;
+                }
+                
+                // 根據W+和L+調整連勝判斷邏輯（簡化）
+                if (round.outcome === 'W') {
+                    winStreak++;
+                    
+                    // 根據W+值判斷是否提升注數
+                    const wThreshold = wPlusValue ? parseInt(wPlusValue) : 1;
+                    if (winStreak >= wThreshold && currentLevel < 3) {
+                        currentLevel++;
+                        winStreak = 0;
+                    }
+                } else {
+                    // 輸了，根據L+值判斷是否降低關數
+                    const lThreshold = lPlusValue ? parseInt(lPlusValue) : 1;
+                    if (lThreshold > 0) {
+                        // 簡化邏輯：每輸一次，關數+1
+                        currentGuan++;
+                        currentLevel = 1;
+                        winStreak = 0;
+                    }
+                }
+                
+                // 限制關數在1-50之間
+                if (currentGuan > 50) currentGuan = 50;
+            }
+            
+            // 7. 生成G欄：單局盈虧
+            let balance = initialCapital;
+            let sumWin = 0;
+            let sumSpecialWin = 0;
+            
+            for (let i = 0; i < totalRounds; i++) {
+                const round = rounds[i];
+                
+                if (round.protectMark !== 'V' || round.betAmount === 0) {
+                    round.profitLoss = 0;
+                    round.cumulativeBalance = balance;
+                    continue;
+                }
+                
+                if (round.outcome === 'W') {
+                    if (round.result === 'A') {
+                        // A贏扣5%
+                        round.profitLoss = round.betAmount * 0.95;
+                        sumSpecialWin += round.betAmount;
+                    } else {
+                        round.profitLoss = round.betAmount;
+                    }
+                    sumWin += round.profitLoss;
+                } else {
+                    round.profitLoss = -round.betAmount;
+                }
+                
+                balance += round.profitLoss;
+                round.cumulativeBalance = balance;
+            }
+            
+            // 8. 計算統計結果
+            const finalBalance = balance;
+            const feeFromAWins = sumSpecialWin * 0.05;
+            
+            return {
+                rounds: rounds,
+                finalBalance: finalBalance,
+                totalWin: sumWin,
+                feeFromAWins: feeFromAWins,
+                totalRounds: totalRounds,
+                initialCapital: initialCapital,
+                ruleUsed: 'rule2',
+                wPlusValue: wPlusValue,
+                lPlusValue: lPlusValue
             };
         }
 
         // 執行手動模擬
-        function runManualSimulation(initialCapital) {
+        function runManualSimulation(initialCapital, selectedRule) {
             // 解析手動輸入的A/B序列
             const inputText = manualSequenceTextarea.value.trim();
             
@@ -2125,6 +2390,19 @@
             
             const totalRounds = validResults.length;
             
+            // 根據選擇的規則進行模擬
+            if (selectedRule === 'rule1') {
+                return runManualRule1Simulation(validResults, initialCapital, totalRounds);
+            } else if (selectedRule === 'rule2') {
+                return runManualRule2Simulation(validResults, initialCapital, totalRounds);
+            } else {
+                // 規則三（暫未實現）
+                return runManualRule1Simulation(validResults, initialCapital, totalRounds); // 暫用規則一
+            }
+        }
+
+        // 手動規則一模擬
+        function runManualRule1Simulation(validResults, initialCapital, totalRounds) {
             // 1. 生成B列（局數）和C列（結果）
             const rounds = [];
             for (let i = 0; i < totalRounds; i++) {
@@ -2318,12 +2596,180 @@
                 totalWin: sumWin,
                 feeFromAWins: feeFromAWins,
                 totalRounds: totalRounds,
-                initialCapital: initialCapital
+                initialCapital: initialCapital,
+                ruleUsed: 'rule1'
+            };
+        }
+
+        // 手動規則二模擬
+        function runManualRule2Simulation(validResults, initialCapital, totalRounds) {
+            // 1. 生成B列（局數）和C列（結果）
+            const rounds = [];
+            for (let i = 0; i < totalRounds; i++) {
+                rounds.push({
+                    round: i + 1,
+                    result: validResults[i],
+                    protectMark: 'V', // 預設有保護標記
+                    betAmount: 0,
+                    outcome: '',
+                    profitLoss: 0,
+                    cumulativeBalance: initialCapital,
+                    currentGuan: 0,
+                    currentLevel: 0
+                });
+            }
+            
+            // 2. 生成F列（勝負）
+            for (let i = 0; i < totalRounds - 1; i++) {
+                if (rounds[i].result === rounds[i + 1].result) {
+                    rounds[i].outcome = 'W'; // 相同 → 贏
+                } else {
+                    rounds[i].outcome = 'L'; // 不同 → 輸
+                }
+            }
+            
+            // 3. 修改保護規則：連續3個L時，清除下一個V標記（原本是4個L）
+            if (totalRounds >= 4) {
+                for (let i = 2; i < totalRounds - 1; i++) {
+                    let isThreeL = true;
+                    
+                    for (let k = 0; k <= 2; k++) {
+                        if (rounds[i - k].outcome !== 'L') {
+                            isThreeL = false;
+                            break;
+                        }
+                    }
+                    
+                    if (isThreeL) {
+                        rounds[i + 1].protectMark = ''; // 清除V標記
+                    }
+                }
+            }
+            
+            // 4. D欄沒有V時，對應的F欄清空
+            for (let i = 0; i < totalRounds; i++) {
+                if (rounds[i].protectMark !== 'V') {
+                    rounds[i].outcome = '';
+                }
+            }
+            
+            // 5. 獲取W+和L+值
+            const wPlusValue = wPlusInput.value.trim();
+            const lPlusValue = lPlusInput.value.trim();
+            
+            // 6. 生成E欄：投注金額（簡化規則二邏輯）
+            let currentGuan = 1;
+            let currentLevel = 1;
+            let winStreak = 0;
+            const baseBet = parseInt(baseBetInput.value) || 10;
+            
+            for (let i = 0; i < totalRounds; i++) {
+                const round = rounds[i];
+                
+                // 記錄當前關數和注數
+                round.currentGuan = currentGuan;
+                round.currentLevel = currentLevel;
+                
+                // 如果沒有V標記或沒有勝負結果，清除投注金額
+                if (round.protectMark !== 'V' || (round.outcome !== 'W' && round.outcome !== 'L')) {
+                    round.betAmount = 0;
+                    continue;
+                }
+                
+                // 根據規則二計算投注金額（簡化版本）
+                let betAmount = 0;
+                
+                // 這裡可以根據W+和L+值來調整投注邏輯
+                // 目前先使用固定公式
+                if (currentLevel === 1) {
+                    betAmount = baseBet;
+                } else if (currentLevel === 2) {
+                    betAmount = baseBet * 2;
+                } else if (currentLevel === 3) {
+                    betAmount = baseBet * 4;
+                }
+                
+                if (betAmount > 0) {
+                    round.betAmount = betAmount;
+                } else {
+                    round.betAmount = 0;
+                }
+                
+                // 根據W+和L+調整連勝判斷邏輯（簡化）
+                if (round.outcome === 'W') {
+                    winStreak++;
+                    
+                    // 根據W+值判斷是否提升注數
+                    const wThreshold = wPlusValue ? parseInt(wPlusValue) : 1;
+                    if (winStreak >= wThreshold && currentLevel < 3) {
+                        currentLevel++;
+                        winStreak = 0;
+                    }
+                } else {
+                    // 輸了，根據L+值判斷是否降低關數
+                    const lThreshold = lPlusValue ? parseInt(lPlusValue) : 1;
+                    if (lThreshold > 0) {
+                        // 簡化邏輯：每輸一次，關數+1
+                        currentGuan++;
+                        currentLevel = 1;
+                        winStreak = 0;
+                    }
+                }
+                
+                // 限制關數在1-50之間
+                if (currentGuan > 50) currentGuan = 50;
+            }
+            
+            // 7. 生成G欄：單局盈虧
+            let balance = initialCapital;
+            let sumWin = 0;
+            let sumSpecialWin = 0;
+            
+            for (let i = 0; i < totalRounds; i++) {
+                const round = rounds[i];
+                
+                if (round.protectMark !== 'V' || round.betAmount === 0) {
+                    round.profitLoss = 0;
+                    round.cumulativeBalance = balance;
+                    continue;
+                }
+                
+                if (round.outcome === 'W') {
+                    if (round.result === 'A') {
+                        // A贏扣5%
+                        round.profitLoss = round.betAmount * 0.95;
+                        sumSpecialWin += round.betAmount;
+                    } else {
+                        round.profitLoss = round.betAmount;
+                    }
+                    sumWin += round.profitLoss;
+                } else {
+                    round.profitLoss = -round.betAmount;
+                }
+                
+                balance += round.profitLoss;
+                round.cumulativeBalance = balance;
+            }
+            
+            // 8. 計算統計結果
+            const finalBalance = balance;
+            const feeFromAWins = sumSpecialWin * 0.05;
+            
+            return {
+                rounds: rounds,
+                finalBalance: finalBalance,
+                totalWin: sumWin,
+                feeFromAWins: feeFromAWins,
+                totalRounds: totalRounds,
+                initialCapital: initialCapital,
+                ruleUsed: 'rule2',
+                wPlusValue: wPlusValue,
+                lPlusValue: lPlusValue
             };
         }
 
         // 執行批次模擬
-        async function runBatchSimulation(totalRounds, initialCapital, simulationTimes) {
+        async function runBatchSimulation(totalRounds, initialCapital, simulationTimes, selectedRule) {
             progressContainer.classList.add('active');
             
             const results = [];
@@ -2347,8 +2793,8 @@
                 
                 // 執行單次模擬
                 const result = currentMode === 'random'
-                    ? runRandomSimulation(totalRounds, initialCapital)
-                    : runManualSimulation(initialCapital);
+                    ? runRandomSimulation(totalRounds, initialCapital, selectedRule)
+                    : runManualSimulation(initialCapital, selectedRule);
                 
                 if (result) {
                     results.push(result);
@@ -2479,6 +2925,9 @@
             messageBox.className = 'message';
             messageBox.style.display = 'none';
             
+            // 獲取選擇的規則
+            const selectedRule = bettingRuleSelect.value;
+            
             if (currentMode === 'random') {
                 // 驗證隨機模式輸入
                 if (!totalRoundsInput.value.trim()) {
@@ -2548,16 +2997,22 @@
                 return false;
             }
             
-            if (!incrementRateInput.value.trim()) {
-                showMessage('請輸入每2關+？', 'error');
-                incrementRateInput.focus();
-                return false;
-            }
-            
-            if (!isNumeric(incrementRateInput.value)) {
-                showMessage('每2關+？必須是數字', 'error');
-                incrementRateInput.focus();
-                return false;
+            // 根據選擇的規則驗證特定輸入
+            if (selectedRule === 'rule1') {
+                if (!incrementRateInput.value.trim()) {
+                    showMessage('請輸入每2關+？', 'error');
+                    incrementRateInput.focus();
+                    return false;
+                }
+                
+                if (!isNumeric(incrementRateInput.value)) {
+                    showMessage('每2關+？必須是數字', 'error');
+                    incrementRateInput.focus();
+                    return false;
+                }
+            } else if (selectedRule === 'rule2') {
+                // 規則二需要驗證W+和L+（可選）
+                // 這裡可以根據需要添加驗證邏輯
             }
             
             // 驗證多模擬次數
@@ -2623,10 +3078,13 @@
 
         // 重置表單
         function resetForm() {
+            bettingRuleSelect.value = 'rule1';
             totalRoundsInput.value = '100';
             initialCapitalInput.value = '1000';
             baseBetInput.value = '10';
             incrementRateInput.value = '5';
+            wPlusInput.value = '';
+            lPlusInput.value = '';
             multiSimulationCheckbox.checked = false;
             simulationTimesInput.style.display = 'none';
             simulationTimesInput.value = '1';
@@ -2635,6 +3093,9 @@
             clearResults();
             messageBox.style.display = 'none';
             stopBtnContainer.classList.remove('active');
+            
+            // 更新規則特定輸入框顯示
+            updateRuleSpecificInputs();
 
             lastRandomResults = [];
             simulationResults = [];
@@ -2656,10 +3117,13 @@
         // 儲存表單資料到sessionStorage
         function saveFormDataToStorage() {
             const formData = {
+                bettingRule: bettingRuleSelect.value,
                 totalRounds: totalRoundsInput.value,
                 initialCapital: initialCapitalInput.value,
                 baseBet: baseBetInput.value,
                 incrementRate: incrementRateInput.value,
+                wPlus: wPlusInput.value,
+                lPlus: lPlusInput.value,
                 multiSimulation: multiSimulationCheckbox.checked,
                 simulationTimes: simulationTimesInput.value,
                 manualSequence: manualSequenceTextarea.value,
@@ -2677,10 +3141,13 @@
             if (savedData) {
                 const formData = JSON.parse(savedData);
                 
+                bettingRuleSelect.value = formData.bettingRule || 'rule1';
                 totalRoundsInput.value = formData.totalRounds || '100';
                 initialCapitalInput.value = formData.initialCapital || '1000';
                 baseBetInput.value = formData.baseBet || '10';
                 incrementRateInput.value = formData.incrementRate || '5';
+                wPlusInput.value = formData.wPlus || '';
+                lPlusInput.value = formData.lPlus || '';
                 multiSimulationCheckbox.checked = formData.multiSimulation || false;
                 simulationTimesInput.value = formData.simulationTimes || '1';
                 simulationTimesInput.style.display = formData.multiSimulation ? 'inline-block' : 'none';
