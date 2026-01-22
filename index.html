@@ -13,7 +13,7 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif;
         }
-
+ 
         body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             color: #e6e6e6;
@@ -21,7 +21,7 @@
             padding: 20px;
             position: relative;
         }
-
+ 
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -31,13 +31,13 @@
             overflow: hidden;
             border: 1px solid #2a2a4a;
         }
-
+ 
         header {
             background: linear-gradient(90deg, #0f3460, #1a1a2e);
             padding: 20px 30px;
             border-bottom: 1px solid #2a2a4a;
         }
-
+ 
         h1 {
             font-size: 28px;
             margin-bottom: 5px;
@@ -46,16 +46,16 @@
             align-items: center;
             gap: 10px;
         }
-
+ 
         h1 i {
             font-size: 26px;
         }
-
+ 
         .subtitle {
             color: #a0a0c0;
             font-size: 14px;
         }
-
+ 
         .mode-selector {
             display: flex;
             margin: 20px 0;
@@ -65,7 +65,7 @@
             width: fit-content;
             border: 1px solid #2a2a4a;
         }
-
+ 
         .mode-btn {
             padding: 10px 25px;
             background: transparent;
@@ -76,48 +76,48 @@
             transition: all 0.3s;
             font-size: 15px;
         }
-
+ 
         .mode-btn.active {
             color: white;
         }
-
+ 
         #randomModeBtn.active {
             background: linear-gradient(90deg, #4361ee, #3a0ca3);
         }
-
+ 
         #manualModeBtn.active {
             background: linear-gradient(90deg, #ec4899, #be185d);
         }
-
+ 
         .mode-btn:hover:not(.active) {
             background-color: #252542;
             color: #e6e6e6;
         }
-
+ 
         .input-section {
             padding: 0 30px 20px;
             border-bottom: 1px solid #2a2a4a;
         }
-
+ 
         .input-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin-bottom: 20px;
         }
-
+ 
         .input-group {
             display: flex;
             flex-direction: column;
         }
-
+ 
         label {
             margin-bottom: 8px;
             color: #a0a0c0;
             font-weight: 500;
             font-size: 14px;
         }
-
+ 
         select {
             padding: 12px 15px;
             background-color: #252542;
@@ -127,13 +127,13 @@
             font-size: 15px;
             transition: all 0.3s;
         }
-
+ 
         select:focus {
             outline: none;
             border-color: #4361ee;
             box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
         }
-
+ 
         input[type="text"],
         input[type="number"] {
             padding: 12px 15px;
@@ -144,45 +144,45 @@
             font-size: 15px;
             transition: all 0.3s;
         }
-
+ 
         input[type="text"]:focus,
         input[type="number"]:focus {
             outline: none;
             border-color: #4361ee;
             box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
         }
-
+ 
         .checkbox-group {
             display: flex;
             align-items: center;
             margin-top: 10px;
             gap: 10px;
         }
-
+ 
         .checkbox-group input[type="checkbox"] {
             width: 18px;
             height: 18px;
             accent-color: #4361ee;
         }
-
+ 
         .checkbox-group label {
             margin-bottom: 0;
         }
-
+ 
         #simulationTimes {
             width: 120px;
             margin-left: 10px;
         }
-
+ 
         .textarea-group {
             display: none;
             margin-top: 15px;
         }
-
+ 
         .textarea-group.active {
             display: block;
         }
-
+ 
         textarea {
             width: 100%;
             height: 80px;
@@ -196,20 +196,20 @@
             font-family: 'Consolas', 'Courier New', monospace;
             line-height: 1.5;
         }
-
+ 
         textarea:focus {
             outline: none;
             border-color: #4361ee;
             box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
         }
-
+ 
         .textarea-note {
             font-size: 13px;
             color: #8888aa;
             margin-top: 5px;
             font-style: italic;
         }
-
+ 
         .button-section {
             padding: 20px 30px;
             display: flex;
@@ -219,21 +219,21 @@
             align-items: center;
             justify-content: space-between;
         }
-
+ 
         .button-left-group {
             display: flex;
             gap: 15px;
             align-items: center;
             flex-wrap: wrap;
         }
-
+ 
         .button-right-group {
             display: flex;
             gap: 15px;
             align-items: center;
             flex-wrap: wrap;
         }
-
+ 
         .btn {
             padding: 12px 24px;
             border: none;
@@ -248,138 +248,138 @@
             gap: 8px;
             white-space: nowrap;
         }
-
+ 
         .btn-primary {
             background: linear-gradient(90deg, #4361ee, #3a0ca3);
             color: white;
         }
-
+ 
         .btn-primary:hover {
             background: linear-gradient(90deg, #3a56d4, #2f0b8a);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(67, 97, 238, 0.4);
         }
-
+ 
         #runSimulationBtn {
             background: linear-gradient(90deg, #10b981, #059669);
             color: white;
         }
-
+ 
         #runSimulationBtn:hover {
             background: linear-gradient(90deg, #0da271, #047852);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
         }
-
+ 
         .btn-secondary {
             background-color: #3a3a5a;
             color: #e6e6e6;
         }
-
+ 
         .btn-secondary:hover {
             background-color: #4a4a6a;
             transform: translateY(-2px);
         }
-
+ 
         .btn-success {
             background: linear-gradient(90deg, #4cc9f0, #4895ef);
             color: white;
         }
-
+ 
         .btn-success:hover {
             background: linear-gradient(90deg, #3ab5d8, #3884d4);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(76, 201, 240, 0.4);
         }
-
+ 
         .btn-warning {
             background: linear-gradient(90deg, #f59e0b, #d97706);
             color: white;
         }
-
+ 
         .btn-warning:hover {
             background: linear-gradient(90deg, #e0900a, #c46c05);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(245, 158, 11, 0.4);
         }
-
+ 
         .btn-danger {
             background: linear-gradient(90deg, #ef4444, #dc2626);
             color: white;
         }
-
+ 
         .btn-danger:hover {
             background: linear-gradient(90deg, #e03c3c, #c72222);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
         }
-
+ 
         .btn-info {
             background: linear-gradient(90deg, #06b6d4, #0891b2);
             color: white;
         }
-
+ 
         .btn-info:hover {
             background: linear-gradient(90deg, #059bb4, #067a9a);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
         }
-
+ 
         .results-section {
             padding: 20px 30px;
         }
-
+ 
         .summary-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
             margin-bottom: 25px;
         }
-
+ 
         .summary-card {
             background-color: #252542;
             border-radius: 8px;
             padding: 20px;
             border-left: 4px solid #4361ee;
         }
-
+ 
         .summary-card h3 {
             font-size: 14px;
             color: #a0a0c0;
             margin-bottom: 8px;
         }
-
+ 
         .summary-card .value {
             font-size: 28px;
             font-weight: 700;
             color: #4cc9f0;
         }
-
+ 
         .summary-card .value.positive {
             color: #4ade80;
         }
-
+ 
         .summary-card .value.negative {
             color: #f87171;
         }
-
+ 
         .table-container {
             overflow-x: auto;
             border-radius: 8px;
             border: 1px solid #3a3a5a;
             margin-bottom: 25px;
         }
-
+ 
         table {
             width: 100%;
             border-collapse: collapse;
             min-width: 800px;
         }
-
+ 
         thead {
             background: linear-gradient(90deg, #0f3460, #1a1a2e);
         }
-
+ 
         th {
             padding: 15px 12px;
             text-align: center;
@@ -388,46 +388,46 @@
             border-bottom: 1px solid #3a3a5a;
             font-size: 18px;
         }
-
+ 
         td {
             padding: 12px;
             text-align: center;
             border-bottom: 1px solid #2a2a2a;
             font-size: 18px;
         }
-
+ 
         tbody tr:nth-child(even) {
             background-color: rgba(37, 37, 66, 0.5);
         }
-
+ 
         tbody tr:hover {
             background-color: rgba(67, 97, 238, 0.1);
         }
-
+ 
         .result-W {
             color: #4ade80;
             font-weight: 600;
         }
-
+ 
         .result-L {
             color: #f87171;
             font-weight: 600;
         }
-
+ 
         .result-A {
             color: #4cc9f0;
         }
-
+ 
         .result-B {
             color: #f59e0b;
         }
-
+ 
         .export-section {
             display: flex;
             justify-content: flex-end;
             gap: 15px;
         }
-
+ 
         .message {
             padding: 15px;
             border-radius: 6px;
@@ -436,35 +436,35 @@
             align-items: center;
             gap: 10px;
         }
-
+ 
         .message.error {
             background-color: rgba(239, 68, 68, 0.1);
             border-left: 4px solid #ef4444;
             color: #f87171;
             display: flex;
         }
-
+ 
         .message.success {
             background-color: rgba(74, 222, 128, 0.1);
             border-left: 4px solid #4ade80;
             color: #4ade80;
             display: flex;
         }
-
+ 
         .message.info {
             background-color: rgba(59, 130, 246, 0.1);
             border-left: 4px solid #3b82f6;
             color: #60a5fa;
             display: flex;
         }
-
+ 
         .message.warning {
             background-color: rgba(245, 158, 11, 0.1);
             border-left: 4px solid #f59e0b;
             color: #fbbf24;
             display: flex;
         }
-
+ 
         .progress-container {
             display: none;
             margin: 20px 0;
@@ -472,39 +472,39 @@
             border-radius: 8px;
             padding: 15px;
         }
-
+ 
         .progress-container.active {
             display: block;
         }
-
+ 
         .progress-header {
             display: flex;
             justify-content: space-between;
             margin-bottom: 10px;
         }
-
+ 
         .progress-bar {
             height: 10px;
             background-color: #3a3a5a;
             border-radius: 5px;
             overflow: hidden;
         }
-
+ 
         .progress-fill {
             height: 100%;
             background: linear-gradient(90deg, #4cc9f0, #4895ef);
             width: 0%;
             transition: width 0.3s;
         }
-
+ 
         .stop-btn-container {
             display: none;
         }
-
+ 
         .stop-btn-container.active {
             display: block;
         }
-
+ 
         footer {
             text-align: center;
             padding: 20px;
@@ -512,7 +512,7 @@
             font-size: 14px;
             border-top: 1px solid #2a2a4a;
         }
-
+ 
         /* 懸浮按鈕樣式 */
         .floating-btn {
             position: fixed;
@@ -533,16 +533,16 @@
             justify-content: center;
             transition: all 0.3s ease;
         }
-
+ 
         .floating-btn:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 25px rgba(238, 90, 36, 0.7);
         }
-
+ 
         .floating-btn:active {
             transform: scale(0.95);
         }
-
+ 
         /* 調整後的百家樂系統視窗樣式 - 與主體風格一致 */
         .baccarat-overlay {
             display: none;
@@ -556,7 +556,7 @@
             overflow-y: auto;
             padding: 20px;
         }
-
+ 
         .baccarat-container {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             color: #e6e6e6;
@@ -568,7 +568,7 @@
             border: 1px solid #2a2a4a;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
         }
-
+ 
         .baccarat-header {
             display: flex;
             justify-content: space-between;
@@ -577,7 +577,7 @@
             padding-bottom: 15px;
             border-bottom: 1px solid #2a2a4a;
         }
-
+ 
         .baccarat-title {
             font-size: 24px;
             color: #4cc9f0;
@@ -586,11 +586,11 @@
             align-items: center;
             gap: 10px;
         }
-
+ 
         .baccarat-title i {
             font-size: 22px;
         }
-
+ 
         .close-btn {
             background: linear-gradient(90deg, #ef4444, #dc2626);
             color: white;
@@ -605,32 +605,32 @@
             justify-content: center;
             transition: all 0.3s;
         }
-
+ 
         .close-btn:hover {
             background: linear-gradient(90deg, #e03c3c, #c72222);
             transform: scale(1.1);
             box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
         }
-
+ 
         .baccarat-content {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
-
+ 
         .baccarat-section {
             background-color: #252542;
             border-radius: 8px;
             padding: 15px;
             border: 1px solid #3a3a5a;
         }
-
+ 
         .baccarat-section h3 {
             margin: 0 0 10px 0;
             font-size: 16px;
             color: #a0a0c0;
         }
-
+ 
         .road-viewport {
             background: white;
             border: 1px solid #333;
@@ -639,7 +639,7 @@
             border-radius: 6px;
             padding: 5px;
         }
-
+ 
         .grid {
             display: grid;
             grid-auto-flow: column;
@@ -649,7 +649,7 @@
             width: max-content;
             align-content: start;
         }
-
+ 
         .cell {
             background: white;
             display: flex;
@@ -659,17 +659,17 @@
             width: 100%;
             height: 100%;
         }
-
+ 
         .big-road-grid {
             grid-template-rows: repeat(6, 32px);
             height: 198px;
         }
-
+ 
         .bead-plate-grid {
             grid-template-rows: repeat(6, 36px);
             height: 222px;
         }
-
+ 
         .bead {
             width: 30px;
             height: 30px;
@@ -682,11 +682,11 @@
             justify-content: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
-
+ 
         .bead.B { background: linear-gradient(135deg, #d93030, #b32020); }
         .bead.P { background: linear-gradient(135deg, #2b56bf, #1a3a8f); }
         .bead.T { background: linear-gradient(135deg, #28a745, #1e7e34); }
-
+ 
         .big-circle {
             width: 24px;
             height: 24px;
@@ -694,10 +694,10 @@
             border-radius: 50%;
             box-sizing: border-box;
         }
-
+ 
         .B { border-color: #d93030; color: #d93030; }
         .P { border-color: #2b56bf; color: #2b56bf; }
-
+ 
         .tie-slash {
             position: absolute;
             width: 80%;
@@ -706,7 +706,7 @@
             transform: rotate(-45deg);
             z-index: 1;
         }
-
+ 
         .tie-num {
             position: absolute;
             color: #28a745;
@@ -717,7 +717,7 @@
             z-index: 2;
             line-height: 1;
         }
-
+ 
         .baccarat-controls {
             display: flex;
             gap: 15px;
@@ -727,7 +727,7 @@
             border-top: 1px solid #2a2a4a;
             flex-wrap: wrap;
         }
-
+ 
         .baccarat-controls button {
             padding: 10px 20px;
             border: none;
@@ -740,158 +740,158 @@
             justify-content: center;
             gap: 8px;
         }
-
+ 
         .baccarat-controls .btn-b {
             background: linear-gradient(90deg, #d93030, #b32020);
             color: white;
         }
-
+ 
         .baccarat-controls .btn-b:hover {
             background: linear-gradient(90deg, #c52a2a, #9d1a1a);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(217, 48, 48, 0.4);
         }
-
+ 
         .baccarat-controls .btn-p {
             background: linear-gradient(90deg, #2b56bf, #1a3a8f);
             color: white;
         }
-
+ 
         .baccarat-controls .btn-p:hover {
             background: linear-gradient(90deg, #254bab, #152a75);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(43, 86, 191, 0.4);
         }
-
+ 
         .baccarat-controls .btn-t {
             background: linear-gradient(90deg, #28a745, #1e7e34);
             color: white;
         }
-
+ 
         .baccarat-controls .btn-t:hover {
             background: linear-gradient(90deg, #23923d, #186729);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
         }
-
+ 
         .baccarat-controls .btn-func {
             background-color: #3a3a5a;
             color: #e6e6e6;
             border: 1px solid #3a3a5a;
         }
-
+ 
         .baccarat-controls .btn-func:hover {
             background-color: #4a4a6a;
             transform: translateY(-2px);
         }
-
+ 
         @media (max-width: 1100px) {
             .button-section {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 20px;
+            	flex-direction: column;
+            	align-items: flex-start;
+            	gap: 20px;
             }
-            
+           
             .button-left-group,
             .button-right-group {
-                width: 100%;
-                justify-content: center;
+            	width: 100%;
+            	justify-content: center;
             }
-            
+           
             .baccarat-container {
-                margin: 10px;
-                padding: 15px;
+            	margin: 10px;
+            	padding: 15px;
             }
         }
-
+ 
         @media (max-width: 768px) {
             .container {
-                border-radius: 8px;
+            	border-radius: 8px;
             }
-            
+           
             .input-grid {
-                grid-template-columns: 1fr;
+            	grid-template-columns: 1fr;
             }
-            
+           
             .button-section {
-                gap: 15px;
+            	gap: 15px;
             }
-            
+           
             .button-left-group,
             .button-right-group {
-                flex-direction: column;
-                width: 100%;
+            	flex-direction: column;
+            	width: 100%;
             }
-            
+           
             .btn {
-                width: 100%;
-                justify-content: center;
+            	width: 100%;
+            	justify-content: center;
             }
-            
+           
             .summary-cards {
-                grid-template-columns: 1fr;
+            	grid-template-columns: 1fr;
             }
-            
+           
             .stop-btn-container {
-                width: 100%;
+            	width: 100%;
             }
-            
+           
             .floating-btn {
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
+            	bottom: 20px;
+            	right: 20px;
+            	width: 50px;
+            	height: 50px;
+            	font-size: 20px;
             }
-            
+           
             .baccarat-controls {
-                flex-direction: column;
-                align-items: center;
+            	flex-direction: column;
+            	align-items: center;
             }
-            
+           
             .baccarat-controls button {
-                width: 100%;
-                max-width: 300px;
+            	width: 100%;
+            	max-width: 300px;
             }
         }
-
+ 
         @media (max-width: 480px) {
             .button-section {
-                padding: 15px 20px;
+            	padding: 15px 20px;
             }
-            
+           
             .button-left-group,
             .button-right-group {
-                gap: 10px;
+            	gap: 10px;
             }
-            
+           
             .btn {
-                padding: 10px 15px;
-                font-size: 14px;
+            	padding: 10px 15px;
+            	font-size: 14px;
             }
-            
+           
             .export-section {
-                flex-direction: column;
+            	flex-direction: column;
             }
-            
+           
             .floating-btn {
-                bottom: 15px;
-                right: 15px;
-                width: 45px;
-                height: 45px;
-                font-size: 18px;
+            	bottom: 15px;
+            	right: 15px;
+            	width: 45px;
+            	height: 45px;
+            	font-size: 18px;
             }
-            
+           
             .baccarat-container {
-                padding: 15px;
+            	padding: 15px;
             }
-            
+           
             .baccarat-controls button {
-                padding: 8px 15px;
-                font-size: 14px;
+            	padding: 8px 15px;
+            	font-size: 14px;
             }
         }
-        
+       
         /* 登入頁面樣式 */
         #loginPage {
             display: flex;
@@ -905,7 +905,7 @@
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             z-index: 9999;
         }
-        
+       
         .login-container {
             background-color: rgba(25, 25, 40, 0.95);
             padding: 40px;
@@ -914,25 +914,25 @@
             width: 350px;
             border: 1px solid #2a2a4a;
         }
-        
+       
         .login-header {
             color: #4cc9f0;
             text-align: center;
             margin-bottom: 30px;
             font-size: 24px;
         }
-        
+       
         .login-input-group {
             margin-bottom: 20px;
         }
-        
+       
         .login-input-group label {
             display: block;
             color: #a0a0c0;
             margin-bottom: 8px;
             font-weight: 500;
         }
-        
+       
         .login-input {
             width: 100%;
             padding: 12px 15px;
@@ -942,18 +942,18 @@
             color: #e6e6e6;
             font-size: 15px;
         }
-        
+       
         .login-input::placeholder {
             color: #8888aa;
         }
-        
+       
         .login-message {
             color: #f87171;
             margin-bottom: 20px;
             text-align: center;
             display: none;
         }
-        
+       
         .login-btn {
             width: 100%;
             padding: 12px;
@@ -970,21 +970,21 @@
             justify-content: center;
             gap: 8px;
         }
-        
+       
         .login-btn:hover {
             background: linear-gradient(90deg, #3a56d4, #2f0b8a);
             transform: translateY(-2px);
         }
-        
+       
         /* 規則相關輸入欄位 */
         .rule-specific-input {
             display: none;
         }
-        
+       
         .rule-specific-input.active {
             display: block;
         }
-        
+       
         .w-plus-input,
         .l-plus-input {
             width: 100%;
@@ -996,2173 +996,2397 @@
     <div id="loginPage">
         <div class="login-container">
             <h2 class="login-header">
-                <i class="fas fa-dice"></i> BP System v1.0
+            	<i class="fas fa-dice"></i> BP System v1.0
             </h2>
-            
+           
             <div class="login-input-group">
-                <label for="loginUsername">帳號</label>
-                <input type="text" id="loginUsername" class="login-input" placeholder="輸入帳號">
+            	<label for="loginUsername">帳號</label>
+            	<input type="text" id="loginUsername" class="login-input" placeholder="輸入帳號">
             </div>
-            
+           
             <div class="login-input-group">
-                <label for="loginPassword">密碼</label>
-                <input type="password" id="loginPassword" class="login-input" placeholder="輸入密碼">
+            	<label for="loginPassword">密碼</label>
+            	<input type="password" id="loginPassword" class="login-input" placeholder="輸入密碼">
             </div>
-            
+           
             <div id="loginMessage" class="login-message">
-                <i class="fas fa-exclamation-circle"></i> 帳號或密碼錯誤
+            	<i class="fas fa-exclamation-circle"></i> 帳號或密碼錯誤
             </div>
-            
+           
             <button id="loginBtn" class="login-btn">
-                <i class="fas fa-sign-in-alt"></i> 登入
+            	<i class="fas fa-sign-in-alt"></i> 登入
             </button>
         </div>
     </div>
-    
+	
     <!-- 主應用程式容器 -->
     <div class="container" style="display: none;">
         <header>
             <h1><i class="fas fa-dice"></i> BP System v1.0</h1>
             <p class="subtitle">I have not come for what you hoped to do, I've come for what you've done.</p>
         </header>
-
+ 
         <div class="input-section">
             <div class="mode-selector">
-                <button class="mode-btn active" id="randomModeBtn">隨機模式</button>
-                <button class="mode-btn" id="manualModeBtn">手動模式</button>
+            	<button class="mode-btn active" id="randomModeBtn">隨機模式</button>
+            	<button class="mode-btn" id="manualModeBtn">手動模式</button>
             </div>
-
+ 
             <div class="input-grid">
-                <div class="input-group">
-                    <label for="bettingRule">投注規則</label>
-                    <select id="bettingRule">
-                        <option value="rule1">規則一</option>
-                        <option value="rule2">規則二</option>
-                        <option value="rule3">規則三</option>
-                    </select>
-                </div>
-                
-                <div class="input-group">
-                    <label for="totalRounds" id="totalRoundsLabel">局數</label>
-                    <input type="number" id="totalRounds" value="78" min="1" max="10000">
-                </div>
-                
-                <div class="input-group">
-                    <label for="initialCapital">初始金額</label>
-                    <input type="number" id="initialCapital" value="7000" step="10" min="1">
-                </div>
-                
-                <div class="input-group">
-                    <label for="baseBet">起步注碼</label>
-                    <input type="number" id="baseBet" value="20" min="1">
-                </div>
-                
-                <div class="input-group">
-                    <div class="rule-specific-input" id="incrementRateGroup">
-                        <label for="incrementRate">每2關+？</label>
-                        <input type="number" id="incrementRate" value="10" min="1">
-                    </div>
-                    
-                    <div class="rule-specific-input" id="wPlusGroup">
-                        <label for="wPlus">W+</label>
-                        <input type="text" id="wPlus" class="w-plus-input" placeholder="輸入W+值">
-                    </div>
-                    
-                    <div class="rule-specific-input" id="lPlusGroup">
-                        <label for="lPlus">L+</label>
-                        <input type="text" id="lPlus" class="l-plus-input" placeholder="輸入L+值">
-                    </div>
-                </div>
+            	<div class="input-group">
+                	<label for="bettingRule">投注規則</label>
+                	<select id="bettingRule">
+                    	<option value="rule1">規則一</option>
+                    	<option value="rule2">規則二</option>
+                    	<option value="rule3">規則三</option>
+                	</select>
+            	</div>
+            	
+            	<div class="input-group">
+                	<label for="totalRounds" id="totalRoundsLabel">局數</label>
+                	<input type="number" id="totalRounds" value="78" min="1" max="10000">
+            	</div>
+            	
+            	<div class="input-group">
+                	<label for="initialCapital">初始金額</label>
+                	<input type="number" id="initialCapital" value="7000" step="10" min="1">
+            	</div>
+            	
+            	<div class="input-group">
+                	<label for="baseBet">起步注碼</label>
+                	<input type="number" id="baseBet" value="20" min="1">
+            	</div>
+            	
+            	<div class="input-group">
+                	<div class="rule-specific-input" id="incrementRateGroup">
+                    	<label for="incrementRate">每2關+？</label>
+                    	<input type="number" id="incrementRate" value="10" min="1">
+                	</div>
+                	
+                	<div class="rule-specific-input" id="wPlusGroup">
+                    	<label for="wPlus">W+</label>
+                    	<input type="text" id="wPlus" class="w-plus-input" placeholder="輸入W+值">
+                	</div>
+                	
+                	<div class="rule-specific-input" id="lPlusGroup">
+                    	<label for="lPlus">L+</label>
+                    	<input type="text" id="lPlus" class="l-plus-input" placeholder="輸入L+值">
+                	</div>
+            	</div>
             </div>
-
+ 
             <div class="checkbox-group" id="multiSimulationGroup">
-                <input type="checkbox" id="multiSimulation">
-                <label for="multiSimulation">N次模擬</label>
-                <input type="number" id="simulationTimes" value="1" min="1" max="1000" style="display: none;">
+            	<input type="checkbox" id="multiSimulation">
+            	<label for="multiSimulation">N次模擬</label>
+            	<input type="number" id="simulationTimes" value="1" min="1" max="1000" style="display: none;">
             </div>
-
+ 
             <div class="textarea-group" id="manualInputArea">
-                <label for="manualSequence">手動輸入A/B序列（直接輸入如：ABAABAB）</label>
-                <textarea id="manualSequence" placeholder="例如：ABAABAB 或 AABBBAA"></textarea>
-                <p class="textarea-note">注意：直接輸入A和B的序列，不需要分行。只會識別A和B字符，其他字符將被忽略。</p>
+            	<label for="manualSequence">手動輸入A/B序列（直接輸入如：ABAABAB）</label>
+            	<textarea id="manualSequence" placeholder="例如：ABAABAB 或 AABBBAA"></textarea>
+            	<p class="textarea-note">注意：直接輸入A和B的序列，不需要分行。只會識別A和B字符，其他字符將被忽略。</p>
             </div>
         </div>
-
+ 
         <div class="message" id="messageBox"></div>
-
+ 
         <div class="progress-container" id="progressContainer">
             <div class="progress-header">
-                <span>模擬進度</span>
-                <span id="progressText">0/1</span>
+            	<span>模擬進度</span>
+            	<span id="progressText">0/1</span>
             </div>
             <div class="progress-bar">
-                <div class="progress-fill" id="progressFill"></div>
+            	<div class="progress-fill" id="progressFill"></div>
             </div>
         </div>
-
+ 
         <div class="button-section">
             <div class="button-left-group">
-                <button class="btn btn-primary" id="runSimulationBtn">
-                    <i class="fas fa-play-circle"></i> RUN
-                </button>
-
-                <button class="btn btn-secondary" id="resetBtn">
-                    <i class="fas fa-redo"></i> 重置
-                </button>
-                
-                <div class="stop-btn-container" id="stopBtnContainer">
-                    <button class="btn btn-danger" id="stopSimulationBtn">
-                        <i class="fas fa-stop-circle"></i> 停止模擬
-                    </button>
-                </div>
+            	<button class="btn btn-primary" id="runSimulationBtn">
+                	<i class="fas fa-play-circle"></i> RUN
+            	</button>
+ 
+            	<button class="btn btn-secondary" id="resetBtn">
+                	<i class="fas fa-redo"></i> 重置
+            	</button>
+            	
+            	<div class="stop-btn-container" id="stopBtnContainer">
+                	<button class="btn btn-danger" id="stopSimulationBtn">
+                    	<i class="fas fa-stop-circle"></i> 停止模擬
+                	</button>
+            	</div>
             </div>
-            
+           
             <div class="button-right-group">
-                <button class="btn btn-info" id="copyToManualBtn">
-                    <i class="fas fa-copy"></i> 一鍵COPY
-                </button>
+            	<button class="btn btn-info" id="copyToManualBtn">
+                	<i class="fas fa-copy"></i> 一鍵COPY
+            	</button>
             </div>
         </div>
-
+ 
         <div class="results-section">
             <div class="summary-cards">
-                <div class="summary-card">
-                    <h3>總局數</h3>
-                    <div class="value" id="totalRoundsResult">0</div>
-                </div>
-                <div class="summary-card">
-                    <h3>最終餘額</h3>
-                    <div class="value" id="finalBalance">0</div>
-                </div>
-                <div class="summary-card">
+            	<div class="summary-card">
+                	<h3>總局數</h3>
+                	<div class="value" id="totalRoundsResult">0</div>
+            	</div>
+            	<div class="summary-card">
+                	<h3>最終餘額</h3>
+                	<div class="value" id="finalBalance">0</div>
+            	</div>
+            	<div class="summary-card">
                     <h3>ROLLING</h3>
-                    <div class="value" id="totalWin">0</div>
-                </div>
-                <div class="summary-card">
-                    <h3>5%總計</h3>
-                    <div class="value" id="feeFromAWins">0</div>
-                </div>             
+                	<div class="value" id="totalWin">0</div>
+            	</div>
+            	<div class="summary-card">
+                	<h3>5%總計</h3>
+                	<div class="value" id="feeFromAWins">0</div>
+            	</div>         	
             </div>
-
+ 
             <div class="table-container">
-                <table id="resultsTable">
-                    <thead>
-                        <tr>
-                            <th>局數</th>
-                            <th>結果</th>
-                            <th>V參考下一局結果</th>
-                            <th>投注金額</th>
-                            <th>勝負</th>
-                            <th>單局盈虧</th>
-                            <th>資金情況</th>
-                            <th>關數</th>
-                            <th>注數</th>
-                        </tr>
-                    </thead>
-                    <tbody id="resultsBody">
-                        <!-- 資料將通過JavaScript動態填充 -->
-                    </tbody>
-                </table>
+            	<table id="resultsTable">
+                	<thead>
+                    	<tr>
+                        	<th>局數</th>
+                        	<th>結果</th>
+                        	<th>V參考下一局結果</th>
+                        	<th>投注金額</th>
+                        	<th>勝負</th>
+                        	<th>單局盈虧</th>
+                        	<th>資金情況</th>
+                        	<th>關數</th>
+                        	<th>注數</th>
+                    	</tr>
+                	</thead>
+                	<tbody id="resultsBody">
+                    	<!-- 資料將通過JavaScript動態填充 -->
+                	</tbody>
+            	</table>
             </div>
         </div>
-
+ 
         <footer>
             <p>Copyright © 2026 MENG</p>
         </footer>
     </div>
-
+ 
     <!-- 懸浮按鈕 -->
     <button class="floating-btn" id="baccaratBtn" title="查看路紙">
         <i class="fas fa-chart-line"></i>
     </button>
-
+ 
     <!-- 百家樂系統視窗 -->
     <div class="baccarat-overlay" id="baccaratOverlay">
         <div class="baccarat-container">
             <div class="baccarat-header">
-                <h2 class="baccarat-title"><i class="fas fa-cards"></i> 大路&珠盤路</h2>
-                <button class="close-btn" id="closeBaccaratBtn">&times;</button>
+            	<h2 class="baccarat-title"><i class="fas fa-cards"></i> 大路&珠盤路</h2>
+            	<button class="close-btn" id="closeBaccaratBtn">&times;</button>
             </div>
-            
+           
             <div class="baccarat-content">
-                <div class="baccarat-section">
-                    <h3>大路</h3>
-                    <div class="road-viewport">
-                        <div id="baccaratBigRoad" class="grid big-road-grid"></div>
-                    </div>
-                </div>
-                
-                <div class="baccarat-section">
-                    <h3>珠盤路</h3>
-                    <div class="road-viewport">
-                        <div id="baccaratBeadPlate" class="grid bead-plate-grid"></div>
-                    </div>
-                </div>
-                
-                <div class="baccarat-controls">
-                    <button class="btn-b" onclick="addBaccaratResult('B')"><i class="fas fa-chess-king"></i> 庄 (1)</button>
-                    <button class="btn-p" onclick="addBaccaratResult('P')"><i class="fas fa-chess-pawn"></i> 閒 (2)</button>
-                    <button class="btn-t" onclick="addBaccaratResult('T')"><i class="fas fa-handshake"></i> 和 (3)</button>
-                    <button class="btn-func" onclick="undoBaccaratResult()"><i class="fas fa-undo"></i> 退一步 (Backspace)</button>
-                    <button class="btn-func" onclick="resetBaccarat()"><i class="fas fa-redo"></i> 重開</button>
-                    <button class="btn-func" onclick="copyBaccaratSequence()"><i class="fas fa-copy"></i> 複製序列</button>
-                </div>
+            	<div class="baccarat-section">
+                	<h3>大路</h3>
+                	<div class="road-viewport">
+                    	<div id="baccaratBigRoad" class="grid big-road-grid"></div>
+                	</div>
+            	</div>
+            	
+            	<div class="baccarat-section">
+                	<h3>珠盤路</h3>
+                	<div class="road-viewport">
+                    	<div id="baccaratBeadPlate" class="grid bead-plate-grid"></div>
+                	</div>
+            	</div>
+            	
+            	<div class="baccarat-controls">
+                	<button class="btn-b" onclick="addBaccaratResult('B')"><i class="fas fa-chess-king"></i> 庄 (1)</button>
+                	<button class="btn-p" onclick="addBaccaratResult('P')"><i class="fas fa-chess-pawn"></i> 閒 (2)</button>
+                	<button class="btn-t" onclick="addBaccaratResult('T')"><i class="fas fa-handshake"></i> 和 (3)</button>
+                	<button class="btn-func" onclick="undoBaccaratResult()"><i class="fas fa-undo"></i> 退一步 (Backspace)</button>
+                	<button class="btn-func" onclick="resetBaccarat()"><i class="fas fa-redo"></i> 重開</button>
+                	<button class="btn-func" onclick="copyBaccaratSequence()"><i class="fas fa-copy"></i> 複製序列</button>
+            	</div>
             </div>
         </div>
     </div>
-
+ 
     <script>
-        // 全域變數
-        let currentMode = 'random'; // 'random' 或 'manual'
-        let bettingRules = {
-            level1: {}, // 1注
-            level2: {}, // 2注
-            level3: {}, // 3注
-            retreatPoints: {} // 尾到開頭（回退點）
-        };
-        let simulationResults = [];
-        let isSimulating = false;
-        let stopSimulation = false;
-        let lastRandomResults = []; // 儲存上一次隨機模擬的結果
-        
-        // 百家樂系統變數
-        let baccaratHistory = []; // 百家樂結果歷史
+// 全域變數
+let currentMode = 'random'; // 'random' 或 'manual'
+let bettingRules = {
+    level1: {}, // 1注
+    level2: {}, // 2注
+    level3: {}, // 3注
+    retreatPoints: {} // 尾到開頭（回退點）
+};
+let simulationResults = [];
+let isSimulating = false;
+let stopSimulation = false;
+let lastRandomResults = []; // 儲存上一次隨機模擬的結果
 
-        // DOM元素
-        const bettingRuleSelect = document.getElementById('bettingRule');
-        const randomModeBtn = document.getElementById('randomModeBtn');
-        const manualModeBtn = document.getElementById('manualModeBtn');
-        const totalRoundsInput = document.getElementById('totalRounds');
-        const totalRoundsLabel = document.getElementById('totalRoundsLabel');
-        const initialCapitalInput = document.getElementById('initialCapital');
-        const baseBetInput = document.getElementById('baseBet');
-        const incrementRateGroup = document.getElementById('incrementRateGroup');
-        const incrementRateInput = document.getElementById('incrementRate');
-        const wPlusGroup = document.getElementById('wPlusGroup');
-        const wPlusInput = document.getElementById('wPlus');
-        const lPlusGroup = document.getElementById('lPlusGroup');
-        const lPlusInput = document.getElementById('lPlus');
-        const multiSimulationGroup = document.getElementById('multiSimulationGroup');
-        const multiSimulationCheckbox = document.getElementById('multiSimulation');
-        const simulationTimesInput = document.getElementById('simulationTimes');
-        const manualInputArea = document.getElementById('manualInputArea');
-        const manualSequenceTextarea = document.getElementById('manualSequence');
-        const runSimulationBtn = document.getElementById('runSimulationBtn');
-        const resetBtn = document.getElementById('resetBtn');
-        const stopBtnContainer = document.getElementById('stopBtnContainer');
-        const stopSimulationBtn = document.getElementById('stopSimulationBtn');
-        const messageBox = document.getElementById('messageBox');
-        const progressContainer = document.getElementById('progressContainer');
-        const progressText = document.getElementById('progressText');
-        const progressFill = document.getElementById('progressFill');
-        const finalBalanceEl = document.getElementById('finalBalance');
-        const totalWinEl = document.getElementById('totalWin');
-        const feeFromAWinsEl = document.getElementById('feeFromAWins');
-        const totalRoundsResultEl = document.getElementById('totalRoundsResult');
-        const resultsBody = document.getElementById('resultsBody');
-        const copyToManualBtn = document.getElementById('copyToManualBtn');
-        
-        // 百家樂相關DOM元素
-        const baccaratBtn = document.getElementById('baccaratBtn');
-        const baccaratOverlay = document.getElementById('baccaratOverlay');
-        const closeBaccaratBtn = document.getElementById('closeBaccaratBtn');
-        const baccaratBigRoadEl = document.getElementById('baccaratBigRoad');
-        const baccaratBeadPlateEl = document.getElementById('baccaratBeadPlate');
-        
-        // 登入相關DOM元素
-        const loginPage = document.getElementById('loginPage');
-        const loginUsername = document.getElementById('loginUsername');
-        const loginPassword = document.getElementById('loginPassword');
-        const loginBtn = document.getElementById('loginBtn');
-        const loginMessage = document.getElementById('loginMessage');
-        const mainContainer = document.querySelector('.container');
-        
-        // 登入狀態管理
-        let isLoggedIn = false;
-        const LOGIN_USERNAME = 'admin';
-        const LOGIN_PASSWORD = 'admin1234';
+// 百家樂系統變數
+let baccaratHistory = []; // 百家樂結果歷史
 
-        // 初始化
-        document.addEventListener('DOMContentLoaded', function() {
-            // 檢查登入狀態
-            checkLoginStatus();
+// DOM元素
+const bettingRuleSelect = document.getElementById('bettingRule');
+const randomModeBtn = document.getElementById('randomModeBtn');
+const manualModeBtn = document.getElementById('manualModeBtn');
+const totalRoundsInput = document.getElementById('totalRounds');
+const totalRoundsLabel = document.getElementById('totalRoundsLabel');
+const initialCapitalInput = document.getElementById('initialCapital');
+const baseBetInput = document.getElementById('baseBet');
+const incrementRateGroup = document.getElementById('incrementRateGroup');
+const incrementRateInput = document.getElementById('incrementRate');
+const wPlusGroup = document.getElementById('wPlusGroup');
+const wPlusInput = document.getElementById('wPlus');
+const lPlusGroup = document.getElementById('lPlusGroup');
+const lPlusInput = document.getElementById('lPlus');
+const multiSimulationGroup = document.getElementById('multiSimulationGroup');
+const multiSimulationCheckbox = document.getElementById('multiSimulation');
+const simulationTimesInput = document.getElementById('simulationTimes');
+const manualInputArea = document.getElementById('manualInputArea');
+const manualSequenceTextarea = document.getElementById('manualSequence');
+const runSimulationBtn = document.getElementById('runSimulationBtn');
+const resetBtn = document.getElementById('resetBtn');
+const stopBtnContainer = document.getElementById('stopBtnContainer');
+const stopSimulationBtn = document.getElementById('stopSimulationBtn');
+const messageBox = document.getElementById('messageBox');
+const progressContainer = document.getElementById('progressContainer');
+const progressText = document.getElementById('progressText');
+const progressFill = document.getElementById('progressFill');
+const finalBalanceEl = document.getElementById('finalBalance');
+const totalWinEl = document.getElementById('totalWin');
+const feeFromAWinsEl = document.getElementById('feeFromAWins');
+const totalRoundsResultEl = document.getElementById('totalRoundsResult');
+const resultsBody = document.getElementById('resultsBody');
+const copyToManualBtn = document.getElementById('copyToManualBtn');
+
+// 百家樂相關DOM元素
+const baccaratBtn = document.getElementById('baccaratBtn');
+const baccaratOverlay = document.getElementById('baccaratOverlay');
+const closeBaccaratBtn = document.getElementById('closeBaccaratBtn');
+const baccaratBigRoadEl = document.getElementById('baccaratBigRoad');
+const baccaratBeadPlateEl = document.getElementById('baccaratBeadPlate');
+
+// 登入相關DOM元素
+const loginPage = document.getElementById('loginPage');
+const loginUsername = document.getElementById('loginUsername');
+const loginPassword = document.getElementById('loginPassword');
+const loginBtn = document.getElementById('loginBtn');
+const loginMessage = document.getElementById('loginMessage');
+const mainContainer = document.querySelector('.container');
+
+// 登入狀態管理
+let isLoggedIn = false;
+const VALID_CREDENTIALS = [
+    { username: 'admin', password: 'admin1234' },
+    { username: 'user', password: 'user5678' }  // 新增的第二組帳號密碼
+];
+
+// 初始化
+document.addEventListener('DOMContentLoaded', function() {
+    // 檢查登入狀態
+    checkLoginStatus();
+    
+    // 登入按鈕事件
+    loginBtn.addEventListener('click', handleLogin);
+    
+    // 按Enter鍵登入
+    loginUsername.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            loginPassword.focus();
+        }
+    });
+    
+    loginPassword.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            handleLogin();
+        }
+    });
+});
+
+// 檢查登入狀態
+function checkLoginStatus() {
+    // 檢查是否有登入記錄（模擬會話狀態）
+    const sessionLoggedIn = sessionStorage.getItem('borp_logged_in');
+    
+    if (sessionLoggedIn === 'true') {
+        // 已登入，顯示主頁面
+        isLoggedIn = true;
+        loginPage.style.display = 'none';
+        mainContainer.style.display = 'block';
+        initBettingRules();
+        setupEventListeners();
+        updateUIForMode();
+        updateRuleSpecificInputs();
+        showMessage('系統已就緒，請設定參數並開始模擬。', 'info');
+    } else {
+        // 未登入，顯示登入頁面
+        isLoggedIn = false;
+        loginPage.style.display = 'flex';
+        mainContainer.style.display = 'none';
+    }
+}
+
+// 處理登入
+function handleLogin() {
+    const username = loginUsername.value.trim();
+    const password = loginPassword.value.trim();
+    
+    // 檢查是否匹配任何一組有效的憑證
+    const isValid = VALID_CREDENTIALS.some(cred => 
+        cred.username === username && cred.password === password
+    );
+    
+    if (isValid) {
+        // 登入成功
+        isLoggedIn = true;
+        sessionStorage.setItem('borp_logged_in', 'true');
+        loginPage.style.display = 'none';
+        mainContainer.style.display = 'block';
+        initBettingRules();
+        setupEventListeners();
+        updateUIForMode();
+        updateRuleSpecificInputs();
+        showMessage('登入成功！系統已就緒，請設定參數並開始模擬。', 'success');
+    } else {
+        // 登入失敗
+        loginMessage.style.display = 'block';
+        loginPassword.value = '';
+        loginPassword.focus();
+    }
+}
+
+// 按Enter鍵登入的處理保持不變
+loginUsername.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        loginPassword.focus();
+    }
+});
+
+loginPassword.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        handleLogin();
+    }
+});
+
+// 初始化投注規則（基於Excel表格）
+function initBettingRules() {
+    const baseBet = parseInt(baseBetInput.value) || 10;
+    const incrementRate = parseInt(incrementRateInput.value) || 5;
+    
+    // 清空規則
+    bettingRules.level1 = {};
+    bettingRules.level2 = {};
+    bettingRules.level3 = {};
+    bettingRules.retreatPoints = {};
+    
+    // 根據提供的Excel表格規則生成
+    for (let i = 1; i <= 50; i++) {
+        // 計算關數基數：每2關為一組，第1-2關為第1組，第3-4關為第2組，依此類推
+        // 組數計算：ceil(i/2)
+        const group = Math.ceil(i / 2);
+        
+        // 1注：起步注碼 + (組數-1) * 每2關增量
+        // 例如：起步注碼=10，每2關+5，第1關=10，第3關=15，第5關=20...
+        bettingRules.level1[i] = baseBet + (group - 1) * incrementRate;
+        
+        // 2注：1注的2倍
+        bettingRules.level2[i] = bettingRules.level1[i] * 2;
+        
+        // 3注：2注的2倍（僅偶數關有）
+        if (i % 2 === 0) {
+            bettingRules.level3[i] = bettingRules.level2[i] * 2;
+        }
+        
+        // 尾到開頭（回退點）規則 - 基於Excel表格
+        // 根據您提供的圖片，回退點規則如下：
+        if (i <= 6) {
+            bettingRules.retreatPoints[i] = 1;
+        } else if (i === 7) {
+            bettingRules.retreatPoints[i] = 3;
+        } else if (i === 8) {
+            bettingRules.retreatPoints[i] = 1;
+        } else if (i === 9) {
+            bettingRules.retreatPoints[i] = 5;
+        } else if (i === 10) {
+            bettingRules.retreatPoints[i] = 3;
+        } else if (i === 11) {
+            bettingRules.retreatPoints[i] = 7;
+        } else if (i === 12) {
+            bettingRules.retreatPoints[i] = 5;
+        } else if (i === 13) {
+            bettingRules.retreatPoints[i] = 9;
+        } else if (i === 14) {
+            bettingRules.retreatPoints[i] = 7;
+        } else if (i === 15) {
+            bettingRules.retreatPoints[i] = 11;
+        } else if (i === 16) {
+            bettingRules.retreatPoints[i] = 9;
+        } else if (i === 17) {
+            bettingRules.retreatPoints[i] = 13;
+        } else if (i === 18) {
+            bettingRules.retreatPoints[i] = 11;
+        } else if (i === 19) {
+            bettingRules.retreatPoints[i] = 15;
+        } else if (i === 20) {
+            bettingRules.retreatPoints[i] = 13;
+        } else if (i === 21) {
+            bettingRules.retreatPoints[i] = 17;
+        } else if (i === 22) {
+            bettingRules.retreatPoints[i] = 15;
+        } else if (i === 23) {
+            bettingRules.retreatPoints[i] = 19;
+        } else if (i === 24) {
+            bettingRules.retreatPoints[i] = 17;
+        } else if (i === 25) {
+            bettingRules.retreatPoints[i] = 21;
+        } else if (i === 26) {
+            bettingRules.retreatPoints[i] = 19;
+        } else if (i === 27) {
+            bettingRules.retreatPoints[i] = 23;
+        } else if (i === 28) {
+            bettingRules.retreatPoints[i] = 21;
+        } else if (i === 29) {
+            bettingRules.retreatPoints[i] = 25;
+        } else if (i === 30) {
+            bettingRules.retreatPoints[i] = 23;
+        } else if (i === 31) {
+            bettingRules.retreatPoints[i] = 27;
+        } else if (i === 32) {
+            bettingRules.retreatPoints[i] = 25;
+        } else if (i === 33) {
+            bettingRules.retreatPoints[i] = 29;
+        } else if (i === 34) {
+            bettingRules.retreatPoints[i] = 27;
+        } else if (i === 35) {
+            bettingRules.retreatPoints[i] = 31;
+        } else if (i === 36) {
+            bettingRules.retreatPoints[i] = 29;
+        } else if (i === 37) {
+            bettingRules.retreatPoints[i] = 33;
+        } else if (i === 38) {
+            bettingRules.retreatPoints[i] = 31;
+        } else if (i === 39) {
+            bettingRules.retreatPoints[i] = 35;
+        } else if (i === 40) {
+            bettingRules.retreatPoints[i] = 33;
+        } else if (i === 41) {
+            bettingRules.retreatPoints[i] = 37;
+        } else if (i === 42) {
+            bettingRules.retreatPoints[i] = 35;
+        } else if (i === 43) {
+            bettingRules.retreatPoints[i] = 39;
+        } else if (i === 44) {
+            bettingRules.retreatPoints[i] = 37;
+        } else if (i === 45) {
+            bettingRules.retreatPoints[i] = 41;
+        } else if (i === 46) {
+            bettingRules.retreatPoints[i] = 39;
+        } else if (i === 47) {
+            bettingRules.retreatPoints[i] = 43;
+        } else if (i === 48) {
+            bettingRules.retreatPoints[i] = 41;
+        } else if (i === 49) {
+            bettingRules.retreatPoints[i] = 45;
+        } else if (i === 50) {
+            bettingRules.retreatPoints[i] = 43;
+        }
+    }
+    
+    // 儲存到sessionStorage
+    saveBettingRulesToStorage();
+}
+
+// 更新規則特定輸入框顯示
+function updateRuleSpecificInputs() {
+    const selectedRule = bettingRuleSelect.value;
+    
+    // 隱藏所有規則特定輸入框
+    incrementRateGroup.classList.remove('active');
+    wPlusGroup.classList.remove('active');
+    lPlusGroup.classList.remove('active');
+    
+    // 根據選擇的規則顯示對應的輸入框
+    if (selectedRule === 'rule1') {
+        incrementRateGroup.classList.add('active');
+    } else if (selectedRule === 'rule2') {
+        wPlusGroup.classList.add('active');
+        lPlusGroup.classList.add('active');
+    }
+    // rule3 目前沒有特定輸入框
+}
+
+// 儲存投注規則到sessionStorage
+function saveBettingRulesToStorage() {
+    sessionStorage.setItem('bettingSimulation_rules', JSON.stringify(bettingRules));
+    sessionStorage.setItem('bettingSimulation_config', JSON.stringify({
+        baseBet: parseInt(baseBetInput.value) || 10,
+        incrementRate: parseInt(incrementRateInput.value) || 5
+    }));
+}
+
+// 從sessionStorage載入投注規則
+function loadBettingRulesFromStorage() {
+    const savedRules = sessionStorage.getItem('bettingSimulation_rules');
+    const savedConfig = sessionStorage.getItem('bettingSimulation_config');
+    
+    if (savedRules) {
+        bettingRules = JSON.parse(savedRules);
+    }
+    
+    if (savedConfig) {
+        const config = JSON.parse(savedConfig);
+        baseBetInput.value = config.baseBet;
+        incrementRateInput.value = config.incrementRate;
+    }
+}
+
+// 設定事件監聽器
+function setupEventListeners() {
+    // 模式切換
+    randomModeBtn.addEventListener('click', () => switchMode('random'));
+    manualModeBtn.addEventListener('click', () => switchMode('manual'));
+    
+    // 規則選擇變化
+    bettingRuleSelect.addEventListener('change', updateRuleSpecificInputs);
+    
+    // 多模擬複選框
+    multiSimulationCheckbox.addEventListener('change', function() {
+        simulationTimesInput.style.display = this.checked ? 'inline-block' : 'none';
+        // 勾選時確保數值為1
+        if (this.checked && (!simulationTimesInput.value || parseInt(simulationTimesInput.value) < 1)) {
+            simulationTimesInput.value = '1';
+        }
+        updateStopButtonVisibility();
+    });
+    
+    // 模擬次數輸入框變化
+    simulationTimesInput.addEventListener('input', updateStopButtonVisibility);
+    
+    // 參數變化時更新投注規則
+    baseBetInput.addEventListener('change', initBettingRules);
+    incrementRateInput.addEventListener('change', initBettingRules);
+    
+    // 按鈕事件
+    runSimulationBtn.addEventListener('click', runSimulation);
+    resetBtn.addEventListener('click', resetForm);
+    stopSimulationBtn.addEventListener('click', stopSimulationHandler);
+    copyToManualBtn.addEventListener('click', copyToManualHandler);
+    
+    // 百家樂系統事件
+    baccaratBtn.addEventListener('click', showBaccaratSystem);
+    closeBaccaratBtn.addEventListener('click', hideBaccaratSystem);
+    
+    // 百家樂鍵盤快捷鍵
+    document.addEventListener('keydown', handleBaccaratKeyboard);
+    
+    // 從sessionStorage載入資料
+    loadBettingRulesFromStorage();
+    loadFormDataFromStorage();
+    
+    // 載入百家樂歷史
+    loadBaccaratHistory();
+}
+
+// 顯示百家樂系統
+function showBaccaratSystem() {
+    if (!isLoggedIn) {
+        showMessage('請先登入系統', 'warning');
+        return;
+    }
+    
+    if (simulationResults.length === 0 || !simulationResults[0].rounds || simulationResults[0].rounds.length === 0) {
+        showMessage('請先執行模擬', 'warning');
+        return;
+    }
+    
+    // 自動轉換模擬結果為百家樂序列
+    convertToBaccarat();
+    
+    baccaratOverlay.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // 防止背景滾動
+}
+
+// 隱藏百家樂系統
+function hideBaccaratSystem() {
+    baccaratOverlay.style.display = 'none';
+    document.body.style.overflow = 'auto'; // 恢復滾動
+}
+
+// 處理百家樂鍵盤快捷鍵
+function handleBaccaratKeyboard(e) {
+    // 只有在百家樂系統顯示時才處理
+    if (baccaratOverlay.style.display !== 'block') return;
+    
+    if (e.key === '1' || e.key === 'b' || e.key === 'B') {
+        addBaccaratResult('B');
+        e.preventDefault();
+    } else if (e.key === '2' || e.key === 'p' || e.key === 'P') {
+        addBaccaratResult('P');
+        e.preventDefault();
+    } else if (e.key === '3' || e.key === 't' || e.key === 'T') {
+        addBaccaratResult('T');
+        e.preventDefault();
+    } else if (e.key === 'Backspace') {
+        undoBaccaratResult();
+        e.preventDefault();
+    } else if (e.key === 'Escape') {
+        hideBaccaratSystem();
+        e.preventDefault();
+    }
+}
+
+// 將模擬結果轉換為百家樂序列
+function convertToBaccarat() {
+    const result = simulationResults[0];
+    const rounds = result.rounds;
+    
+    // 清空歷史
+    baccaratHistory = [];
+    
+    // 轉換A/B為庄/閒 (A=庄, B=閒)
+    rounds.forEach(round => {
+        if (round.result === 'A') {
+            baccaratHistory.push('B'); // A -> 庄
+        } else if (round.result === 'B') {
+            baccaratHistory.push('P'); // B -> 閒
+        } else if (round.result === 'C') {
+            baccaratHistory.push('T'); // C -> 和
+        }
+    });
+    
+    // 更新顯示
+    updateBaccaratDisplay();
+    saveBaccaratHistory();
+}
+
+// 更新百家樂顯示
+function updateBaccaratDisplay() {
+    // 渲染大路
+    renderBaccaratBigRoad();
+    
+    // 渲染珠盤路
+    renderBaccaratBeadPlate();
+}
+
+// 獲取百家樂結果名稱
+function getBaccaratResultName(result) {
+    switch(result) {
+        case 'B': return '庄';
+        case 'P': return '閒';
+        case 'T': return '和';
+        default: return '?';
+    }
+}
+
+// 渲染百家樂大路
+function renderBaccaratBigRoad() {
+    const bigRoadData = getBigRoadDataForBaccarat(baccaratHistory);
+    baccaratBigRoadEl.innerHTML = '';
+    
+    const maxC = Math.max(30, bigRoadData.reduce((acc, d) => Math.max(acc, d.c), 0) + 5);
+    baccaratBigRoadEl.style.gridTemplateColumns = `repeat(${maxC + 1}, 32px)`;
+    
+    // 創建所有格子
+    for(let i = 0; i < (maxC + 1) * 6; i++) {
+        const cell = document.createElement('div');
+        cell.className = 'cell';
+        baccaratBigRoadEl.appendChild(cell);
+    }
+    
+    // 填充資料
+    bigRoadData.forEach(d => {
+        const targetIndex = d.c * 6 + d.r;
+        if (targetIndex >= 0 && targetIndex < baccaratBigRoadEl.children.length) {
+            const target = baccaratBigRoadEl.children[targetIndex];
             
-            // 登入按鈕事件
-            loginBtn.addEventListener('click', handleLogin);
+            // 畫庄/閒圈
+            const circ = document.createElement('div');
+            circ.className = `big-circle ${d.type}`;
+            target.appendChild(circ);
             
-            // 按Enter鍵登入
-            loginUsername.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    loginPassword.focus();
+            // 畫和局斜線與數字
+            if(d.tie > 0) {
+                const slash = document.createElement('div');
+                slash.className = 'tie-slash';
+                target.appendChild(slash);
+                
+                if(d.tie > 1) {
+                    const num = document.createElement('div');
+                    num.className = 'tie-num';
+                    num.innerText = d.tie;
+                    target.appendChild(num);
                 }
-            });
-            
-            loginPassword.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    handleLogin();
-                }
-            });
-        });
+            }
+        }
+    });
+}
 
-        // 檢查登入狀態
-        function checkLoginStatus() {
-            // 檢查是否有登入記錄（模擬會話狀態）
-            const sessionLoggedIn = sessionStorage.getItem('borp_logged_in');
-            
-            if (sessionLoggedIn === 'true') {
-                // 已登入，顯示主頁面
-                isLoggedIn = true;
-                loginPage.style.display = 'none';
-                mainContainer.style.display = 'block';
-                initBettingRules();
-                setupEventListeners();
-                updateUIForMode();
-                updateRuleSpecificInputs();
-                showMessage('系統已就緒，請設定參數並開始模擬。', 'info');
+// 為百家樂歷史生成大路資料
+function getBigRoadDataForBaccarat(input) {
+    let matrix = [], results = [], lastW = null, lastP = {r:0, c:0}, isH = false;
+    
+    input.forEach(res => {
+        if (res === 'T') {
+            if (results.length > 0) results[results.length-1].tie++;
+            return;
+        }
+        
+        let r, c;
+        if (!lastW) {
+            r = 0;
+            c = 0;
+        } else if (res === lastW) {
+            if (isH) {
+                r = lastP.r;
+                c = lastP.c + 1;
             } else {
-                // 未登入，顯示登入頁面
-                isLoggedIn = false;
-                loginPage.style.display = 'flex';
-                mainContainer.style.display = 'none';
-            }
-        }
-
-        // 處理登入
-        function handleLogin() {
-            const username = loginUsername.value.trim();
-            const password = loginPassword.value.trim();
-            
-            if (username === LOGIN_USERNAME && password === LOGIN_PASSWORD) {
-                // 登入成功
-                isLoggedIn = true;
-                sessionStorage.setItem('borp_logged_in', 'true');
-                loginPage.style.display = 'none';
-                mainContainer.style.display = 'block';
-                initBettingRules();
-                setupEventListeners();
-                updateUIForMode();
-                updateRuleSpecificInputs();
-                showMessage('登入成功！系統已就緒，請設定參數並開始模擬。', 'success');
-            } else {
-                // 登入失敗
-                loginMessage.style.display = 'block';
-                loginPassword.value = '';
-                loginPassword.focus();
-            }
-        }
-
-        // 初始化投注規則（基於Excel表格）
-        function initBettingRules() {
-            const baseBet = parseInt(baseBetInput.value) || 10;
-            const incrementRate = parseInt(incrementRateInput.value) || 5;
-            
-            // 清空規則
-            bettingRules.level1 = {};
-            bettingRules.level2 = {};
-            bettingRules.level3 = {};
-            bettingRules.retreatPoints = {};
-            
-            // 根據提供的Excel表格規則生成
-            for (let i = 1; i <= 50; i++) {
-                // 計算關數基數：每2關為一組，第1-2關為第1組，第3-4關為第2組，依此類推
-                // 組數計算：ceil(i/2)
-                const group = Math.ceil(i / 2);
-                
-                // 1注：起步注碼 + (組數-1) * 每2關增量
-                // 例如：起步注碼=10，每2關+5，第1關=10，第3關=15，第5關=20...
-                bettingRules.level1[i] = baseBet + (group - 1) * incrementRate;
-                
-                // 2注：1注的2倍
-                bettingRules.level2[i] = bettingRules.level1[i] * 2;
-                
-                // 3注：2注的2倍（僅偶數關有）
-                if (i % 2 === 0) {
-                    bettingRules.level3[i] = bettingRules.level2[i] * 2;
-                }
-                
-                // 尾到開頭（回退點）規則 - 基於Excel表格
-                // 根據您提供的圖片，回退點規則如下：
-                if (i <= 6) {
-                    bettingRules.retreatPoints[i] = 1;
-                } else if (i === 7) {
-                    bettingRules.retreatPoints[i] = 3;
-                } else if (i === 8) {
-                    bettingRules.retreatPoints[i] = 1;
-                } else if (i === 9) {
-                    bettingRules.retreatPoints[i] = 5;
-                } else if (i === 10) {
-                    bettingRules.retreatPoints[i] = 3;
-                } else if (i === 11) {
-                    bettingRules.retreatPoints[i] = 7;
-                } else if (i === 12) {
-                    bettingRules.retreatPoints[i] = 5;
-                } else if (i === 13) {
-                    bettingRules.retreatPoints[i] = 9;
-                } else if (i === 14) {
-                    bettingRules.retreatPoints[i] = 7;
-                } else if (i === 15) {
-                    bettingRules.retreatPoints[i] = 11;
-                } else if (i === 16) {
-                    bettingRules.retreatPoints[i] = 9;
-                } else if (i === 17) {
-                    bettingRules.retreatPoints[i] = 13;
-                } else if (i === 18) {
-                    bettingRules.retreatPoints[i] = 11;
-                } else if (i === 19) {
-                    bettingRules.retreatPoints[i] = 15;
-                } else if (i === 20) {
-                    bettingRules.retreatPoints[i] = 13;
-                } else if (i === 21) {
-                    bettingRules.retreatPoints[i] = 17;
-                } else if (i === 22) {
-                    bettingRules.retreatPoints[i] = 15;
-                } else if (i === 23) {
-                    bettingRules.retreatPoints[i] = 19;
-                } else if (i === 24) {
-                    bettingRules.retreatPoints[i] = 17;
-                } else if (i === 25) {
-                    bettingRules.retreatPoints[i] = 21;
-                } else if (i === 26) {
-                    bettingRules.retreatPoints[i] = 19;
-                } else if (i === 27) {
-                    bettingRules.retreatPoints[i] = 23;
-                } else if (i === 28) {
-                    bettingRules.retreatPoints[i] = 21;
-                } else if (i === 29) {
-                    bettingRules.retreatPoints[i] = 25;
-                } else if (i === 30) {
-                    bettingRules.retreatPoints[i] = 23;
-                } else if (i === 31) {
-                    bettingRules.retreatPoints[i] = 27;
-                } else if (i === 32) {
-                    bettingRules.retreatPoints[i] = 25;
-                } else if (i === 33) {
-                    bettingRules.retreatPoints[i] = 29;
-                } else if (i === 34) {
-                    bettingRules.retreatPoints[i] = 27;
-                } else if (i === 35) {
-                    bettingRules.retreatPoints[i] = 31;
-                } else if (i === 36) {
-                    bettingRules.retreatPoints[i] = 29;
-                } else if (i === 37) {
-                    bettingRules.retreatPoints[i] = 33;
-                } else if (i === 38) {
-                    bettingRules.retreatPoints[i] = 31;
-                } else if (i === 39) {
-                    bettingRules.retreatPoints[i] = 35;
-                } else if (i === 40) {
-                    bettingRules.retreatPoints[i] = 33;
-                } else if (i === 41) {
-                    bettingRules.retreatPoints[i] = 37;
-                } else if (i === 42) {
-                    bettingRules.retreatPoints[i] = 35;
-                } else if (i === 43) {
-                    bettingRules.retreatPoints[i] = 39;
-                } else if (i === 44) {
-                    bettingRules.retreatPoints[i] = 37;
-                } else if (i === 45) {
-                    bettingRules.retreatPoints[i] = 41;
-                } else if (i === 46) {
-                    bettingRules.retreatPoints[i] = 39;
-                } else if (i === 47) {
-                    bettingRules.retreatPoints[i] = 43;
-                } else if (i === 48) {
-                    bettingRules.retreatPoints[i] = 41;
-                } else if (i === 49) {
-                    bettingRules.retreatPoints[i] = 45;
-                } else if (i === 50) {
-                    bettingRules.retreatPoints[i] = 43;
+                r = lastP.r + 1;
+                c = lastP.c;
+                if(r >= 6 || (matrix[c] && matrix[c][r])) {
+                    r = lastP.r;
+                    c = lastP.c + 1;
+                    isH = true;
                 }
             }
-            
-            // 儲存到sessionStorage
-            saveBettingRulesToStorage();
+        } else {
+            r = 0;
+            c = 0;
+            isH = false;
+            while(matrix[c] && matrix[c][0]) c++;
         }
+        
+        if(!matrix[c]) matrix[c] = Array(6).fill(null);
+        matrix[c][r] = res;
+        lastP = {r, c};
+        lastW = res;
+        results.push({r, c, type: res, tie: 0});
+    });
+    
+    return results;
+}
 
-        // 更新規則特定輸入框顯示
-        function updateRuleSpecificInputs() {
-            const selectedRule = bettingRuleSelect.value;
+// 渲染百家樂珠盤路
+function renderBaccaratBeadPlate() {
+    baccaratBeadPlateEl.innerHTML = '';
+    const cols = Math.max(28, Math.ceil(baccaratHistory.length / 6) + 1);
+    baccaratBeadPlateEl.style.gridTemplateColumns = `repeat(${cols}, 36px)`;
+    
+    // 創建所有格子
+    for(let i = 0; i < cols * 6; i++) {
+        const cell = document.createElement('div');
+        cell.className = 'cell';
+        baccaratBeadPlateEl.appendChild(cell);
+    }
+    
+    // 填充資料
+    baccaratHistory.forEach((type, index) => {
+        const col = Math.floor(index / 6);
+        const row = index % 6;
+        const targetIndex = col * 6 + row;
+        
+        if (targetIndex >= 0 && targetIndex < baccaratBeadPlateEl.children.length) {
+            const cell = baccaratBeadPlateEl.children[targetIndex];
             
-            // 隱藏所有規則特定輸入框
-            incrementRateGroup.classList.remove('active');
-            wPlusGroup.classList.remove('active');
-            lPlusGroup.classList.remove('active');
-            
-            // 根據選擇的規則顯示對應的輸入框
-            if (selectedRule === 'rule1') {
-                incrementRateGroup.classList.add('active');
-            } else if (selectedRule === 'rule2') {
-                wPlusGroup.classList.add('active');
-                lPlusGroup.classList.add('active');
-            }
-            // rule3 目前沒有特定輸入框
-        }
-
-        // 儲存投注規則到sessionStorage
-        function saveBettingRulesToStorage() {
-            sessionStorage.setItem('bettingSimulation_rules', JSON.stringify(bettingRules));
-            sessionStorage.setItem('bettingSimulation_config', JSON.stringify({
-                baseBet: parseInt(baseBetInput.value) || 10,
-                incrementRate: parseInt(incrementRateInput.value) || 5
-            }));
-        }
-
-        // 從sessionStorage載入投注規則
-        function loadBettingRulesFromStorage() {
-            const savedRules = sessionStorage.getItem('bettingSimulation_rules');
-            const savedConfig = sessionStorage.getItem('bettingSimulation_config');
-            
-            if (savedRules) {
-                bettingRules = JSON.parse(savedRules);
-            }
-            
-            if (savedConfig) {
-                const config = JSON.parse(savedConfig);
-                baseBetInput.value = config.baseBet;
-                incrementRateInput.value = config.incrementRate;
-            }
-        }
-
-        // 設定事件監聽器
-        function setupEventListeners() {
-            // 模式切換
-            randomModeBtn.addEventListener('click', () => switchMode('random'));
-            manualModeBtn.addEventListener('click', () => switchMode('manual'));
-            
-            // 規則選擇變化
-            bettingRuleSelect.addEventListener('change', updateRuleSpecificInputs);
-            
-            // 多模擬複選框
-            multiSimulationCheckbox.addEventListener('change', function() {
-                simulationTimesInput.style.display = this.checked ? 'inline-block' : 'none';
-                // 勾選時確保數值為1
-                if (this.checked && (!simulationTimesInput.value || parseInt(simulationTimesInput.value) < 1)) {
-                    simulationTimesInput.value = '1';
-                }
-                updateStopButtonVisibility();
-            });
-            
-            // 模擬次數輸入框變化
-            simulationTimesInput.addEventListener('input', updateStopButtonVisibility);
-            
-            // 參數變化時更新投注規則
-            baseBetInput.addEventListener('change', initBettingRules);
-            incrementRateInput.addEventListener('change', initBettingRules);
-            
-            // 按鈕事件
-            runSimulationBtn.addEventListener('click', runSimulation);
-            resetBtn.addEventListener('click', resetForm);
-            stopSimulationBtn.addEventListener('click', stopSimulationHandler);
-            copyToManualBtn.addEventListener('click', copyToManualHandler);
-            
-            // 百家樂系統事件
-            baccaratBtn.addEventListener('click', showBaccaratSystem);
-            closeBaccaratBtn.addEventListener('click', hideBaccaratSystem);
-            
-            // 百家樂鍵盤快捷鍵
-            document.addEventListener('keydown', handleBaccaratKeyboard);
-            
-            // 從sessionStorage載入資料
-            loadBettingRulesFromStorage();
-            loadFormDataFromStorage();
-            
-            // 載入百家樂歷史
-            loadBaccaratHistory();
-        }
-
-        // 顯示百家樂系統
-        function showBaccaratSystem() {
-            if (!isLoggedIn) {
-                showMessage('請先登入系統', 'warning');
-                return;
-            }
-            
-            if (simulationResults.length === 0 || !simulationResults[0].rounds || simulationResults[0].rounds.length === 0) {
-                showMessage('請先執行模擬', 'warning');
-                return;
-            }
-            
-            // 自動轉換模擬結果為百家樂序列
-            convertToBaccarat();
-            
-            baccaratOverlay.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // 防止背景滾動
-        }
-
-        // 隱藏百家樂系統
-        function hideBaccaratSystem() {
-            baccaratOverlay.style.display = 'none';
-            document.body.style.overflow = 'auto'; // 恢復滾動
-        }
-
-        // 處理百家樂鍵盤快捷鍵
-        function handleBaccaratKeyboard(e) {
-            // 只有在百家樂系統顯示時才處理
-            if (baccaratOverlay.style.display !== 'block') return;
-            
-            if (e.key === '1' || e.key === 'b' || e.key === 'B') {
-                addBaccaratResult('B');
-                e.preventDefault();
-            } else if (e.key === '2' || e.key === 'p' || e.key === 'P') {
-                addBaccaratResult('P');
-                e.preventDefault();
-            } else if (e.key === '3' || e.key === 't' || e.key === 'T') {
-                addBaccaratResult('T');
-                e.preventDefault();
-            } else if (e.key === 'Backspace') {
-                undoBaccaratResult();
-                e.preventDefault();
-            } else if (e.key === 'Escape') {
-                hideBaccaratSystem();
-                e.preventDefault();
-            }
-        }
-
-        // 將模擬結果轉換為百家樂序列
-        function convertToBaccarat() {
-            const result = simulationResults[0];
-            const rounds = result.rounds;
-            
-            // 清空歷史
-            baccaratHistory = [];
-            
-            // 轉換A/B為庄/閒 (A=庄, B=閒)
-            rounds.forEach(round => {
-                if (round.result === 'A') {
-                    baccaratHistory.push('B'); // A -> 庄
-                } else if (round.result === 'B') {
-                    baccaratHistory.push('P'); // B -> 閒
-                }
-            });
-            
-            // 更新顯示
-            updateBaccaratDisplay();
-            saveBaccaratHistory();
-        }
-
-        // 更新百家樂顯示
-        function updateBaccaratDisplay() {
-            // 渲染大路
-            renderBaccaratBigRoad();
-            
-            // 渲染珠盤路
-            renderBaccaratBeadPlate();
-        }
-
-        // 獲取百家樂結果名稱
-        function getBaccaratResultName(result) {
-            switch(result) {
-                case 'B': return '庄';
-                case 'P': return '閒';
-                case 'T': return '和';
-                default: return '?';
-            }
-        }
-
-        // 渲染百家樂大路
-        function renderBaccaratBigRoad() {
-            const bigRoadData = getBigRoadDataForBaccarat(baccaratHistory);
-            baccaratBigRoadEl.innerHTML = '';
-            
-            const maxC = Math.max(30, bigRoadData.reduce((acc, d) => Math.max(acc, d.c), 0) + 5);
-            baccaratBigRoadEl.style.gridTemplateColumns = `repeat(${maxC + 1}, 32px)`;
-            
-            // 創建所有格子
-            for(let i = 0; i < (maxC + 1) * 6; i++) {
-                const cell = document.createElement('div');
-                cell.className = 'cell';
-                baccaratBigRoadEl.appendChild(cell);
-            }
-            
-            // 填充資料
-            bigRoadData.forEach(d => {
-                const targetIndex = d.c * 6 + d.r;
-                if (targetIndex >= 0 && targetIndex < baccaratBigRoadEl.children.length) {
-                    const target = baccaratBigRoadEl.children[targetIndex];
-                    
-                    // 畫庄/閒圈
-                    const circ = document.createElement('div');
-                    circ.className = `big-circle ${d.type}`;
-                    target.appendChild(circ);
-                    
-                    // 畫和局斜線與數字
-                    if(d.tie > 0) {
-                        const slash = document.createElement('div');
-                        slash.className = 'tie-slash';
-                        target.appendChild(slash);
-                        
-                        if(d.tie > 1) {
-                            const num = document.createElement('div');
-                            num.className = 'tie-num';
-                            num.innerText = d.tie;
-                            target.appendChild(num);
-                        }
-                    }
-                }
-            });
-        }
-
-        // 為百家樂歷史生成大路資料
-        function getBigRoadDataForBaccarat(input) {
-            let matrix = [], results = [], lastW = null, lastP = {r:0, c:0}, isH = false;
-            
-            input.forEach(res => {
-                if (res === 'T') { 
-                    if (results.length > 0) results[results.length-1].tie++; 
-                    return; 
-                }
+            if(type) {
+                const bead = document.createElement('div');
+                bead.className = `bead ${type}`;
                 
-                let r, c;
-                if (!lastW) { 
-                    r = 0; 
-                    c = 0; 
-                } else if (res === lastW) {
-                    if (isH) { 
-                        r = lastP.r; 
-                        c = lastP.c + 1; 
-                    } else { 
-                        r = lastP.r + 1; 
-                        c = lastP.c; 
-                        if(r >= 6 || (matrix[c] && matrix[c][r])) { 
-                            r = lastP.r; 
-                            c = lastP.c + 1; 
-                            isH = true; 
-                        } 
-                    }
-                } else { 
-                    r = 0; 
-                    c = 0; 
-                    isH = false; 
-                    while(matrix[c] && matrix[c][0]) c++; 
-                }
+                if (type === 'B') bead.innerText = '庄';
+                else if (type === 'P') bead.innerText = '閒';
+                else if (type === 'T') bead.innerText = '和';
                 
-                if(!matrix[c]) matrix[c] = Array(6).fill(null);
-                matrix[c][r] = res; 
-                lastP = {r, c}; 
-                lastW = res;
-                results.push({r, c, type: res, tie: 0});
-            });
-            
-            return results;
-        }
-
-        // 渲染百家樂珠盤路
-        function renderBaccaratBeadPlate() {
-            baccaratBeadPlateEl.innerHTML = '';
-            const cols = Math.max(28, Math.ceil(baccaratHistory.length / 6) + 1);
-            baccaratBeadPlateEl.style.gridTemplateColumns = `repeat(${cols}, 36px)`;
-            
-            // 創建所有格子
-            for(let i = 0; i < cols * 6; i++) {
-                const cell = document.createElement('div');
-                cell.className = 'cell';
-                baccaratBeadPlateEl.appendChild(cell);
-            }
-            
-            // 填充資料
-            baccaratHistory.forEach((type, index) => {
-                const col = Math.floor(index / 6);
-                const row = index % 6;
-                const targetIndex = col * 6 + row;
-                
-                if (targetIndex >= 0 && targetIndex < baccaratBeadPlateEl.children.length) {
-                    const cell = baccaratBeadPlateEl.children[targetIndex];
-                    
-                    if(type) {
-                        const bead = document.createElement('div');
-                        bead.className = `bead ${type}`;
-                        
-                        if (type === 'B') bead.innerText = '庄';
-                        else if (type === 'P') bead.innerText = '閒';
-                        else if (type === 'T') bead.innerText = '和';
-                        
-                        cell.appendChild(bead);
-                    }
-                }
-            });
-        }
-
-        // 添加百家樂結果
-        function addBaccaratResult(type) {
-            baccaratHistory.push(type);
-            updateBaccaratDisplay();
-            saveBaccaratHistory();
-        }
-
-        // 撤銷最後一個百家樂結果
-        function undoBaccaratResult() {
-            if (baccaratHistory.length > 0) {
-                baccaratHistory.pop();
-                updateBaccaratDisplay();
-                saveBaccaratHistory();
+                cell.appendChild(bead);
             }
         }
+    });
+}
 
-        // 重置百家樂
-        function resetBaccarat() {
-            if (confirm('重設路紙？')) {
-                baccaratHistory = [];
-                updateBaccaratDisplay();
-                saveBaccaratHistory();
-            }
+// 添加百家樂結果
+function addBaccaratResult(type) {
+    baccaratHistory.push(type);
+    updateBaccaratDisplay();
+    saveBaccaratHistory();
+}
+
+// 撤銷最後一個百家樂結果
+function undoBaccaratResult() {
+    if (baccaratHistory.length > 0) {
+        baccaratHistory.pop();
+        updateBaccaratDisplay();
+        saveBaccaratHistory();
+    }
+}
+
+// 重置百家樂
+function resetBaccarat() {
+    if (confirm('重設路紙？')) {
+        baccaratHistory = [];
+        updateBaccaratDisplay();
+        saveBaccaratHistory();
+    }
+}
+
+// 複製百家樂序列
+function copyBaccaratSequence() {
+    const sequenceText = baccaratHistory.map((result, index) => {
+        return `${index + 1}: ${getBaccaratResultName(result)}`;
+    }).join('\n');
+    
+    navigator.clipboard.writeText(sequenceText).then(() => {
+        showMessage('百家樂序列已複製到剪貼簿', 'success');
+    }).catch(err => {
+        console.error('複製失敗:', err);
+        showMessage('複製失敗，請手動複製', 'error');
+    });
+}
+
+// 儲存百家樂歷史到sessionStorage
+function saveBaccaratHistory() {
+    sessionStorage.setItem('baccarat_history', JSON.stringify(baccaratHistory));
+}
+
+// 從sessionStorage載入百家樂歷史
+function loadBaccaratHistory() {
+    const savedHistory = sessionStorage.getItem('baccarat_history');
+    if (savedHistory) {
+        baccaratHistory = JSON.parse(savedHistory);
+        // 不需要立即更新顯示，會在需要時更新
+    }
+}
+
+// 一鍵COPY處理函數
+function copyToManualHandler() {
+    if (simulationResults.length === 0 || !simulationResults[0].rounds || simulationResults[0].rounds.length === 0) {
+        showMessage('請先執行隨機模擬，才能複製結果', 'warning');
+        return;
+    }
+    
+    const result = simulationResults[0];
+    
+    // 提取所有A/B/C結果並轉換為一行字符串
+    const abSequence = result.rounds.map(round => round.result).join('');
+    
+    // 複製到剪貼簿
+    navigator.clipboard.writeText(abSequence).then(() => {
+        // 切換到手動模式
+        switchMode('manual');
+        
+        // 將結果貼到文字框中（一行格式）
+        manualSequenceTextarea.value = abSequence;
+        
+        showMessage('A/B/C序列已複製並切換到手動模式！', 'success');
+    }).catch(err => {
+        console.error('複製失敗:', err);
+        // 如果剪貼簿API失敗，使用舊方法
+        manualSequenceTextarea.focus();
+        manualSequenceTextarea.select();
+        try {
+            document.execCommand('copy');
+            // 切換到手動模式
+            switchMode('manual');
+            // 將結果貼到文字框中（一行格式）
+            manualSequenceTextarea.value = abSequence;
+            showMessage('A/B/C序列已複製並切換到手動模式！', 'success');
+        } catch (e) {
+            showMessage('複製失敗，請手動複製結果', 'error');
         }
+    });
+}
 
-        // 複製百家樂序列
-        function copyBaccaratSequence() {
-            const sequenceText = baccaratHistory.map((result, index) => {
-                return `${index + 1}: ${getBaccaratResultName(result)}`;
-            }).join('\n');
-            
-            navigator.clipboard.writeText(sequenceText).then(() => {
-                showMessage('百家樂序列已複製到剪貼簿', 'success');
-            }).catch(err => {
-                console.error('複製失敗:', err);
-                showMessage('複製失敗，請手動複製', 'error');
-            });
-        }
+// 切換模式
+function switchMode(mode) {
+    currentMode = mode;
+    updateUIForMode();
+    
+    // 更新按鈕啟動狀態
+    randomModeBtn.classList.toggle('active', mode === 'random');
+    manualModeBtn.classList.toggle('active', mode === 'manual');
+    
+    // 儲存模式到sessionStorage
+    sessionStorage.setItem('bettingSimulation_mode', mode);
+    
+    // 儲存當前表單資料
+    saveFormDataToStorage();
+}
 
-        // 儲存百家樂歷史到sessionStorage
-        function saveBaccaratHistory() {
-            sessionStorage.setItem('baccarat_history', JSON.stringify(baccaratHistory));
-        }
+// 根據當前模式更新UI
+function updateUIForMode() {
+    if (currentMode === 'random') {
+        totalRoundsLabel.textContent = '局數';
+        totalRoundsInput.style.display = 'block';
+        multiSimulationGroup.style.display = 'flex';
+        manualInputArea.classList.remove('active');
+    } else {
+        totalRoundsLabel.textContent = '手動輸入結果';
+        totalRoundsInput.style.display = 'none';
+        multiSimulationGroup.style.display = 'none';
+        manualInputArea.classList.add('active');
+    }
+    
+    // 更新停止按鈕可見性
+    updateStopButtonVisibility();
+}
 
-        // 從sessionStorage載入百家樂歷史
-        function loadBaccaratHistory() {
-            const savedHistory = sessionStorage.getItem('baccarat_history');
-            if (savedHistory) {
-                baccaratHistory = JSON.parse(savedHistory);
-                // 不需要立即更新顯示，會在需要時更新
-            }
-        }
+// 更新停止按鈕可見性
+function updateStopButtonVisibility() {
+    if (currentMode === 'random' &&
+        multiSimulationCheckbox.checked &&
+        parseInt(simulationTimesInput.value) > 100) {
+        stopBtnContainer.classList.add('active');
+    } else {
+        stopBtnContainer.classList.remove('active');
+    }
+}
 
-        // 一鍵COPY處理函數
-        function copyToManualHandler() {
-            if (simulationResults.length === 0 || !simulationResults[0].rounds || simulationResults[0].rounds.length === 0) {
-                showMessage('請先執行隨機模擬，才能複製結果', 'warning');
-                return;
-            }
-            
-            const result = simulationResults[0];
-            
-            // 提取所有A/B結果並轉換為一行字符串
-            const abSequence = result.rounds.map(round => round.result).join('');
-            
-            // 複製到剪貼簿
-            navigator.clipboard.writeText(abSequence).then(() => {
-                // 切換到手動模式
-                switchMode('manual');
-                
-                // 將結果貼到文字框中（一行格式）
-                manualSequenceTextarea.value = abSequence;
-                
-                showMessage('A/B序列已複製並切換到手動模式！', 'success');
-            }).catch(err => {
-                console.error('複製失敗:', err);
-                // 如果剪貼簿API失敗，使用舊方法
-                manualSequenceTextarea.focus();
-                manualSequenceTextarea.select();
-                try {
-                    document.execCommand('copy');
-                    // 切換到手動模式
-                    switchMode('manual');
-                    // 將結果貼到文字框中（一行格式）
-                    manualSequenceTextarea.value = abSequence;
-                    showMessage('A/B序列已複製並切換到手動模式！', 'success');
-                } catch (e) {
-                    showMessage('複製失敗，請手動複製結果', 'error');
-                }
-            });
-        }
-
-        // 切換模式
-        function switchMode(mode) {
-            currentMode = mode;
-            updateUIForMode();
-            
-            // 更新按鈕啟動狀態
-            randomModeBtn.classList.toggle('active', mode === 'random');
-            manualModeBtn.classList.toggle('active', mode === 'manual');
-            
-            // 儲存模式到sessionStorage
-            sessionStorage.setItem('bettingSimulation_mode', mode);
-            
-            // 儲存當前表單資料
-            saveFormDataToStorage();
-        }
-
-        // 根據當前模式更新UI
-        function updateUIForMode() {
+// 執行模擬
+async function runSimulation() {
+    if (!isLoggedIn) {
+        showMessage('請先登入系統', 'warning');
+        return;
+    }
+    
+    if (isSimulating) return;
+    
+    // 驗證輸入
+    if (!validateInputs()) return;
+    
+    isSimulating = true;
+    stopSimulation = false;
+    runSimulationBtn.disabled = true;
+    runSimulationBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 模擬中...';
+    
+    // 獲取參數
+    const totalRounds = parseInt(totalRoundsInput.value) || 100;
+    const initialCapital = parseFloat(initialCapitalInput.value) || 1000;
+    const simulationTimes = multiSimulationCheckbox.checked ? parseInt(simulationTimesInput.value) || 1 : 1;
+    const selectedRule = bettingRuleSelect.value;
+    
+    // 儲存表單資料到sessionStorage
+    saveFormDataToStorage();
+    
+    // 初始化投注規則（僅規則一需要）
+    if (selectedRule === 'rule1') {
+        initBettingRules();
+    }
+    
+    // 清除之前的結果
+    clearResults();
+    
+    if (simulationTimes > 1) {
+        // 批次模擬
+        await runBatchSimulation(totalRounds, initialCapital, simulationTimes, selectedRule);
+    } else {
+        // 單次模擬
+        const result = currentMode === 'random'
+            ? runRandomSimulation(totalRounds, initialCapital, selectedRule)
+            : runManualSimulation(initialCapital, selectedRule);
+        
+        if (result) {
+            simulationResults = [result];
+            // 如果是隨機模擬，儲存結果以便複製
             if (currentMode === 'random') {
-                totalRoundsLabel.textContent = '局數';
-                totalRoundsInput.style.display = 'block';
-                multiSimulationGroup.style.display = 'flex';
-                manualInputArea.classList.remove('active');
+                lastRandomResults = result.rounds.map(round => round.result);
+            }
+            displayResults(result);
+        }
+    }
+    
+    isSimulating = false;
+    runSimulationBtn.disabled = false;
+    runSimulationBtn.innerHTML = '<i class="fas fa-play-circle"></i> RUN';
+    
+    // 隱藏停止按鈕
+    stopBtnContainer.classList.remove('active');
+}
+
+// 執行隨機模擬
+function runRandomSimulation(totalRounds, initialCapital, selectedRule) {
+    // 根據選擇的規則進行模擬
+    if (selectedRule === 'rule1') {
+        return runRule1Simulation(totalRounds, initialCapital);
+    } else if (selectedRule === 'rule2') {
+        return runRule2Simulation(totalRounds, initialCapital);
+    } else {
+        // 規則三（暫未實現）
+        return runRule1Simulation(totalRounds, initialCapital); // 暫用規則一
+    }
+}
+
+// 生成隨機結果（包含A, B, C）
+function generateRandomResult() {
+    const random = Math.random();
+    if (random < 0.45) { // 45% 概率 A
+        return 'A';
+    } else if (random < 0.9) { // 45% 概率 B
+        return 'B';
+    } else { // 10% 概率 C
+        return 'C';
+    }
+}
+
+// 查找最近的非C結果（用於繼承）
+function findLastNonCResult(rounds, currentIndex) {
+    // 從當前索引向前查找，直到找到非C的結果
+    for (let i = currentIndex - 1; i >= 0; i--) {
+        if (rounds[i].result !== 'C') {
+            return rounds[i].result;
+        }
+    }
+    // 如果前面都是C，返回A作為默認值
+    return 'A';
+}
+
+// 規則一模擬
+function runRule1Simulation(totalRounds, initialCapital) {
+    // 1. 生成B列（局數）和C列（隨機A/B/C結果）
+    const rounds = [];
+    for (let i = 1; i <= totalRounds; i++) {
+        rounds.push({
+            round: i,
+            result: generateRandomResult(),
+            protectMark: 'V', // 預設有保護標記
+            betAmount: 0,
+            outcome: '',
+            profitLoss: 0,
+            cumulativeBalance: initialCapital,
+            currentGuan: 0,
+            currentLevel: 0,
+            winStreakState: 0 // 用於記錄連勝狀態
+        });
+    }
+    
+    // 2. 生成F列（勝負）- 修改：當開出C時，向前追溯到第一個非C的結果來繼承
+    for (let i = 0; i < totalRounds; i++) {
+        if (i < totalRounds - 1) {
+            // 有下一局可以比較
+            let currentResult = rounds[i].result;
+            const nextResult = rounds[i + 1].result;
+            
+            // 如果當前局是C，則向前追溯到第一個非C的結果來繼承
+            if (currentResult === 'C') {
+                currentResult = findLastNonCResult(rounds, i);
+            }
+            
+            if (nextResult === 'C') {
+                // 下一局的結果是C，即為T（和局）
+                rounds[i].outcome = 'T';
+            } else if (currentResult === nextResult) {
+                // A=A 或 B=B，相同則為W
+                rounds[i].outcome = 'W';
             } else {
-                totalRoundsLabel.textContent = '手動輸入結果';
-                totalRoundsInput.style.display = 'none';
-                multiSimulationGroup.style.display = 'none';
-                manualInputArea.classList.add('active');
+                // A≠A 或 B≠B，不同則為L
+                rounds[i].outcome = 'L';
             }
-            
-            // 更新停止按鈕可見性
-            updateStopButtonVisibility();
+        } else {
+            // 最後一局沒有下一局可比較，結果為空
+            rounds[i].outcome = '';
         }
-
-        // 更新停止按鈕可見性
-        function updateStopButtonVisibility() {
-            if (currentMode === 'random' && 
-                multiSimulationCheckbox.checked && 
-                parseInt(simulationTimesInput.value) > 100) {
-                stopBtnContainer.classList.add('active');
-            } else {
-                stopBtnContainer.classList.remove('active');
-            }
-        }
-
-        // 執行模擬
-        async function runSimulation() {
-            if (!isLoggedIn) {
-                showMessage('請先登入系統', 'warning');
-                return;
-            }
+    }
+    
+    // 3. 修改保護規則：連續3個L時，清除下一個V標記（和局不參與計算）
+    if (totalRounds >= 4) {
+        for (let i = 2; i < totalRounds - 1; i++) {
+            // 檢查連續3個L，跳過和局
+            let consecutiveL = 0;
+            let checkIndex = i;
             
-            if (isSimulating) return;
-            
-            // 驗證輸入
-            if (!validateInputs()) return;
-            
-            isSimulating = true;
-            stopSimulation = false;
-            runSimulationBtn.disabled = true;
-            runSimulationBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 模擬中...';
-            
-            // 獲取參數
-            const totalRounds = parseInt(totalRoundsInput.value) || 100;
-            const initialCapital = parseFloat(initialCapitalInput.value) || 1000;
-            const simulationTimes = multiSimulationCheckbox.checked ? parseInt(simulationTimesInput.value) || 1 : 1;
-            const selectedRule = bettingRuleSelect.value;
-            
-            // 儲存表單資料到sessionStorage
-            saveFormDataToStorage();
-            
-            // 初始化投注規則（僅規則一需要）
-            if (selectedRule === 'rule1') {
-                initBettingRules();
-            }
-            
-            // 清除之前的結果
-            clearResults();
-            
-            if (simulationTimes > 1) {
-                // 批次模擬
-                await runBatchSimulation(totalRounds, initialCapital, simulationTimes, selectedRule);
-            } else {
-                // 單次模擬
-                const result = currentMode === 'random' 
-                    ? runRandomSimulation(totalRounds, initialCapital, selectedRule)
-                    : runManualSimulation(initialCapital, selectedRule);
-                
-                if (result) {
-                    simulationResults = [result];
-                    // 如果是隨機模擬，儲存結果以便複製
-                    if (currentMode === 'random') {
-                        lastRandomResults = result.rounds.map(round => round.result);
-                    }
-                    displayResults(result);
-                }
-            }
-            
-            isSimulating = false;
-            runSimulationBtn.disabled = false;
-            runSimulationBtn.innerHTML = '<i class="fas fa-play-circle"></i> RUN';
-            
-            // 隱藏停止按鈕
-            stopBtnContainer.classList.remove('active');
-        }
-
-        // 執行隨機模擬
-        function runRandomSimulation(totalRounds, initialCapital, selectedRule) {
-            // 根據選擇的規則進行模擬
-            if (selectedRule === 'rule1') {
-                return runRule1Simulation(totalRounds, initialCapital);
-            } else if (selectedRule === 'rule2') {
-                return runRule2Simulation(totalRounds, initialCapital);
-            } else {
-                // 規則三（暫未實現）
-                return runRule1Simulation(totalRounds, initialCapital); // 暫用規則一
-            }
-        }
-
-        // 規則一模擬
-        function runRule1Simulation(totalRounds, initialCapital) {
-            // 1. 生成B列（局數）和C列（隨機A/B結果）
-            const rounds = [];
-            for (let i = 1; i <= totalRounds; i++) {
-                rounds.push({
-                    round: i,
-                    result: Math.random() >= 0.5 ? 'A' : 'B',
-                    protectMark: 'V', // 預設有保護標記
-                    betAmount: 0,
-                    outcome: '',
-                    profitLoss: 0,
-                    cumulativeBalance: initialCapital,
-                    currentGuan: 0,
-                    currentLevel: 0
-                });
-            }
-            
-            // 2. 生成F列（勝負）
-            for (let i = 0; i < totalRounds - 1; i++) {
-                if (rounds[i].result === rounds[i + 1].result) {
-                    rounds[i].outcome = 'W'; // 相同 → 贏
-                } else {
-                    rounds[i].outcome = 'L'; // 不同 → 輸
-                }
-            }
-            
-            // 3. 修改保護規則：連續3個L時，清除下一個V標記（原本是4個L）
-            if (totalRounds >= 4) {
-                for (let i = 2; i < totalRounds - 1; i++) {
-                    let isThreeL = true;
-                    
-                    for (let k = 0; k <= 2; k++) {
-                        if (rounds[i - k].outcome !== 'L') {
-                            isThreeL = false;
-                            break;
-                        }
-                    }
-                    
-                    if (isThreeL) {
-                        rounds[i + 1].protectMark = ''; // 清除V標記
-                    }
-                }
-            }
-            
-            // 4. D欄沒有V時，對應的F欄清空
-            for (let i = 0; i < totalRounds; i++) {
-                if (rounds[i].protectMark !== 'V') {
-                    rounds[i].outcome = '';
-                }
-            }
-            
-            // 5. 生成E欄：投注金額（基於Excel表格的三注數投注系統）
-            // 按照原VBA代碼邏輯
-            let currentGuan = 1;
-            let currentLevel = 1;
-            let winStreak = 0;
-            
-            for (let i = 0; i < totalRounds; i++) {
-                const round = rounds[i];
-                
-                // 記錄當前關數和注數
-                round.currentGuan = currentGuan;
-                round.currentLevel = currentLevel;
-                
-                // 如果沒有V標記或沒有勝負結果，清除投注金額
-                if (round.protectMark !== 'V' || (round.outcome !== 'W' && round.outcome !== 'L')) {
-                    round.betAmount = 0;
+            // 向前檢查最多3局，跳過和局
+            while (checkIndex >= 0 && consecutiveL < 3) {
+                if (rounds[checkIndex].outcome === 'L') {
+                    consecutiveL++;
+                } else if (rounds[checkIndex].outcome === 'T') {
+                    // 和局不影響連續計算，繼續向前檢查
+                    checkIndex--;
                     continue;
-                }
-                
-                // 限制關數在1-50之間
-                if (currentGuan > 50) currentGuan = 50;
-                
-                // 根據當前注數和關數確定投注金額
-                let betAmount = 0;
-                
-                switch (currentLevel) {
-                    case 1:
-                        if (bettingRules.level1[currentGuan]) {
-                            betAmount = bettingRules.level1[currentGuan];
-                        }
-                        break;
-                    case 2:
-                        if (bettingRules.level2[currentGuan]) {
-                            betAmount = bettingRules.level2[currentGuan];
-                        }
-                        break;
-                    case 3:
-                        // 注數3僅在偶數關有效
-                        if (currentGuan % 2 === 0 && bettingRules.level3[currentGuan]) {
-                            betAmount = bettingRules.level3[currentGuan];
-                        } else {
-                            // 如果當前是奇數關但注數是3，則使用注數2
-                            betAmount = bettingRules.level2[currentGuan] || 0;
-                        }
-                        break;
-                }
-                
-                if (betAmount > 0) {
-                    round.betAmount = betAmount;
                 } else {
-                    round.betAmount = 0;
-                }
-                
-                // 更新連勝與關數 - 按照原VBA代碼邏輯
-                if (round.outcome === 'W') {
-                    winStreak = winStreak + 1;
-                    
-                    if (currentGuan % 2 === 1) {
-                        // 奇數關
-                        if (winStreak >= 2 && currentLevel === 2) {
-                            // 檢查是否有回退點
-                            if (bettingRules.retreatPoints[currentGuan]) {
-                                const retroTo = bettingRules.retreatPoints[currentGuan];
-                                if (retroTo >= 1 && retroTo <= 50) {
-                                    currentGuan = retroTo;
-                                    currentLevel = 1;
-                                    winStreak = 0;
-                                }
-                            } else {
-                                // 沒有回退點，繼續提升注數
-                                if (currentLevel < 3) currentLevel = currentLevel + 1;
-                            }
-                        } else {
-                            // 不滿足回退條件，提升注數
-                            if (currentLevel < 3) currentLevel = currentLevel + 1;
-                        }
-                    } else {
-                        // 偶數關
-                        if (winStreak >= 3 && currentLevel === 3) {
-                            // 檢查是否有回退點
-                            if (bettingRules.retreatPoints[currentGuan]) {
-                                const retroTo = bettingRules.retreatPoints[currentGuan];
-                                if (retroTo >= 1 && retroTo <= 50) {
-                                    currentGuan = retroTo;
-                                    currentLevel = 1;
-                                    winStreak = 0;
-                                }
-                            }
-                            // 偶數關注數3是最後一級，不回退也不提升
-                        } else {
-                            // 不滿足回退條件，提升注數
-                            if (currentLevel < 3) currentLevel = currentLevel + 1;
-                        }
-                    }
-                } else {
-                    // 輸了，重置：關數+1，注數回1，連勝歸0
-                    winStreak = 0;
-                    currentGuan = currentGuan + 1;
-                    currentLevel = 1;
-                }
-            }
-            
-            // 6. 生成G欄：單局盈虧
-            let balance = initialCapital;
-            let sumWin = 0;
-            let sumSpecialWin = 0;
-            
-            for (let i = 0; i < totalRounds; i++) {
-                const round = rounds[i];
-                
-                if (round.protectMark !== 'V' || round.betAmount === 0) {
-                    round.profitLoss = 0;
-                    round.cumulativeBalance = balance;
-                    continue;
-                }
-                
-                if (round.outcome === 'W') {
-                    if (round.result === 'A') {
-                        // A贏扣5%
-                        round.profitLoss = round.betAmount * 0.95;
-                        sumSpecialWin += round.betAmount;
-                    } else {
-                        round.profitLoss = round.betAmount;
-                    }
-                    sumWin += round.profitLoss;
-                } else {
-                    round.profitLoss = -round.betAmount;
-                }
-                
-                balance += round.profitLoss;
-                round.cumulativeBalance = balance;
-            }
-            
-            // 7. 計算統計結果
-            const finalBalance = balance;
-            const feeFromAWins = sumSpecialWin * 0.05;
-            
-            // 儲存A/B結果以便複製
-            lastRandomResults = rounds.map(round => round.result);
-            
-            return {
-                rounds: rounds,
-                finalBalance: finalBalance,
-                totalWin: sumWin,
-                feeFromAWins: feeFromAWins,
-                totalRounds: totalRounds,
-                initialCapital: initialCapital,
-                ruleUsed: 'rule1'
-            };
-        }
-
-        // 規則二模擬（簡化版本，根據W+和L+值調整）
-        function runRule2Simulation(totalRounds, initialCapital) {
-            // 1. 生成B列（局數）和C列（隨機A/B結果）
-            const rounds = [];
-            for (let i = 1; i <= totalRounds; i++) {
-                rounds.push({
-                    round: i,
-                    result: Math.random() >= 0.5 ? 'A' : 'B',
-                    protectMark: 'V', // 預設有保護標記
-                    betAmount: 0,
-                    outcome: '',
-                    profitLoss: 0,
-                    cumulativeBalance: initialCapital,
-                    currentGuan: 0,
-                    currentLevel: 0
-                });
-            }
-            
-            // 2. 生成F列（勝負）
-            for (let i = 0; i < totalRounds - 1; i++) {
-                if (rounds[i].result === rounds[i + 1].result) {
-                    rounds[i].outcome = 'W'; // 相同 → 贏
-                } else {
-                    rounds[i].outcome = 'L'; // 不同 → 輸
-                }
-            }
-            
-            // 3. 修改保護規則：連續3個L時，清除下一個V標記（原本是4個L）
-            if (totalRounds >= 4) {
-                for (let i = 2; i < totalRounds - 1; i++) {
-                    let isThreeL = true;
-                    
-                    for (let k = 0; k <= 2; k++) {
-                        if (rounds[i - k].outcome !== 'L') {
-                            isThreeL = false;
-                            break;
-                        }
-                    }
-                    
-                    if (isThreeL) {
-                        rounds[i + 1].protectMark = ''; // 清除V標記
-                    }
-                }
-            }
-            
-            // 4. D欄沒有V時，對應的F欄清空
-            for (let i = 0; i < totalRounds; i++) {
-                if (rounds[i].protectMark !== 'V') {
-                    rounds[i].outcome = '';
-                }
-            }
-            
-            // 5. 獲取W+和L+值
-            const wPlusValue = wPlusInput.value.trim();
-            const lPlusValue = lPlusInput.value.trim();
-            
-            // 6. 生成E欄：投注金額（簡化規則二邏輯）
-            let currentGuan = 1;
-            let currentLevel = 1;
-            let winStreak = 0;
-            const baseBet = parseInt(baseBetInput.value) || 10;
-            
-            for (let i = 0; i < totalRounds; i++) {
-                const round = rounds[i];
-                
-                // 記錄當前關數和注數
-                round.currentGuan = currentGuan;
-                round.currentLevel = currentLevel;
-                
-                // 如果沒有V標記或沒有勝負結果，清除投注金額
-                if (round.protectMark !== 'V' || (round.outcome !== 'W' && round.outcome !== 'L')) {
-                    round.betAmount = 0;
-                    continue;
-                }
-                
-                // 根據規則二計算投注金額（簡化版本）
-                let betAmount = 0;
-                
-                // 這裡可以根據W+和L+值來調整投注邏輯
-                // 目前先使用固定公式
-                if (currentLevel === 1) {
-                    betAmount = baseBet;
-                } else if (currentLevel === 2) {
-                    betAmount = baseBet * 2;
-                } else if (currentLevel === 3) {
-                    betAmount = baseBet * 4;
-                }
-                
-                if (betAmount > 0) {
-                    round.betAmount = betAmount;
-                } else {
-                    round.betAmount = 0;
-                }
-                
-                // 根據W+和L+調整連勝判斷邏輯（簡化）
-                if (round.outcome === 'W') {
-                    winStreak++;
-                    
-                    // 根據W+值判斷是否提升注數
-                    const wThreshold = wPlusValue ? parseInt(wPlusValue) : 1;
-                    if (winStreak >= wThreshold && currentLevel < 3) {
-                        currentLevel++;
-                        winStreak = 0;
-                    }
-                } else {
-                    // 輸了，根據L+值判斷是否降低關數
-                    const lThreshold = lPlusValue ? parseInt(lPlusValue) : 1;
-                    if (lThreshold > 0) {
-                        // 簡化邏輯：每輸一次，關數+1
-                        currentGuan++;
-                        currentLevel = 1;
-                        winStreak = 0;
-                    }
-                }
-                
-                // 限制關數在1-50之間
-                if (currentGuan > 50) currentGuan = 50;
-            }
-            
-            // 7. 生成G欄：單局盈虧
-            let balance = initialCapital;
-            let sumWin = 0;
-            let sumSpecialWin = 0;
-            
-            for (let i = 0; i < totalRounds; i++) {
-                const round = rounds[i];
-                
-                if (round.protectMark !== 'V' || round.betAmount === 0) {
-                    round.profitLoss = 0;
-                    round.cumulativeBalance = balance;
-                    continue;
-                }
-                
-                if (round.outcome === 'W') {
-                    if (round.result === 'A') {
-                        // A贏扣5%
-                        round.profitLoss = round.betAmount * 0.95;
-                        sumSpecialWin += round.betAmount;
-                    } else {
-                        round.profitLoss = round.betAmount;
-                    }
-                    sumWin += round.profitLoss;
-                } else {
-                    round.profitLoss = -round.betAmount;
-                }
-                
-                balance += round.profitLoss;
-                round.cumulativeBalance = balance;
-            }
-            
-            // 8. 計算統計結果
-            const finalBalance = balance;
-            const feeFromAWins = sumSpecialWin * 0.05;
-            
-            return {
-                rounds: rounds,
-                finalBalance: finalBalance,
-                totalWin: sumWin,
-                feeFromAWins: feeFromAWins,
-                totalRounds: totalRounds,
-                initialCapital: initialCapital,
-                ruleUsed: 'rule2',
-                wPlusValue: wPlusValue,
-                lPlusValue: lPlusValue
-            };
-        }
-
-        // 執行手動模擬
-        function runManualSimulation(initialCapital, selectedRule) {
-            // 解析手動輸入的A/B序列
-            const inputText = manualSequenceTextarea.value.trim();
-            
-            if (!inputText) {
-                showMessage('請輸入A/B序列', 'error');
-                return null;
-            }
-            
-            // 提取有效的A/B序列 - 現在只從一行中提取
-            const validResults = [];
-            for (let i = 0; i < inputText.length; i++) {
-                const char = inputText[i].toUpperCase();
-                if (char === 'A' || char === 'B') {
-                    validResults.push(char);
-                }
-                // 忽略其他字符
-            }
-            
-            if (validResults.length === 0) {
-                showMessage('請輸入至少一個有效的A或B', 'error');
-                return null;
-            }
-            
-            const totalRounds = validResults.length;
-            
-            // 根據選擇的規則進行模擬
-            if (selectedRule === 'rule1') {
-                return runManualRule1Simulation(validResults, initialCapital, totalRounds);
-            } else if (selectedRule === 'rule2') {
-                return runManualRule2Simulation(validResults, initialCapital, totalRounds);
-            } else {
-                // 規則三（暫未實現）
-                return runManualRule1Simulation(validResults, initialCapital, totalRounds); // 暫用規則一
-            }
-        }
-
-        // 手動規則一模擬
-        function runManualRule1Simulation(validResults, initialCapital, totalRounds) {
-            // 1. 生成B列（局數）和C列（結果）
-            const rounds = [];
-            for (let i = 0; i < totalRounds; i++) {
-                rounds.push({
-                    round: i + 1,
-                    result: validResults[i],
-                    protectMark: 'V', // 預設有保護標記
-                    betAmount: 0,
-                    outcome: '',
-                    profitLoss: 0,
-                    cumulativeBalance: initialCapital,
-                    currentGuan: 0,
-                    currentLevel: 0
-                });
-            }
-            
-            // 2. 生成F列（勝負）
-            for (let i = 0; i < totalRounds - 1; i++) {
-                if (rounds[i].result === rounds[i + 1].result) {
-                    rounds[i].outcome = 'W'; // 相同 → 贏
-                } else {
-                    rounds[i].outcome = 'L'; // 不同 → 輸
-                }
-            }
-            
-            // 3. 修改保護規則：連續3個L時，清除下一個V標記（原本是4個L）
-            if (totalRounds >= 4) {
-                for (let i = 2; i < totalRounds - 1; i++) {
-                    let isThreeL = true;
-                    
-                    for (let k = 0; k <= 2; k++) {
-                        if (rounds[i - k].outcome !== 'L') {
-                            isThreeL = false;
-                            break;
-                        }
-                    }
-                    
-                    if (isThreeL) {
-                        rounds[i + 1].protectMark = ''; // 清除V標記
-                    }
-                }
-            }
-            
-            // 4. D欄沒有V時，對應的F欄清空
-            for (let i = 0; i < totalRounds; i++) {
-                if (rounds[i].protectMark !== 'V') {
-                    rounds[i].outcome = '';
-                }
-            }
-            
-            // 5. 生成E欄：投注金額（基於Excel表格的三注數投注系統）
-            // 按照原VBA代碼邏輯
-            let currentGuan = 1;
-            let currentLevel = 1;
-            let winStreak = 0;
-            
-            for (let i = 0; i < totalRounds; i++) {
-                const round = rounds[i];
-                
-                // 記錄當前關數和注數
-                round.currentGuan = currentGuan;
-                round.currentLevel = currentLevel;
-                
-                // 如果沒有V標記或沒有勝負結果，清除投注金額
-                if (round.protectMark !== 'V' || (round.outcome !== 'W' && round.outcome !== 'L')) {
-                    round.betAmount = 0;
-                    continue;
-                }
-                
-                // 限制關數在1-50之間
-                if (currentGuan > 50) currentGuan = 50;
-                
-                // 根據當前注數和關數確定投注金額
-                let betAmount = 0;
-                
-                switch (currentLevel) {
-                    case 1:
-                        if (bettingRules.level1[currentGuan]) {
-                            betAmount = bettingRules.level1[currentGuan];
-                        }
-                        break;
-                    case 2:
-                        if (bettingRules.level2[currentGuan]) {
-                            betAmount = bettingRules.level2[currentGuan];
-                        }
-                        break;
-                    case 3:
-                        // 注數3僅在偶數關有效
-                        if (currentGuan % 2 === 0 && bettingRules.level3[currentGuan]) {
-                            betAmount = bettingRules.level3[currentGuan];
-                        } else {
-                            // 如果當前是奇數關但注數是3，則使用注數2
-                            betAmount = bettingRules.level2[currentGuan] || 0;
-                        }
-                        break;
-                }
-                
-                if (betAmount > 0) {
-                    round.betAmount = betAmount;
-                } else {
-                    round.betAmount = 0;
-                }
-                
-                // 更新連勝與關數 - 按照原VBA代碼邏輯
-                if (round.outcome === 'W') {
-                    winStreak = winStreak + 1;
-                    
-                    if (currentGuan % 2 === 1) {
-                        // 奇數關
-                        if (winStreak >= 2 && currentLevel === 2) {
-                            // 檢查是否有回退點
-                            if (bettingRules.retreatPoints[currentGuan]) {
-                                const retroTo = bettingRules.retreatPoints[currentGuan];
-                                if (retroTo >= 1 && retroTo <= 50) {
-                                    currentGuan = retroTo;
-                                    currentLevel = 1;
-                                    winStreak = 0;
-                                }
-                            } else {
-                                // 沒有回退點，繼續提升注數
-                                if (currentLevel < 3) currentLevel = currentLevel + 1;
-                            }
-                        } else {
-                            // 不滿足回退條件，提升注數
-                            if (currentLevel < 3) currentLevel = currentLevel + 1;
-                        }
-                    } else {
-                        // 偶數關
-                        if (winStreak >= 3 && currentLevel === 3) {
-                            // 檢查是否有回退點
-                            if (bettingRules.retreatPoints[currentGuan]) {
-                                const retroTo = bettingRules.retreatPoints[currentGuan];
-                                if (retroTo >= 1 && retroTo <= 50) {
-                                    currentGuan = retroTo;
-                                    currentLevel = 1;
-                                    winStreak = 0;
-                                }
-                            }
-                            // 偶數關注數3是最後一級，不回退也不提升
-                        } else {
-                            // 不滿足回退條件，提升注數
-                            if (currentLevel < 3) currentLevel = currentLevel + 1;
-                        }
-                    }
-                } else {
-                    // 輸了，重置：關數+1，注數回1，連勝歸0
-                    winStreak = 0;
-                    currentGuan = currentGuan + 1;
-                    currentLevel = 1;
-                }
-            }
-            
-            // 6. 生成G欄：單局盈虧
-            let balance = initialCapital;
-            let sumWin = 0;
-            let sumSpecialWin = 0;
-            
-            for (let i = 0; i < totalRounds; i++) {
-                const round = rounds[i];
-                
-                if (round.protectMark !== 'V' || round.betAmount === 0) {
-                    round.profitLoss = 0;
-                    round.cumulativeBalance = balance;
-                    continue;
-                }
-                
-                if (round.outcome === 'W') {
-                    if (round.result === 'A') {
-                        // A贏扣5%
-                        round.profitLoss = round.betAmount * 0.95;
-                        sumSpecialWin += round.betAmount;
-                    } else {
-                        round.profitLoss = round.betAmount;
-                    }
-                    sumWin += round.profitLoss;
-                } else {
-                    round.profitLoss = -round.betAmount;
-                }
-                
-                balance += round.profitLoss;
-                round.cumulativeBalance = balance;
-            }
-            
-            // 7. 計算統計結果
-            const finalBalance = balance;
-            const feeFromAWins = sumSpecialWin * 0.05;
-            
-            return {
-                rounds: rounds,
-                finalBalance: finalBalance,
-                totalWin: sumWin,
-                feeFromAWins: feeFromAWins,
-                totalRounds: totalRounds,
-                initialCapital: initialCapital,
-                ruleUsed: 'rule1'
-            };
-        }
-
-        // 手動規則二模擬
-        function runManualRule2Simulation(validResults, initialCapital, totalRounds) {
-            // 1. 生成B列（局數）和C列（結果）
-            const rounds = [];
-            for (let i = 0; i < totalRounds; i++) {
-                rounds.push({
-                    round: i + 1,
-                    result: validResults[i],
-                    protectMark: 'V', // 預設有保護標記
-                    betAmount: 0,
-                    outcome: '',
-                    profitLoss: 0,
-                    cumulativeBalance: initialCapital,
-                    currentGuan: 0,
-                    currentLevel: 0
-                });
-            }
-            
-            // 2. 生成F列（勝負）
-            for (let i = 0; i < totalRounds - 1; i++) {
-                if (rounds[i].result === rounds[i + 1].result) {
-                    rounds[i].outcome = 'W'; // 相同 → 贏
-                } else {
-                    rounds[i].outcome = 'L'; // 不同 → 輸
-                }
-            }
-            
-            // 3. 修改保護規則：連續3個L時，清除下一個V標記（原本是4個L）
-            if (totalRounds >= 4) {
-                for (let i = 2; i < totalRounds - 1; i++) {
-                    let isThreeL = true;
-                    
-                    for (let k = 0; k <= 2; k++) {
-                        if (rounds[i - k].outcome !== 'L') {
-                            isThreeL = false;
-                            break;
-                        }
-                    }
-                    
-                    if (isThreeL) {
-                        rounds[i + 1].protectMark = ''; // 清除V標記
-                    }
-                }
-            }
-            
-            // 4. D欄沒有V時，對應的F欄清空
-            for (let i = 0; i < totalRounds; i++) {
-                if (rounds[i].protectMark !== 'V') {
-                    rounds[i].outcome = '';
-                }
-            }
-            
-            // 5. 獲取W+和L+值
-            const wPlusValue = wPlusInput.value.trim();
-            const lPlusValue = lPlusInput.value.trim();
-            
-            // 6. 生成E欄：投注金額（簡化規則二邏輯）
-            let currentGuan = 1;
-            let currentLevel = 1;
-            let winStreak = 0;
-            const baseBet = parseInt(baseBetInput.value) || 10;
-            
-            for (let i = 0; i < totalRounds; i++) {
-                const round = rounds[i];
-                
-                // 記錄當前關數和注數
-                round.currentGuan = currentGuan;
-                round.currentLevel = currentLevel;
-                
-                // 如果沒有V標記或沒有勝負結果，清除投注金額
-                if (round.protectMark !== 'V' || (round.outcome !== 'W' && round.outcome !== 'L')) {
-                    round.betAmount = 0;
-                    continue;
-                }
-                
-                // 根據規則二計算投注金額（簡化版本）
-                let betAmount = 0;
-                
-                // 這裡可以根據W+和L+值來調整投注邏輯
-                // 目前先使用固定公式
-                if (currentLevel === 1) {
-                    betAmount = baseBet;
-                } else if (currentLevel === 2) {
-                    betAmount = baseBet * 2;
-                } else if (currentLevel === 3) {
-                    betAmount = baseBet * 4;
-                }
-                
-                if (betAmount > 0) {
-                    round.betAmount = betAmount;
-                } else {
-                    round.betAmount = 0;
-                }
-                
-                // 根據W+和L+調整連勝判斷邏輯（簡化）
-                if (round.outcome === 'W') {
-                    winStreak++;
-                    
-                    // 根據W+值判斷是否提升注數
-                    const wThreshold = wPlusValue ? parseInt(wPlusValue) : 1;
-                    if (winStreak >= wThreshold && currentLevel < 3) {
-                        currentLevel++;
-                        winStreak = 0;
-                    }
-                } else {
-                    // 輸了，根據L+值判斷是否降低關數
-                    const lThreshold = lPlusValue ? parseInt(lPlusValue) : 1;
-                    if (lThreshold > 0) {
-                        // 簡化邏輯：每輸一次，關數+1
-                        currentGuan++;
-                        currentLevel = 1;
-                        winStreak = 0;
-                    }
-                }
-                
-                // 限制關數在1-50之間
-                if (currentGuan > 50) currentGuan = 50;
-            }
-            
-            // 7. 生成G欄：單局盈虧
-            let balance = initialCapital;
-            let sumWin = 0;
-            let sumSpecialWin = 0;
-            
-            for (let i = 0; i < totalRounds; i++) {
-                const round = rounds[i];
-                
-                if (round.protectMark !== 'V' || round.betAmount === 0) {
-                    round.profitLoss = 0;
-                    round.cumulativeBalance = balance;
-                    continue;
-                }
-                
-                if (round.outcome === 'W') {
-                    if (round.result === 'A') {
-                        // A贏扣5%
-                        round.profitLoss = round.betAmount * 0.95;
-                        sumSpecialWin += round.betAmount;
-                    } else {
-                        round.profitLoss = round.betAmount;
-                    }
-                    sumWin += round.profitLoss;
-                } else {
-                    round.profitLoss = -round.betAmount;
-                }
-                
-                balance += round.profitLoss;
-                round.cumulativeBalance = balance;
-            }
-            
-            // 8. 計算統計結果
-            const finalBalance = balance;
-            const feeFromAWins = sumSpecialWin * 0.05;
-            
-            return {
-                rounds: rounds,
-                finalBalance: finalBalance,
-                totalWin: sumWin,
-                feeFromAWins: feeFromAWins,
-                totalRounds: totalRounds,
-                initialCapital: initialCapital,
-                ruleUsed: 'rule2',
-                wPlusValue: wPlusValue,
-                lPlusValue: lPlusValue
-            };
-        }
-
-        // 執行批次模擬
-        async function runBatchSimulation(totalRounds, initialCapital, simulationTimes, selectedRule) {
-            progressContainer.classList.add('active');
-            
-            const results = [];
-            const batchSummary = {
-                finalBalances: [],
-                totalWins: [],
-                feeFromAWins: []
-            };
-            
-            for (let i = 0; i < simulationTimes; i++) {
-                // 檢查是否停止模擬
-                if (stopSimulation) {
-                    showMessage('模擬已中止', 'warning');
+                    // 遇到W或空值，中斷連續
                     break;
                 }
-                
-                // 更新進度
-                const progress = ((i + 1) / simulationTimes) * 100;
-                progressText.textContent = `${i + 1}/${simulationTimes}`;
-                progressFill.style.width = `${progress}%`;
-                
-                // 執行單次模擬
-                const result = currentMode === 'random'
-                    ? runRandomSimulation(totalRounds, initialCapital, selectedRule)
-                    : runManualSimulation(initialCapital, selectedRule);
-                
-                if (result) {
-                    results.push(result);
-                    
-                    // 收集統計資料
-                    batchSummary.finalBalances.push(result.finalBalance);
-                    batchSummary.totalWins.push(result.totalWin);
-                    batchSummary.feeFromAWins.push(result.feeFromAWins);
-                }
-                
-                // 短暫延遲以避免阻塞UI
-                if (i < simulationTimes - 1 && !stopSimulation) {
-                    await new Promise(resolve => setTimeout(resolve, 10));
-                }
+                checkIndex--;
             }
             
-            simulationResults = results;
-            
-            // 顯示批次模擬的統計摘要
-            if (results.length > 0) {
-                displayBatchSummary(batchSummary, results.length);
-                
-                // 顯示最後一次模擬的詳細結果
-                displayResults(results[results.length - 1]);
-            }
-            
-            progressContainer.classList.remove('active');
-            
-            if (!stopSimulation) {
-                showMessage(`已完成 ${results.length} 次模擬`, 'success');
+            if (consecutiveL >= 3) {
+                rounds[i + 1].protectMark = ''; // 清除V標記
             }
         }
+    }
+    
+    // 4. D欄沒有V時，對應的F欄清空
+    for (let i = 0; i < totalRounds; i++) {
+        if (rounds[i].protectMark !== 'V') {
+            rounds[i].outcome = '';
+        }
+    }
+    
+    // 5. 生成E欄：投注金額（基於Excel表格的三注數投注系統）
+    // 按照原VBA代碼邏輯，並處理和局
+    let currentGuan = 1;
+    let currentLevel = 1;
+    let winStreak = 0;
+    
+    for (let i = 0; i < totalRounds; i++) {
+        const round = rounds[i];
+        
+        // 記錄當前關數和注數
+        round.currentGuan = currentGuan;
+        round.currentLevel = currentLevel;
+        round.winStreakState = winStreak;
+        
+        // 如果沒有V標記或沒有勝負結果，清除投注金額
+        if (round.protectMark !== 'V' || (round.outcome !== 'W' && round.outcome !== 'L' && round.outcome !== 'T')) {
+            round.betAmount = 0;
+            continue;
+        }
+        
+        // 處理和局：和局時仍按照規則計算投注金額
+        if (round.outcome === 'T') {
+            // 和局：使用當前關數和注數計算投注金額，但不影響狀態
+            // 繼續計算投注金額
+        }
+        
+        // 限制關數在1-50之間
+        if (currentGuan > 50) currentGuan = 50;
+        
+        // 根據當前注數和關數確定投注金額
+        let betAmount = 0;
+        
+        switch (currentLevel) {
+            case 1:
+                if (bettingRules.level1[currentGuan]) {
+                    betAmount = bettingRules.level1[currentGuan];
+                }
+                break;
+            case 2:
+                if (bettingRules.level2[currentGuan]) {
+                    betAmount = bettingRules.level2[currentGuan];
+                }
+                break;
+            case 3:
+                // 注數3僅在偶數關有效
+                if (currentGuan % 2 === 0 && bettingRules.level3[currentGuan]) {
+                    betAmount = bettingRules.level3[currentGuan];
+                } else {
+                    // 如果當前是奇數關但注數是3，則使用注數2
+                    betAmount = bettingRules.level2[currentGuan] || 0;
+                }
+                break;
+        }
+        
+        if (betAmount > 0) {
+            round.betAmount = betAmount;
+        } else {
+            round.betAmount = 0;
+        }
+        
+        // 更新連勝與關數 - 按照原VBA代碼邏輯
+        // 注意：和局不影響狀態
+        if (round.outcome === 'W') {
+            winStreak = winStreak + 1;
+            
+            if (currentGuan % 2 === 1) {
+                // 奇數關
+                if (winStreak >= 2 && currentLevel === 2) {
+                    // 檢查是否有回退點
+                    if (bettingRules.retreatPoints[currentGuan]) {
+                        const retroTo = bettingRules.retreatPoints[currentGuan];
+                        if (retroTo >= 1 && retroTo <= 50) {
+                            currentGuan = retroTo;
+                            currentLevel = 1;
+                            winStreak = 0;
+                        }
+                    } else {
+                        // 沒有回退點，繼續提升注數
+                        if (currentLevel < 3) currentLevel = currentLevel + 1;
+                    }
+                } else {
+                    // 不滿足回退條件，提升注數
+                    if (currentLevel < 3) currentLevel = currentLevel + 1;
+                }
+            } else {
+                // 偶數關
+                if (winStreak >= 3 && currentLevel === 3) {
+                    // 檢查是否有回退點
+                    if (bettingRules.retreatPoints[currentGuan]) {
+                        const retroTo = bettingRules.retreatPoints[currentGuan];
+                        if (retroTo >= 1 && retroTo <= 50) {
+                            currentGuan = retroTo;
+                            currentLevel = 1;
+                            winStreak = 0;
+                        }
+                    }
+                    // 偶數關注數3是最後一級，不回退也不提升
+                } else {
+                    // 不滿足回退條件，提升注數
+                    if (currentLevel < 3) currentLevel = currentLevel + 1;
+                }
+            }
+        } else if (round.outcome === 'L') {
+            // 輸了，重置：關數+1，注數回1，連勝歸0
+            winStreak = 0;
+            currentGuan = currentGuan + 1;
+            currentLevel = 1;
+        }
+        // 和局：不影響狀態
+    }
+    
+    // 6. 生成G欄：單局盈虧
+    let balance = initialCapital;
+    let sumWin = 0;
+    let sumSpecialWin = 0;
+    
+    for (let i = 0; i < totalRounds; i++) {
+        const round = rounds[i];
+        
+        if (round.protectMark !== 'V' || round.betAmount === 0) {
+            round.profitLoss = 0;
+            round.cumulativeBalance = balance;
+            continue;
+        }
+        
+        if (round.outcome === 'W') {
+            if (round.result === 'A') {
+                // A贏扣5%
+                round.profitLoss = round.betAmount * 0.95;
+                sumSpecialWin += round.betAmount;
+            } else {
+                round.profitLoss = round.betAmount;
+            }
+            sumWin += round.profitLoss;
+        } else if (round.outcome === 'L') {
+            round.profitLoss = -round.betAmount;
+        } else if (round.outcome === 'T') {
+            round.profitLoss = 0; // 和局盈虧為0
+        }
+        
+        balance += round.profitLoss;
+        round.cumulativeBalance = balance;
+    }
+    
+    // 7. 計算統計結果
+    const finalBalance = balance;
+    const feeFromAWins = sumSpecialWin * 0.05;
+    
+    // 儲存A/B/C結果以便複製
+    lastRandomResults = rounds.map(round => round.result);
+    
+    return {
+        rounds: rounds,
+        finalBalance: finalBalance,
+        totalWin: sumWin,
+        feeFromAWins: feeFromAWins,
+        totalRounds: totalRounds,
+        initialCapital: initialCapital,
+        ruleUsed: 'rule1'
+    };
+}
 
-        // 顯示批次模擬的統計摘要
-        function displayBatchSummary(batchSummary, simulationTimes) {
-            // 計算統計資訊
-            const avgFinalBalance = batchSummary.finalBalances.reduce((a, b) => a + b, 0) / simulationTimes;
-            const minFinalBalance = Math.min(...batchSummary.finalBalances);
-            const maxFinalBalance = Math.max(...batchSummary.finalBalances);
+// 規則二模擬（簡化版本，根據W+和L+值調整）
+function runRule2Simulation(totalRounds, initialCapital) {
+    // 1. 生成B列（局數）和C列（隨機A/B/C結果）
+    const rounds = [];
+    for (let i = 1; i <= totalRounds; i++) {
+        rounds.push({
+            round: i,
+            result: generateRandomResult(),
+            protectMark: 'V', // 預設有保護標記
+            betAmount: 0,
+            outcome: '',
+            profitLoss: 0,
+            cumulativeBalance: initialCapital,
+            currentGuan: 0,
+            currentLevel: 0
+        });
+    }
+    
+    // 2. 生成F列（勝負）- 修改：當開出C時，向前追溯到第一個非C的結果來繼承
+    for (let i = 0; i < totalRounds; i++) {
+        if (i < totalRounds - 1) {
+            // 有下一局可以比較
+            let currentResult = rounds[i].result;
+            const nextResult = rounds[i + 1].result;
             
-            const avgTotalWin = batchSummary.totalWins.reduce((a, b) => a + b, 0) / simulationTimes;
-            const avgFeeFromAWins = batchSummary.feeFromAWins.reduce((a, b) => a + b, 0) / simulationTimes;
+            // 如果當前局是C，則向前追溯到第一個非C的結果來繼承
+            if (currentResult === 'C') {
+                currentResult = findLastNonCResult(rounds, i);
+            }
             
-            // 在結果表格前新增統計摘要
-            const summaryHTML = `
-                <div style="background-color: #252542; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-                    <h3 style="color: #4cc9f0; margin-bottom: 10px;">批次模擬統計摘要 (${simulationTimes}次)</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
-                        <div>
-                            <div style="font-size: 14px; color: #a0a0c0;">平均最終餘額</div>
-                            <div style="font-size: 24px; font-weight: bold; color: ${avgFinalBalance >= 0 ? '#4ade80' : '#f87171'}">${avgFinalBalance.toFixed(2)}</div>
-                        </div>
-                        <div>
-                            <div style="font-size: 14px; color: #a0a0c0;">最終餘額範圍</div>
-                            <div style="font-size: 24px; font-weight: bold; color: #4cc9f0">${minFinalBalance.toFixed(2)} - ${maxFinalBalance.toFixed(2)}</div>
-                        </div>
-                        <div>
-                            <div style="font-size: 14px; color: #a0a0c0;">平均ROLLING</div>
-                            <div style="font-size: 24px; font-weight: bold; color: #4ade80">${avgTotalWin.toFixed(2)}</div>
-                        </div>
-                        <div>
-                            <div style="font-size: 14px; color: #a0a0c0;">平均5%計算</div>
-                            <div style="font-size: 24px; font-weight: bold; color: #f59e0b">${avgFeeFromAWins.toFixed(2)}</div>
-                        </div>
-                    </div>
+            if (nextResult === 'C') {
+                // 下一局的結果是C，即為T（和局）
+                rounds[i].outcome = 'T';
+            } else if (currentResult === nextResult) {
+                // A=A 或 B=B，相同則為W
+                rounds[i].outcome = 'W';
+            } else {
+                // A≠A 或 B≠B，不同則為L
+                rounds[i].outcome = 'L';
+            }
+        } else {
+            // 最後一局沒有下一局可比較，結果為空
+            rounds[i].outcome = '';
+        }
+    }
+    
+    // 3. 修改保護規則：連續3個L時，清除下一個V標記（和局不參與計算）
+    if (totalRounds >= 4) {
+        for (let i = 2; i < totalRounds - 1; i++) {
+            // 檢查連續3個L，跳過和局
+            let consecutiveL = 0;
+            let checkIndex = i;
+            
+            // 向前檢查最多3局，跳過和局
+            while (checkIndex >= 0 && consecutiveL < 3) {
+                if (rounds[checkIndex].outcome === 'L') {
+                    consecutiveL++;
+                } else if (rounds[checkIndex].outcome === 'T') {
+                    // 和局不影響連續計算，繼續向前檢查
+                    checkIndex--;
+                    continue;
+                } else {
+                    // 遇到W或空值，中斷連續
+                    break;
+                }
+                checkIndex--;
+            }
+            
+            if (consecutiveL >= 3) {
+                rounds[i + 1].protectMark = ''; // 清除V標記
+            }
+        }
+    }
+    
+    // 4. D欄沒有V時，對應的F欄清空
+    for (let i = 0; i < totalRounds; i++) {
+        if (rounds[i].protectMark !== 'V') {
+            rounds[i].outcome = '';
+        }
+    }
+    
+    // 5. 獲取W+和L+值
+    const wPlusValue = wPlusInput.value.trim();
+    const lPlusValue = lPlusInput.value.trim();
+    
+    // 6. 生成E欄：投注金額（簡化規則二邏輯）
+    let currentGuan = 1;
+    let currentLevel = 1;
+    let winStreak = 0;
+    const baseBet = parseInt(baseBetInput.value) || 10;
+    
+    for (let i = 0; i < totalRounds; i++) {
+        const round = rounds[i];
+        
+        // 記錄當前關數和注數
+        round.currentGuan = currentGuan;
+        round.currentLevel = currentLevel;
+        
+        // 如果沒有V標記或沒有勝負結果，清除投注金額
+        if (round.protectMark !== 'V' || (round.outcome !== 'W' && round.outcome !== 'L' && round.outcome !== 'T')) {
+            round.betAmount = 0;
+            continue;
+        }
+        
+        // 處理和局：和局時仍按照規則計算投注金額
+        if (round.outcome === 'T') {
+            // 和局：使用當前關數和注數計算投注金額，但不影響狀態
+        }
+        
+        // 根據規則二計算投注金額（簡化版本）
+        let betAmount = 0;
+        
+        // 這裡可以根據W+和L+值來調整投注邏輯
+        // 目前先使用固定公式
+        if (currentLevel === 1) {
+            betAmount = baseBet;
+        } else if (currentLevel === 2) {
+            betAmount = baseBet * 2;
+        } else if (currentLevel === 3) {
+            betAmount = baseBet * 4;
+        }
+        
+        if (betAmount > 0) {
+            round.betAmount = betAmount;
+        } else {
+            round.betAmount = 0;
+        }
+        
+        // 根據W+和L+調整連勝判斷邏輯（簡化）
+        // 注意：和局不影響狀態
+        if (round.outcome === 'W') {
+            winStreak++;
+            
+            // 根據W+值判斷是否提升注數
+            const wThreshold = wPlusValue ? parseInt(wPlusValue) : 1;
+            if (winStreak >= wThreshold && currentLevel < 3) {
+                currentLevel++;
+                winStreak = 0;
+            }
+        } else if (round.outcome === 'L') {
+            // 輸了，根據L+值判斷是否降低關數
+            const lThreshold = lPlusValue ? parseInt(lPlusValue) : 1;
+            if (lThreshold > 0) {
+                // 簡化邏輯：每輸一次，關數+1
+                currentGuan++;
+                currentLevel = 1;
+                winStreak = 0;
+            }
+        }
+        // 和局：不影響狀態
+        
+        // 限制關數在1-50之間
+        if (currentGuan > 50) currentGuan = 50;
+    }
+    
+    // 7. 生成G欄：單局盈虧
+    let balance = initialCapital;
+    let sumWin = 0;
+    let sumSpecialWin = 0;
+    
+    for (let i = 0; i < totalRounds; i++) {
+        const round = rounds[i];
+        
+        if (round.protectMark !== 'V' || round.betAmount === 0) {
+            round.profitLoss = 0;
+            round.cumulativeBalance = balance;
+            continue;
+        }
+        
+        if (round.outcome === 'W') {
+            if (round.result === 'A') {
+                // A贏扣5%
+                round.profitLoss = round.betAmount * 0.95;
+                sumSpecialWin += round.betAmount;
+            } else {
+                round.profitLoss = round.betAmount;
+            }
+            sumWin += round.profitLoss;
+        } else if (round.outcome === 'L') {
+            round.profitLoss = -round.betAmount;
+        } else if (round.outcome === 'T') {
+            round.profitLoss = 0; // 和局盈虧為0
+        }
+        
+        balance += round.profitLoss;
+        round.cumulativeBalance = balance;
+    }
+    
+    // 8. 計算統計結果
+    const finalBalance = balance;
+    const feeFromAWins = sumSpecialWin * 0.05;
+    
+    return {
+        rounds: rounds,
+        finalBalance: finalBalance,
+        totalWin: sumWin,
+        feeFromAWins: feeFromAWins,
+        totalRounds: totalRounds,
+        initialCapital: initialCapital,
+        ruleUsed: 'rule2',
+        wPlusValue: wPlusValue,
+        lPlusValue: lPlusValue
+    };
+}
+
+// 執行手動模擬
+function runManualSimulation(initialCapital, selectedRule) {
+    // 解析手動輸入的A/B/C序列
+    const inputText = manualSequenceTextarea.value.trim();
+    
+    if (!inputText) {
+        showMessage('請輸入A/B/C序列', 'error');
+        return null;
+    }
+    
+    // 提取有效的A/B/C序列 - 現在只從一行中提取
+    const validResults = [];
+    for (let i = 0; i < inputText.length; i++) {
+        const char = inputText[i].toUpperCase();
+        if (char === 'A' || char === 'B' || char === 'C') {
+            validResults.push(char);
+        }
+        // 忽略其他字符
+    }
+    
+    if (validResults.length === 0) {
+        showMessage('請輸入至少一個有效的A、B或C', 'error');
+        return null;
+    }
+    
+    const totalRounds = validResults.length;
+    
+    // 根據選擇的規則進行模擬
+    if (selectedRule === 'rule1') {
+        return runManualRule1Simulation(validResults, initialCapital, totalRounds);
+    } else if (selectedRule === 'rule2') {
+        return runManualRule2Simulation(validResults, initialCapital, totalRounds);
+    } else {
+        // 規則三（暫未實現）
+        return runManualRule1Simulation(validResults, initialCapital, totalRounds); // 暫用規則一
+    }
+}
+
+// 手動規則一模擬
+function runManualRule1Simulation(validResults, initialCapital, totalRounds) {
+    // 1. 生成B列（局數）和C列（結果）
+    const rounds = [];
+    for (let i = 0; i < totalRounds; i++) {
+        rounds.push({
+            round: i + 1,
+            result: validResults[i],
+            protectMark: 'V', // 預設有保護標記
+            betAmount: 0,
+            outcome: '',
+            profitLoss: 0,
+            cumulativeBalance: initialCapital,
+            currentGuan: 0,
+            currentLevel: 0,
+            winStreakState: 0 // 用於記錄連勝狀態
+        });
+    }
+    
+    // 2. 生成F列（勝負）- 修改：當開出C時，向前追溯到第一個非C的結果來繼承
+    for (let i = 0; i < totalRounds; i++) {
+        if (i < totalRounds - 1) {
+            // 有下一局可以比較
+            let currentResult = rounds[i].result;
+            const nextResult = rounds[i + 1].result;
+            
+            // 如果當前局是C，則向前追溯到第一個非C的結果來繼承
+            if (currentResult === 'C') {
+                currentResult = findLastNonCResult(rounds, i);
+            }
+            
+            if (nextResult === 'C') {
+                // 下一局的結果是C，即為T（和局）
+                rounds[i].outcome = 'T';
+            } else if (currentResult === nextResult) {
+                // A=A 或 B=B，相同則為W
+                rounds[i].outcome = 'W';
+            } else {
+                // A≠A 或 B≠B，不同則為L
+                rounds[i].outcome = 'L';
+            }
+        } else {
+            // 最後一局沒有下一局可比較，結果為空
+            rounds[i].outcome = '';
+        }
+    }
+    
+    // 3. 修改保護規則：連續3個L時，清除下一個V標記（和局不參與計算）
+    if (totalRounds >= 4) {
+        for (let i = 2; i < totalRounds - 1; i++) {
+            // 檢查連續3個L，跳過和局
+            let consecutiveL = 0;
+            let checkIndex = i;
+            
+            // 向前檢查最多3局，跳過和局
+            while (checkIndex >= 0 && consecutiveL < 3) {
+                if (rounds[checkIndex].outcome === 'L') {
+                    consecutiveL++;
+                } else if (rounds[checkIndex].outcome === 'T') {
+                    // 和局不影響連續計算，繼續向前檢查
+                    checkIndex--;
+                    continue;
+                } else {
+                    // 遇到W或空值，中斷連續
+                    break;
+                }
+                checkIndex--;
+            }
+            
+            if (consecutiveL >= 3) {
+                rounds[i + 1].protectMark = ''; // 清除V標記
+            }
+        }
+    }
+    
+    // 4. D欄沒有V時，對應的F欄清空
+    for (let i = 0; i < totalRounds; i++) {
+        if (rounds[i].protectMark !== 'V') {
+            rounds[i].outcome = '';
+        }
+    }
+    
+    // 5. 生成E欄：投注金額（基於Excel表格的三注數投注系統）
+    // 按照原VBA代碼邏輯，並處理和局
+    let currentGuan = 1;
+    let currentLevel = 1;
+    let winStreak = 0;
+    
+    for (let i = 0; i < totalRounds; i++) {
+        const round = rounds[i];
+        
+        // 記錄當前關數和注數
+        round.currentGuan = currentGuan;
+        round.currentLevel = currentLevel;
+        round.winStreakState = winStreak;
+        
+        // 如果沒有V標記或沒有勝負結果，清除投注金額
+        if (round.protectMark !== 'V' || (round.outcome !== 'W' && round.outcome !== 'L' && round.outcome !== 'T')) {
+            round.betAmount = 0;
+            continue;
+        }
+        
+        // 處理和局：和局時仍按照規則計算投注金額
+        if (round.outcome === 'T') {
+            // 和局：使用當前關數和注數計算投注金額，但不影響狀態
+            // 繼續計算投注金額
+        }
+        
+        // 限制關數在1-50之間
+        if (currentGuan > 50) currentGuan = 50;
+        
+        // 根據當前注數和關數確定投注金額
+        let betAmount = 0;
+        
+        switch (currentLevel) {
+            case 1:
+                if (bettingRules.level1[currentGuan]) {
+                    betAmount = bettingRules.level1[currentGuan];
+                }
+                break;
+            case 2:
+                if (bettingRules.level2[currentGuan]) {
+                    betAmount = bettingRules.level2[currentGuan];
+                }
+                break;
+            case 3:
+                // 注數3僅在偶數關有效
+                if (currentGuan % 2 === 0 && bettingRules.level3[currentGuan]) {
+                    betAmount = bettingRules.level3[currentGuan];
+                } else {
+                    // 如果當前是奇數關但注數是3，則使用注數2
+                    betAmount = bettingRules.level2[currentGuan] || 0;
+                }
+                break;
+        }
+        
+        if (betAmount > 0) {
+            round.betAmount = betAmount;
+        } else {
+            round.betAmount = 0;
+        }
+        
+        // 更新連勝與關數 - 按照原VBA代碼邏輯
+        // 注意：和局不影響狀態
+        if (round.outcome === 'W') {
+            winStreak = winStreak + 1;
+            
+            if (currentGuan % 2 === 1) {
+                // 奇數關
+                if (winStreak >= 2 && currentLevel === 2) {
+                    // 檢查是否有回退點
+                    if (bettingRules.retreatPoints[currentGuan]) {
+                        const retroTo = bettingRules.retreatPoints[currentGuan];
+                        if (retroTo >= 1 && retroTo <= 50) {
+                            currentGuan = retroTo;
+                            currentLevel = 1;
+                            winStreak = 0;
+                        }
+                    } else {
+                        // 沒有回退點，繼續提升注數
+                        if (currentLevel < 3) currentLevel = currentLevel + 1;
+                    }
+                } else {
+                    // 不滿足回退條件，提升注數
+                    if (currentLevel < 3) currentLevel = currentLevel + 1;
+                }
+            } else {
+                // 偶數關
+                if (winStreak >= 3 && currentLevel === 3) {
+                    // 檢查是否有回退點
+                    if (bettingRules.retreatPoints[currentGuan]) {
+                        const retroTo = bettingRules.retreatPoints[currentGuan];
+                        if (retroTo >= 1 && retroTo <= 50) {
+                            currentGuan = retroTo;
+                            currentLevel = 1;
+                            winStreak = 0;
+                        }
+                    }
+                    // 偶數關注數3是最後一級，不回退也不提升
+                } else {
+                    // 不滿足回退條件，提升注數
+                    if (currentLevel < 3) currentLevel = currentLevel + 1;
+                }
+            }
+        } else if (round.outcome === 'L') {
+            // 輸了，重置：關數+1，注數回1，連勝歸0
+            winStreak = 0;
+            currentGuan = currentGuan + 1;
+            currentLevel = 1;
+        }
+        // 和局：不影響狀態
+    }
+    
+    // 6. 生成G欄：單局盈虧
+    let balance = initialCapital;
+    let sumWin = 0;
+    let sumSpecialWin = 0;
+    
+    for (let i = 0; i < totalRounds; i++) {
+        const round = rounds[i];
+        
+        if (round.protectMark !== 'V' || round.betAmount === 0) {
+            round.profitLoss = 0;
+            round.cumulativeBalance = balance;
+            continue;
+        }
+        
+        if (round.outcome === 'W') {
+            if (round.result === 'A') {
+                // A贏扣5%
+                round.profitLoss = round.betAmount * 0.95;
+                sumSpecialWin += round.betAmount;
+            } else {
+                round.profitLoss = round.betAmount;
+            }
+            sumWin += round.profitLoss;
+        } else if (round.outcome === 'L') {
+            round.profitLoss = -round.betAmount;
+        } else if (round.outcome === 'T') {
+            round.profitLoss = 0; // 和局盈虧為0
+        }
+        
+        balance += round.profitLoss;
+        round.cumulativeBalance = balance;
+    }
+    
+    // 7. 計算統計結果
+    const finalBalance = balance;
+    const feeFromAWins = sumSpecialWin * 0.05;
+    
+    return {
+        rounds: rounds,
+        finalBalance: finalBalance,
+        totalWin: sumWin,
+        feeFromAWins: feeFromAWins,
+        totalRounds: totalRounds,
+        initialCapital: initialCapital,
+        ruleUsed: 'rule1'
+    };
+}
+
+// 手動規則二模擬
+function runManualRule2Simulation(validResults, initialCapital, totalRounds) {
+    // 1. 生成B列（局數）和C列（結果）
+    const rounds = [];
+    for (let i = 0; i < totalRounds; i++) {
+        rounds.push({
+            round: i + 1,
+            result: validResults[i],
+            protectMark: 'V', // 預設有保護標記
+            betAmount: 0,
+            outcome: '',
+            profitLoss: 0,
+            cumulativeBalance: initialCapital,
+            currentGuan: 0,
+            currentLevel: 0
+        });
+    }
+    
+    // 2. 生成F列（勝負）- 修改：當開出C時，向前追溯到第一個非C的結果來繼承
+    for (let i = 0; i < totalRounds; i++) {
+        if (i < totalRounds - 1) {
+            // 有下一局可以比較
+            let currentResult = rounds[i].result;
+            const nextResult = rounds[i + 1].result;
+            
+            // 如果當前局是C，則向前追溯到第一個非C的結果來繼承
+            if (currentResult === 'C') {
+                currentResult = findLastNonCResult(rounds, i);
+            }
+            
+            if (nextResult === 'C') {
+                // 下一局的結果是C，即為T（和局）
+                rounds[i].outcome = 'T';
+            } else if (currentResult === nextResult) {
+                // A=A 或 B=B，相同則為W
+                rounds[i].outcome = 'W';
+            } else {
+                // A≠A 或 B≠B，不同則為L
+                rounds[i].outcome = 'L';
+            }
+        } else {
+            // 最後一局沒有下一局可比較，結果為空
+            rounds[i].outcome = '';
+        }
+    }
+    
+    // 3. 修改保護規則：連續3個L時，清除下一個V標記（和局不參與計算）
+    if (totalRounds >= 4) {
+        for (let i = 2; i < totalRounds - 1; i++) {
+            // 檢查連續3個L，跳過和局
+            let consecutiveL = 0;
+            let checkIndex = i;
+            
+            // 向前檢查最多3局，跳過和局
+            while (checkIndex >= 0 && consecutiveL < 3) {
+                if (rounds[checkIndex].outcome === 'L') {
+                    consecutiveL++;
+                } else if (rounds[checkIndex].outcome === 'T') {
+                    // 和局不影響連續計算，繼續向前檢查
+                    checkIndex--;
+                    continue;
+                } else {
+                    // 遇到W或空值，中斷連續
+                    break;
+                }
+                checkIndex--;
+            }
+            
+            if (consecutiveL >= 3) {
+                rounds[i + 1].protectMark = ''; // 清除V標記
+            }
+        }
+    }
+    
+    // 4. D欄沒有V時，對應的F欄清空
+    for (let i = 0; i < totalRounds; i++) {
+        if (rounds[i].protectMark !== 'V') {
+            rounds[i].outcome = '';
+        }
+    }
+    
+    // 5. 獲取W+和L+值
+    const wPlusValue = wPlusInput.value.trim();
+    const lPlusValue = lPlusInput.value.trim();
+    
+    // 6. 生成E欄：投注金額（簡化規則二邏輯）
+    let currentGuan = 1;
+    let currentLevel = 1;
+    let winStreak = 0;
+    const baseBet = parseInt(baseBetInput.value) || 10;
+    
+    for (let i = 0; i < totalRounds; i++) {
+        const round = rounds[i];
+        
+        // 記錄當前關數和注數
+        round.currentGuan = currentGuan;
+        round.currentLevel = currentLevel;
+        
+        // 如果沒有V標記或沒有勝負結果，清除投注金額
+        if (round.protectMark !== 'V' || (round.outcome !== 'W' && round.outcome !== 'L' && round.outcome !== 'T')) {
+            round.betAmount = 0;
+            continue;
+        }
+        
+        // 處理和局：和局時仍按照規則計算投注金額
+        if (round.outcome === 'T') {
+            // 和局：使用當前關數和注數計算投注金額，但不影響狀態
+        }
+        
+        // 根據規則二計算投注金額（簡化版本）
+        let betAmount = 0;
+        
+        // 這裡可以根據W+和L+值來調整投注邏輯
+        // 目前先使用固定公式
+        if (currentLevel === 1) {
+            betAmount = baseBet;
+        } else if (currentLevel === 2) {
+            betAmount = baseBet * 2;
+        } else if (currentLevel === 3) {
+            betAmount = baseBet * 4;
+        }
+        
+        if (betAmount > 0) {
+            round.betAmount = betAmount;
+        } else {
+            round.betAmount = 0;
+        }
+        
+        // 根據W+和L+調整連勝判斷邏輯（簡化）
+        // 注意：和局不影響狀態
+        if (round.outcome === 'W') {
+            winStreak++;
+            
+            // 根據W+值判斷是否提升注數
+            const wThreshold = wPlusValue ? parseInt(wPlusValue) : 1;
+            if (winStreak >= wThreshold && currentLevel < 3) {
+                currentLevel++;
+                winStreak = 0;
+            }
+        } else if (round.outcome === 'L') {
+            // 輸了，根據L+值判斷是否降低關數
+            const lThreshold = lPlusValue ? parseInt(lPlusValue) : 1;
+            if (lThreshold > 0) {
+                // 簡化邏輯：每輸一次，關數+1
+                currentGuan++;
+                currentLevel = 1;
+                winStreak = 0;
+            }
+        }
+        // 和局：不影響狀態
+        
+        // 限制關數在1-50之間
+        if (currentGuan > 50) currentGuan = 50;
+    }
+    
+    // 7. 生成G欄：單局盈虧
+    let balance = initialCapital;
+    let sumWin = 0;
+    let sumSpecialWin = 0;
+    
+    for (let i = 0; i < totalRounds; i++) {
+        const round = rounds[i];
+        
+        if (round.protectMark !== 'V' || round.betAmount === 0) {
+            round.profitLoss = 0;
+            round.cumulativeBalance = balance;
+            continue;
+        }
+        
+        if (round.outcome === 'W') {
+            if (round.result === 'A') {
+                // A贏扣5%
+                round.profitLoss = round.betAmount * 0.95;
+                sumSpecialWin += round.betAmount;
+            } else {
+                round.profitLoss = round.betAmount;
+            }
+            sumWin += round.profitLoss;
+        } else if (round.outcome === 'L') {
+            round.profitLoss = -round.betAmount;
+        } else if (round.outcome === 'T') {
+            round.profitLoss = 0; // 和局盈虧為0
+        }
+        
+        balance += round.profitLoss;
+        round.cumulativeBalance = balance;
+    }
+    
+    // 8. 計算統計結果
+    const finalBalance = balance;
+    const feeFromAWins = sumSpecialWin * 0.05;
+    
+    return {
+        rounds: rounds,
+        finalBalance: finalBalance,
+        totalWin: sumWin,
+        feeFromAWins: feeFromAWins,
+        totalRounds: totalRounds,
+        initialCapital: initialCapital,
+        ruleUsed: 'rule2',
+        wPlusValue: wPlusValue,
+        lPlusValue: lPlusValue
+    };
+}
+
+// 執行批次模擬
+async function runBatchSimulation(totalRounds, initialCapital, simulationTimes, selectedRule) {
+    progressContainer.classList.add('active');
+    
+    const results = [];
+    const batchSummary = {
+        finalBalances: [],
+        totalWins: [],
+        feeFromAWins: []
+    };
+    
+    for (let i = 0; i < simulationTimes; i++) {
+        // 檢查是否停止模擬
+        if (stopSimulation) {
+            showMessage('模擬已中止', 'warning');
+            break;
+        }
+        
+        // 更新進度
+        const progress = ((i + 1) / simulationTimes) * 100;
+        progressText.textContent = `${i + 1}/${simulationTimes}`;
+        progressFill.style.width = `${progress}%`;
+        
+        // 執行單次模擬
+        const result = currentMode === 'random'
+            ? runRandomSimulation(totalRounds, initialCapital, selectedRule)
+            : runManualSimulation(initialCapital, selectedRule);
+        
+        if (result) {
+            results.push(result);
+            
+            // 收集統計資料
+            batchSummary.finalBalances.push(result.finalBalance);
+            batchSummary.totalWins.push(result.totalWin);
+            batchSummary.feeFromAWins.push(result.feeFromAWins);
+        }
+        
+        // 短暫延遲以避免阻塞UI
+        if (i < simulationTimes - 1 && !stopSimulation) {
+            await new Promise(resolve => setTimeout(resolve, 10));
+        }
+    }
+    
+    simulationResults = results;
+    
+    // 顯示批次模擬的統計摘要
+    if (results.length > 0) {
+        displayBatchSummary(batchSummary, results.length);
+        
+        // 顯示最後一次模擬的詳細結果
+        displayResults(results[results.length - 1]);
+    }
+    
+    progressContainer.classList.remove('active');
+    
+    if (!stopSimulation) {
+        showMessage(`已完成 ${results.length} 次模擬`, 'success');
+    }
+}
+
+// 顯示批次模擬的統計摘要
+function displayBatchSummary(batchSummary, simulationTimes) {
+    // 計算統計資訊
+    const avgFinalBalance = batchSummary.finalBalances.reduce((a, b) => a + b, 0) / simulationTimes;
+    const minFinalBalance = Math.min(...batchSummary.finalBalances);
+    const maxFinalBalance = Math.max(...batchSummary.finalBalances);
+    
+    const avgTotalWin = batchSummary.totalWins.reduce((a, b) => a + b, 0) / simulationTimes;
+    const avgFeeFromAWins = batchSummary.feeFromAWins.reduce((a, b) => a + b, 0) / simulationTimes;
+    
+    // 在結果表格前新增統計摘要
+    const summaryHTML = `
+        <div style="background-color: #252542; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <h3 style="color: #4cc9f0; margin-bottom: 10px;">批次模擬統計摘要 (${simulationTimes}次)</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                <div>
+                    <div style="font-size: 14px; color: #a0a0c0;">平均最終餘額</div>
+                    <div style="font-size: 24px; font-weight: bold; color: ${avgFinalBalance >= 0 ? '#4ade80' : '#f87171'}">${avgFinalBalance.toFixed(2)}</div>
                 </div>
-            `;
-            
-            // 插入摘要
-            const resultsSection = document.querySelector('.results-section');
-            const tableContainer = document.querySelector('.table-container');
-            const existingSummary = document.querySelector('.batch-summary');
-            
-            if (existingSummary) {
-                existingSummary.remove();
-            }
-            
-            const summaryDiv = document.createElement('div');
-            summaryDiv.className = 'batch-summary';
-            summaryDiv.innerHTML = summaryHTML;
-            
-            resultsSection.insertBefore(summaryDiv, tableContainer);
-        }
+                <div>
+                    <div style="font-size: 14px; color: #a0a0c0;">最終餘額範圍</div>
+                    <div style="font-size: 24px; font-weight: bold; color: #4cc9f0">${minFinalBalance.toFixed(2)} - ${maxFinalBalance.toFixed(2)}</div>
+                </div>
+                <div>
+                    <div style="font-size: 14px; color: #a0a0c0;">平均ROLLING</div>
+                    <div style="font-size: 24px; font-weight: bold; color: #4ade80">${avgTotalWin.toFixed(2)}</div>
+                </div>
+                <div>
+                    <div style="font-size: 14px; color: #a0a0c0;">平均5%計算</div>
+                    <div style="font-size: 24px; font-weight: bold; color: #f59e0b">${avgFeeFromAWins.toFixed(2)}</div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // 插入摘要
+    const resultsSection = document.querySelector('.results-section');
+    const tableContainer = document.querySelector('.table-container');
+    const existingSummary = document.querySelector('.batch-summary');
+    
+    if (existingSummary) {
+        existingSummary.remove();
+    }
+    
+    const summaryDiv = document.createElement('div');
+    summaryDiv.className = 'batch-summary';
+    summaryDiv.innerHTML = summaryHTML;
+    
+    resultsSection.insertBefore(summaryDiv, tableContainer);
+}
 
-        // 顯示結果
-        function displayResults(result) {
-            // 更新摘要卡片
-            finalBalanceEl.textContent = result.finalBalance.toFixed(2);
-            finalBalanceEl.className = `value ${result.finalBalance >= result.initialCapital ? 'positive' : 'negative'}`;
-            
-            totalWinEl.textContent = result.totalWin.toFixed(2);
-            totalWinEl.className = 'value positive';
-            
-            feeFromAWinsEl.textContent = result.feeFromAWins.toFixed(2);
-            feeFromAWinsEl.className = 'value';
-            
-            totalRoundsResultEl.textContent = result.totalRounds;
-            
-            // 生成表格行
-            let tableHTML = '';
-            
-            for (let i = 0; i < result.rounds.length; i++) {
-                const round = result.rounds[i];
-                
-                tableHTML += `
-                    <tr>
-                        <td>${round.round}</td>
-                        <td class="result-${round.result}">${round.result}</td>
-                        <td>${round.protectMark || ''}</td>
-                        <td>${round.betAmount > 0 ? round.betAmount.toFixed(2) : ''}</td>
-                        <td class="result-${round.outcome}">${round.outcome}</td>
-                        <td class="${round.profitLoss >= 0 ? 'result-W' : 'result-L'}">${round.profitLoss !== 0 ? round.profitLoss.toFixed(2) : ''}</td>
-                        <td>${round.cumulativeBalance.toFixed(2)}</td>
-                        <td>${round.currentGuan}</td>
-                        <td>${round.currentLevel}</td>
-                    </tr>
-                `;
-            }
-            
-            resultsBody.innerHTML = tableHTML;
-            
-            showMessage('模擬完成！', 'success');
+// 顯示結果
+function displayResults(result) {
+    // 更新摘要卡片
+    finalBalanceEl.textContent = result.finalBalance.toFixed(2);
+    finalBalanceEl.className = `value ${result.finalBalance >= result.initialCapital ? 'positive' : 'negative'}`;
+    
+    totalWinEl.textContent = result.totalWin.toFixed(2);
+    totalWinEl.className = 'value positive';
+    
+    feeFromAWinsEl.textContent = result.feeFromAWins.toFixed(2);
+    feeFromAWinsEl.className = 'value';
+    
+    totalRoundsResultEl.textContent = result.totalRounds;
+    
+    // 生成表格行
+    let tableHTML = '';
+    
+    for (let i = 0; i < result.rounds.length; i++) {
+        const round = result.rounds[i];
+        
+        // 根據結果決定顏色
+        let resultClass = '';
+        if (round.result === 'A') {
+            resultClass = 'result-A';
+        } else if (round.result === 'B') {
+            resultClass = 'result-B';
+        } else if (round.result === 'C') {
+            resultClass = 'result-W'; // C使用綠色顯示
         }
-
-        // 驗證輸入
-        function validateInputs() {
-            // 清除之前的錯誤訊息
-            messageBox.className = 'message';
-            messageBox.style.display = 'none';
-            
-            // 獲取選擇的規則
-            const selectedRule = bettingRuleSelect.value;
-            
-            if (currentMode === 'random') {
-                // 驗證隨機模式輸入
-                if (!totalRoundsInput.value.trim()) {
-                    showMessage('請輸入局數', 'error');
-                    totalRoundsInput.focus();
-                    return false;
-                }
-                
-                if (!isNumeric(totalRoundsInput.value)) {
-                    showMessage('局數必須是數字', 'error');
-                    totalRoundsInput.focus();
-                    return false;
-                }
-                
-                const totalRounds = parseInt(totalRoundsInput.value);
-                if (totalRounds <= 0) {
-                    showMessage('局數必須大於0', 'error');
-                    totalRoundsInput.focus();
-                    return false;
-                }
-            } else {
-                // 驗證手動模式輸入
-                const inputText = manualSequenceTextarea.value.trim();
-                if (!inputText) {
-                    showMessage('請輸入A/B序列', 'error');
-                    manualSequenceTextarea.focus();
-                    return false;
-                }
-                
-                let validCount = 0;
-                for (let i = 0; i < inputText.length; i++) {
-                    const char = inputText[i].toUpperCase();
-                    if (char === 'A' || char === 'B') {
-                        validCount++;
-                    }
-                }
-                
-                if (validCount === 0) {
-                    showMessage('請輸入至少一個有效的A或B', 'error');
-                    manualSequenceTextarea.focus();
-                    return false;
-                }
-            }
-            
-            // 驗證其他必填項
-            if (!initialCapitalInput.value.trim()) {
-                showMessage('請輸入初始金額', 'error');
-                initialCapitalInput.focus();
-                return false;
-            }
-            
-            if (!isNumeric(initialCapitalInput.value)) {
-                showMessage('初始金額必須是數字', 'error');
-                initialCapitalInput.focus();
-                return false;
-            }
-            
-            if (!baseBetInput.value.trim()) {
-                showMessage('請輸入起步注碼', 'error');
-                baseBetInput.focus();
-                return false;
-            }
-            
-            if (!isNumeric(baseBetInput.value)) {
-                showMessage('起步注碼必須是數字', 'error');
-                baseBetInput.focus();
-                return false;
-            }
-            
-            // 根據選擇的規則驗證特定輸入
-            if (selectedRule === 'rule1') {
-                if (!incrementRateInput.value.trim()) {
-                    showMessage('請輸入每2關+？', 'error');
-                    incrementRateInput.focus();
-                    return false;
-                }
-                
-                if (!isNumeric(incrementRateInput.value)) {
-                    showMessage('每2關+？必須是數字', 'error');
-                    incrementRateInput.focus();
-                    return false;
-                }
-            } else if (selectedRule === 'rule2') {
-                // 規則二需要驗證W+和L+（可選）
-                // 這裡可以根據需要添加驗證邏輯
-            }
-            
-            // 驗證多模擬次數
-            if (multiSimulationCheckbox.checked) {
-                if (!simulationTimesInput.value.trim()) {
-                    showMessage('請輸入執行次數', 'error');
-                    simulationTimesInput.focus();
-                    return false;
-                }
-                
-                if (!isNumeric(simulationTimesInput.value)) {
-                    showMessage('執行次數必須是數字', 'error');
-                    simulationTimesInput.focus();
-                    return false;
-                }
-                
-                const simulationTimes = parseInt(simulationTimesInput.value);
-                if (simulationTimes <= 0) {
-                    showMessage('執行次數必須大於0', 'error');
-                    simulationTimesInput.focus();
-                    return false;
-                }
-            }
-            
-            return true;
+        
+        // 根據勝負決定顏色
+        let outcomeClass = '';
+        if (round.outcome === 'W') {
+            outcomeClass = 'result-W';
+        } else if (round.outcome === 'L') {
+            outcomeClass = 'result-L';
+        } else if (round.outcome === 'T') {
+            outcomeClass = 'result-A'; // 和局使用灰色顯示
         }
+        
+        tableHTML += `
+            <tr>
+                <td>${round.round}</td>
+                <td class="${resultClass}">${round.result}</td>
+                <td>${round.protectMark || ''}</td>
+                <td>${round.betAmount > 0 ? round.betAmount.toFixed(2) : ''}</td>
+                <td class="${outcomeClass}">${round.outcome}</td>
+                <td class="${round.profitLoss > 0 ? 'result-W' : round.profitLoss < 0 ? 'result-L' : 'result-A'}">${round.profitLoss !== 0 ? round.profitLoss.toFixed(2) : (round.outcome === 'T' ? '0' : '')}</td>
+                <td>${round.cumulativeBalance.toFixed(2)}</td>
+                <td>${round.currentGuan}</td>
+                <td>${round.currentLevel}</td>
+            </tr>
+        `;
+    }
+    
+    resultsBody.innerHTML = tableHTML;
+    
+    showMessage('模擬完成！', 'success');
+}
 
-        // 檢查是否為數字
-        function isNumeric(value) {
-            return !isNaN(parseFloat(value)) && isFinite(value);
+// 驗證輸入
+function validateInputs() {
+    // 清除之前的錯誤訊息
+    messageBox.className = 'message';
+    messageBox.style.display = 'none';
+    
+    // 獲取選擇的規則
+    const selectedRule = bettingRuleSelect.value;
+    
+    if (currentMode === 'random') {
+        // 驗證隨機模式輸入
+        if (!totalRoundsInput.value.trim()) {
+            showMessage('請輸入局數', 'error');
+            totalRoundsInput.focus();
+            return false;
         }
-
-        // 顯示訊息
-        function showMessage(message, type) {
-            messageBox.textContent = message;
-            messageBox.className = `message ${type}`;
-            messageBox.style.display = 'flex';
-            
-            // 自動隱藏資訊訊息
-            if (type === 'info') {
-                setTimeout(() => {
-                    if (messageBox.className.includes('info')) {
-                        messageBox.style.display = 'none';
-                    }
-                }, 5000);
+        
+        if (!isNumeric(totalRoundsInput.value)) {
+            showMessage('局數必須是數字', 'error');
+            totalRoundsInput.focus();
+            return false;
+        }
+        
+        const totalRounds = parseInt(totalRoundsInput.value);
+        if (totalRounds <= 0) {
+            showMessage('局數必須大於0', 'error');
+            totalRoundsInput.focus();
+            return false;
+        }
+    } else {
+        // 驗證手動模式輸入
+        const inputText = manualSequenceTextarea.value.trim();
+        if (!inputText) {
+            showMessage('請輸入A/B/C序列', 'error');
+            manualSequenceTextarea.focus();
+            return false;
+        }
+        
+        let validCount = 0;
+        for (let i = 0; i < inputText.length; i++) {
+            const char = inputText[i].toUpperCase();
+            if (char === 'A' || char === 'B' || char === 'C') {
+                validCount++;
             }
         }
+        
+        if (validCount === 0) {
+            showMessage('請輸入至少一個有效的A、B或C', 'error');
+            manualSequenceTextarea.focus();
+            return false;
+        }
+    }
+    
+    // 驗證其他必填項
+    if (!initialCapitalInput.value.trim()) {
+        showMessage('請輸入初始金額', 'error');
+        initialCapitalInput.focus();
+        return false;
+    }
+    
+    if (!isNumeric(initialCapitalInput.value)) {
+        showMessage('初始金額必須是數字', 'error');
+        initialCapitalInput.focus();
+        return false;
+    }
+    
+    if (!baseBetInput.value.trim()) {
+        showMessage('請輸入起步注碼', 'error');
+        baseBetInput.focus();
+        return false;
+    }
+    
+    if (!isNumeric(baseBetInput.value)) {
+        showMessage('起步注碼必須是數字', 'error');
+        baseBetInput.focus();
+        return false;
+    }
+    
+    // 根據選擇的規則驗證特定輸入
+    if (selectedRule === 'rule1') {
+        if (!incrementRateInput.value.trim()) {
+            showMessage('請輸入每2關+？', 'error');
+            incrementRateInput.focus();
+            return false;
+        }
+        
+        if (!isNumeric(incrementRateInput.value)) {
+            showMessage('每2關+？必須是數字', 'error');
+            incrementRateInput.focus();
+            return false;
+        }
+    } else if (selectedRule === 'rule2') {
+        // 規則二需要驗證W+和L+（可選）
+        // 這裡可以根據需要添加驗證邏輯
+    }
+    
+    // 驗證多模擬次數
+    if (multiSimulationCheckbox.checked) {
+        if (!simulationTimesInput.value.trim()) {
+            showMessage('請輸入執行次數', 'error');
+            simulationTimesInput.focus();
+            return false;
+        }
+        
+        if (!isNumeric(simulationTimesInput.value)) {
+            showMessage('執行次數必須是數字', 'error');
+            simulationTimesInput.focus();
+            return false;
+        }
+        
+        const simulationTimes = parseInt(simulationTimesInput.value);
+        if (simulationTimes <= 0) {
+            showMessage('執行次數必須大於0', 'error');
+            simulationTimesInput.focus();
+            return false;
+        }
+    }
+    
+    return true;
+}
 
-        // 清除結果
-        function clearResults() {
-            resultsBody.innerHTML = '';
-            finalBalanceEl.textContent = '0';
-            totalWinEl.textContent = '0';
-            feeFromAWinsEl.textContent = '0';
-            totalRoundsResultEl.textContent = '0';
-            
-            // 清除批次模擬摘要
-            const existingSummary = document.querySelector('.batch-summary');
-            if (existingSummary) {
-                existingSummary.remove();
+// 檢查是否為數字
+function isNumeric(value) {
+    return !isNaN(parseFloat(value)) && isFinite(value);
+}
+
+// 顯示訊息
+function showMessage(message, type) {
+    messageBox.textContent = message;
+    messageBox.className = `message ${type}`;
+    messageBox.style.display = 'flex';
+    
+    // 自動隱藏資訊訊息
+    if (type === 'info') {
+        setTimeout(() => {
+            if (messageBox.className.includes('info')) {
+                messageBox.style.display = 'none';
             }
-        }
+        }, 5000);
+    }
+}
 
-        // 重置表單
-        function resetForm() {
-            bettingRuleSelect.value = 'rule1';
-            totalRoundsInput.value = '100';
-            initialCapitalInput.value = '1000';
-            baseBetInput.value = '10';
-            incrementRateInput.value = '5';
-            wPlusInput.value = '';
-            lPlusInput.value = '';
-            multiSimulationCheckbox.checked = false;
-            simulationTimesInput.style.display = 'none';
-            simulationTimesInput.value = '1';
-            manualSequenceTextarea.value = "";
-            
-            clearResults();
-            messageBox.style.display = 'none';
-            stopBtnContainer.classList.remove('active');
-            
-            // 更新規則特定輸入框顯示
-            updateRuleSpecificInputs();
+// 清除結果
+function clearResults() {
+    resultsBody.innerHTML = '';
+    finalBalanceEl.textContent = '0';
+    totalWinEl.textContent = '0';
+    feeFromAWinsEl.textContent = '0';
+    totalRoundsResultEl.textContent = '0';
+    
+    // 清除批次模擬摘要
+    const existingSummary = document.querySelector('.batch-summary');
+    if (existingSummary) {
+        existingSummary.remove();
+    }
+}
 
-            lastRandomResults = [];
-            simulationResults = [];
-            
-            // 重新初始化投注規則
-            initBettingRules();
-            
-            showMessage('表單已重置', 'info');
-        }
+// 重置表單
+function resetForm() {
+    bettingRuleSelect.value = 'rule1';
+    totalRoundsInput.value = '100';
+    initialCapitalInput.value = '1000';
+    baseBetInput.value = '10';
+    incrementRateInput.value = '5';
+    wPlusInput.value = '';
+    lPlusInput.value = '';
+    multiSimulationCheckbox.checked = false;
+    simulationTimesInput.style.display = 'none';
+    simulationTimesInput.value = '1';
+    manualSequenceTextarea.value = "";
+    
+    clearResults();
+    messageBox.style.display = 'none';
+    stopBtnContainer.classList.remove('active');
+    
+    // 更新規則特定輸入框顯示
+    updateRuleSpecificInputs();
 
-        // 停止模擬處理函數
-        function stopSimulationHandler() {
-            if (isSimulating) {
-                stopSimulation = true;
-                showMessage('正在停止模擬...', 'warning');
-            }
-        }
+    lastRandomResults = [];
+    simulationResults = [];
+    
+    // 重新初始化投注規則
+    initBettingRules();
+    
+    showMessage('表單已重置', 'info');
+}
 
-        // 儲存表單資料到sessionStorage
-        function saveFormDataToStorage() {
-            const formData = {
-                bettingRule: bettingRuleSelect.value,
-                totalRounds: totalRoundsInput.value,
-                initialCapital: initialCapitalInput.value,
-                baseBet: baseBetInput.value,
-                incrementRate: incrementRateInput.value,
-                wPlus: wPlusInput.value,
-                lPlus: lPlusInput.value,
-                multiSimulation: multiSimulationCheckbox.checked,
-                simulationTimes: simulationTimesInput.value,
-                manualSequence: manualSequenceTextarea.value,
-                mode: currentMode
-            };
-            
-            sessionStorage.setItem('bettingSimulation_formData', JSON.stringify(formData));
-        }
+// 停止模擬處理函數
+function stopSimulationHandler() {
+    if (isSimulating) {
+        stopSimulation = true;
+        showMessage('正在停止模擬...', 'warning');
+    }
+}
 
-        // 從sessionStorage載入表單資料
-        function loadFormDataFromStorage() {
-            const savedData = sessionStorage.getItem('bettingSimulation_formData');
-            const savedMode = sessionStorage.getItem('bettingSimulation_mode');
-            
-            if (savedData) {
-                const formData = JSON.parse(savedData);
-                
-                bettingRuleSelect.value = formData.bettingRule || 'rule1';
-                totalRoundsInput.value = formData.totalRounds || '100';
-                initialCapitalInput.value = formData.initialCapital || '1000';
-                baseBetInput.value = formData.baseBet || '10';
-                incrementRateInput.value = formData.incrementRate || '5';
-                wPlusInput.value = formData.wPlus || '';
-                lPlusInput.value = formData.lPlus || '';
-                multiSimulationCheckbox.checked = formData.multiSimulation || false;
-                simulationTimesInput.value = formData.simulationTimes || '1';
-                simulationTimesInput.style.display = formData.multiSimulation ? 'inline-block' : 'none';
-                manualSequenceTextarea.value = formData.manualSequence || "";
-                
-                if (savedMode) {
-                    switchMode(savedMode);
-                }
-            } else {
-                // 首次使用時，不預設勾選N次模擬
-                multiSimulationCheckbox.checked = false;
-                simulationTimesInput.style.display = 'none';
-                simulationTimesInput.value = '1';
-            }
+// 儲存表單資料到sessionStorage
+function saveFormDataToStorage() {
+    const formData = {
+        bettingRule: bettingRuleSelect.value,
+        totalRounds: totalRoundsInput.value,
+        initialCapital: initialCapitalInput.value,
+        baseBet: baseBetInput.value,
+        incrementRate: incrementRateInput.value,
+        wPlus: wPlusInput.value,
+        lPlus: lPlusInput.value,
+        multiSimulation: multiSimulationCheckbox.checked,
+        simulationTimes: simulationTimesInput.value,
+        manualSequence: manualSequenceTextarea.value,
+        mode: currentMode
+    };
+    
+    sessionStorage.setItem('bettingSimulation_formData', JSON.stringify(formData));
+}
+
+// 從sessionStorage載入表單資料
+function loadFormDataFromStorage() {
+    const savedData = sessionStorage.getItem('bettingSimulation_formData');
+    const savedMode = sessionStorage.getItem('bettingSimulation_mode');
+    
+    if (savedData) {
+        const formData = JSON.parse(savedData);
+        
+        bettingRuleSelect.value = formData.bettingRule || 'rule1';
+        totalRoundsInput.value = formData.totalRounds || '100';
+        initialCapitalInput.value = formData.initialCapital || '1000';
+        baseBetInput.value = formData.baseBet || '10';
+        incrementRateInput.value = formData.incrementRate || '5';
+        wPlusInput.value = formData.wPlus || '';
+        lPlusInput.value = formData.lPlus || '';
+        multiSimulationCheckbox.checked = formData.multiSimulation || false;
+        simulationTimesInput.value = formData.simulationTimes || '1';
+        simulationTimesInput.style.display = formData.multiSimulation ? 'inline-block' : 'none';
+        manualSequenceTextarea.value = formData.manualSequence || "";
+        
+        if (savedMode) {
+            switchMode(savedMode);
         }
-    </script>
+    } else {
+        // 首次使用時，不預設勾選N次模擬
+        multiSimulationCheckbox.checked = false;
+        simulationTimesInput.style.display = 'none';
+        simulationTimesInput.value = '1';
+    }
+}
+</script>
 </body>
 </html>
