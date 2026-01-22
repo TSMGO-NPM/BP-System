@@ -2001,14 +2001,25 @@ function runRandomSimulation(totalRounds, initialCapital, selectedRule) {
     }
 }
 
-// 生成隨機結果（包含A, B, C）
-function generateRandomResult() {
+// 生成隨機結果（包含A, B, C），第1局不會生成C
+function generateRandomResult(roundNumber = 1) {
     const random = Math.random();
-    if (random < 0.45) { // 45% 概率 A
+    
+    // 如果是第1局，只生成A或B，不生成C
+    if (roundNumber === 1) {
+        if (random < 0.5) { // 50% 概率 A
+            return 'A';
+        } else { // 50% 概率 B
+            return 'B';
+        }
+    }
+    
+    // 其他局數按照原有概率
+    if (random < 0.458597) {
         return 'A';
-    } else if (random < 0.9) { // 45% 概率 B
+    } else if (random < 0.904844) {
         return 'B';
-    } else { // 10% 概率 C
+    } else {
         return 'C';
     }
 }
@@ -2032,7 +2043,7 @@ function runRule1Simulation(totalRounds, initialCapital) {
     for (let i = 1; i <= totalRounds; i++) {
         rounds.push({
             round: i,
-            result: generateRandomResult(),
+            result: generateRandomResult(i), // 傳入局數參數
             protectMark: 'V', // 預設有保護標記
             betAmount: 0,
             outcome: '',
@@ -2252,7 +2263,7 @@ function runRule2Simulation(totalRounds, initialCapital) {
     for (let i = 1; i <= totalRounds; i++) {
         rounds.push({
             round: i,
-            result: generateRandomResult(),
+            result: generateRandomResult(i), // 傳入局數參數
             protectMark: 'V', // 預設有保護標記
             betAmount: 0,
             outcome: '',
@@ -3349,5 +3360,4 @@ function loadFormDataFromStorage() {
 </script>
 </body>
 </html>
-
 
