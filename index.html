@@ -1223,10 +1223,10 @@ let bettingRules = {
 let simulationResults = [];
 let isSimulating = false;
 let stopSimulation = false;
-let lastRandomResults = []; // 儲存上一次隨機模擬的結果
+let lastRandomResults = [];
 
 // 百家樂系統變數
-let baccaratHistory = []; // 百家樂結果歷史
+let baccaratHistory = [];
 
 // DOM元素
 const bettingRuleSelect = document.getElementById('bettingRule');
@@ -1281,7 +1281,7 @@ const mainContainer = document.querySelector('.container');
 let isLoggedIn = false;
 const VALID_CREDENTIALS = [
     { username: 'admin', password: 'admin1111' },
-    { username: 'user1', password: 'user1234' }  // 新增的第二組帳號密碼
+    { username: 'user1', password: 'user1234' }
 ];
 
 // 初始化
@@ -1308,7 +1308,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 檢查登入狀態
 function checkLoginStatus() {
-    // 檢查是否有登入記錄（模擬會話狀態）
+    // 檢查是否有登入記錄
     const sessionLoggedIn = sessionStorage.getItem('borp_logged_in');
     
     if (sessionLoggedIn === 'true') {
@@ -1334,7 +1334,7 @@ function handleLogin() {
     const username = loginUsername.value.trim();
     const password = loginPassword.value.trim();
     
-    // 檢查是否匹配任何一組有效的憑證
+    // 檢查任何一組有效的憑證
     const isValid = VALID_CREDENTIALS.some(cred => 
         cred.username === username && cred.password === password
     );
@@ -1358,7 +1358,7 @@ function handleLogin() {
     }
 }
 
-// 按Enter鍵登入的處理保持不變
+// 按Enter鍵登入
 loginUsername.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         loginPassword.focus();
@@ -1371,7 +1371,7 @@ loginPassword.addEventListener('keypress', function(e) {
     }
 });
 
-// 初始化投注規則（基於Excel表格）
+// 初始化投注規則
 function initBettingRules() {
     const baseBet = parseInt(baseBetInput.value) || 10;
     const incrementRate = parseInt(incrementRateInput.value) || 5;
@@ -1382,26 +1382,15 @@ function initBettingRules() {
     bettingRules.level3 = {};
     bettingRules.retreatPoints = {};
     
-    // 根據提供的Excel表格規則生成
+    // 根據表格規則生成
     for (let i = 1; i <= 50; i++) {
-        // 計算關數基數：每2關為一組，第1-2關為第1組，第3-4關為第2組，依此類推
-        // 組數計算：ceil(i/2)
         const group = Math.ceil(i / 2);
-        
-        // 1注：起步注碼 + (組數-1) * 每2關增量
-        // 例如：起步注碼=10，每2關+5，第1關=10，第3關=15，第5關=20...
         bettingRules.level1[i] = baseBet + (group - 1) * incrementRate;
-        
-        // 2注：1注的2倍
         bettingRules.level2[i] = bettingRules.level1[i] * 2;
-        
-        // 3注：2注的2倍（僅偶數關有）
         if (i % 2 === 0) {
             bettingRules.level3[i] = bettingRules.level2[i] * 2;
         }
         
-        // 尾到開頭（回退點）規則 - 基於Excel表格
-        // 根據您提供的圖片，回退點規則如下：
         if (i <= 6) {
             bettingRules.retreatPoints[i] = 1;
         } else if (i === 7) {
@@ -1602,22 +1591,21 @@ function showBaccaratSystem() {
         return;
     }
     
-    // 自動轉換模擬結果為百家樂序列
+    // 模擬結果為百家樂序列
     convertToBaccarat();
     
     baccaratOverlay.style.display = 'block';
-    document.body.style.overflow = 'hidden'; // 防止背景滾動
+    document.body.style.overflow = 'hidden';
 }
 
 // 隱藏百家樂系統
 function hideBaccaratSystem() {
     baccaratOverlay.style.display = 'none';
-    document.body.style.overflow = 'auto'; // 恢復滾動
+    document.body.style.overflow = 'auto';
 }
 
-// 處理百家樂鍵盤快捷鍵
+// 百家樂鍵盤快捷鍵
 function handleBaccaratKeyboard(e) {
-    // 只有在百家樂系統顯示時才處理
     if (baccaratOverlay.style.display !== 'block') return;
     
     if (e.key === '1' || e.key === 'b' || e.key === 'B') {
@@ -1643,10 +1631,10 @@ function convertToBaccarat() {
     const result = simulationResults[0];
     const rounds = result.rounds;
     
-    // 清空歷史
+    // 清空
     baccaratHistory = [];
     
-    // 轉換A/B為庄/閒 (A=庄, B=閒)
+    // 轉換A/B為庄/閒
     rounds.forEach(round => {
         if (round.result === 'A') {
             baccaratHistory.push('B'); // A -> 庄
@@ -1681,7 +1669,7 @@ function getBaccaratResultName(result) {
     }
 }
 
-// 渲染百家樂大路
+// 渲染大路
 function renderBaccaratBigRoad() {
     const bigRoadData = getBigRoadDataForBaccarat(baccaratHistory);
     baccaratBigRoadEl.innerHTML = '';
@@ -1857,10 +1845,10 @@ function loadBaccaratHistory() {
     }
 }
 
-// 一鍵COPY處理函數
+// 一鍵COPY函數
 function copyToManualHandler() {
     if (simulationResults.length === 0 || !simulationResults[0].rounds || simulationResults[0].rounds.length === 0) {
-        showMessage('請先執行隨機模擬，才能複製結果', 'warning');
+        showMessage('先執行隨機模擬，才能複製', 'warning');
         return;
     }
     
@@ -1885,9 +1873,7 @@ function copyToManualHandler() {
         manualSequenceTextarea.select();
         try {
             document.execCommand('copy');
-            // 切換到手動模式
             switchMode('manual');
-            // 將結果貼到文字框中（一行格式）
             manualSequenceTextarea.value = abSequence;
             showMessage('A/B/C序列已複製並切換到手動模式！', 'success');
         } catch (e) {
@@ -2058,58 +2044,46 @@ function runRule1Simulation(totalRounds, initialCapital) {
         });
     }
     
-    // 2. 生成F列（勝負）- 修改：當開出C時，向前追溯到第一個非C的結果來繼承
+    // 2. 生成F列（勝負)
     for (let i = 0; i < totalRounds; i++) {
         if (i < totalRounds - 1) {
-            // 有下一局可以比較
             let currentResult = rounds[i].result;
             const nextResult = rounds[i + 1].result;
-            
-            // 如果當前局是C，則向前追溯到第一個非C的結果來繼承
             if (currentResult === 'C') {
                 currentResult = findLastNonCResult(rounds, i);
             }
-            
             if (nextResult === 'C') {
-                // 下一局的結果是C，即為T（和局）
                 rounds[i].outcome = 'T';
             } else if (currentResult === nextResult) {
-                // A=A 或 B=B，相同則為W
                 rounds[i].outcome = 'W';
             } else {
-                // A≠A 或 B≠B，不同則為L
                 rounds[i].outcome = 'L';
             }
         } else {
-            // 最後一局沒有下一局可比較，結果為空
             rounds[i].outcome = '';
         }
     }
     
-    // 3. 修改保護規則：連續3個L時，清除下一個V標記（和局不參與計算）
+    // 3. 保護規則
     if (totalRounds >= 4) {
         for (let i = 2; i < totalRounds - 1; i++) {
-            // 檢查連續3個L，跳過和局
             let consecutiveL = 0;
             let checkIndex = i;
             
-            // 向前檢查最多3局，跳過和局
             while (checkIndex >= 0 && consecutiveL < 3) {
                 if (rounds[checkIndex].outcome === 'L') {
                     consecutiveL++;
                 } else if (rounds[checkIndex].outcome === 'T') {
-                    // 和局不影響連續計算，繼續向前檢查
                     checkIndex--;
                     continue;
                 } else {
-                    // 遇到W或空值，中斷連續
                     break;
                 }
                 checkIndex--;
             }
             
             if (consecutiveL >= 3) {
-                rounds[i + 1].protectMark = ''; // 清除V標記
+                rounds[i + 1].protectMark = '';
             }
         }
     }
@@ -2121,8 +2095,7 @@ function runRule1Simulation(totalRounds, initialCapital) {
         }
     }
     
-    // 5. 生成E欄：投注金額（基於Excel表格的三注數投注系統）
-    // 按照原VBA代碼邏輯，並處理和局
+    // 5. 生成E欄：投注金額
     let currentGuan = 1;
     let currentLevel = 1;
     let winStreak = 0;
@@ -2130,27 +2103,20 @@ function runRule1Simulation(totalRounds, initialCapital) {
     for (let i = 0; i < totalRounds; i++) {
         const round = rounds[i];
         
-        // 記錄當前關數和注數
         round.currentGuan = currentGuan;
         round.currentLevel = currentLevel;
         round.winStreakState = winStreak;
         
-        // 如果沒有V標記或沒有勝負結果，清除投注金額
         if (round.protectMark !== 'V' || (round.outcome !== 'W' && round.outcome !== 'L' && round.outcome !== 'T')) {
             round.betAmount = 0;
             continue;
         }
         
-        // 處理和局：和局時仍按照規則計算投注金額
         if (round.outcome === 'T') {
-            // 和局：使用當前關數和注數計算投注金額，但不影響狀態
-            // 繼續計算投注金額
         }
         
-        // 限制關數在1-50之間
         if (currentGuan > 50) currentGuan = 50;
         
-        // 根據當前注數和關數確定投注金額
         let betAmount = 0;
         
         switch (currentLevel) {
@@ -2165,11 +2131,9 @@ function runRule1Simulation(totalRounds, initialCapital) {
                 }
                 break;
             case 3:
-                // 注數3僅在偶數關有效
                 if (currentGuan % 2 === 0 && bettingRules.level3[currentGuan]) {
                     betAmount = bettingRules.level3[currentGuan];
                 } else {
-                    // 如果當前是奇數關但注數是3，則使用注數2
                     betAmount = bettingRules.level2[currentGuan] || 0;
                 }
                 break;
@@ -2181,8 +2145,7 @@ function runRule1Simulation(totalRounds, initialCapital) {
             round.betAmount = 0;
         }
         
-        // 更新連勝與關數 - 按照原VBA代碼邏輯
-        // 注意：和局不影響狀態
+        // 更新連勝與關數
         if (round.outcome === 'W') {
             winStreak = winStreak + 1;
             
@@ -2229,7 +2192,6 @@ function runRule1Simulation(totalRounds, initialCapital) {
             currentGuan = currentGuan + 1;
             currentLevel = 1;
         }
-        // 和局：不影響狀態
     }
     
     // 6. 生成G欄：單局盈虧
@@ -2258,7 +2220,7 @@ function runRule1Simulation(totalRounds, initialCapital) {
         } else if (round.outcome === 'L') {
             round.profitLoss = -round.betAmount;
         } else if (round.outcome === 'T') {
-            round.profitLoss = 0; // 和局盈虧為0
+            round.profitLoss = 0;
         }
         
         balance += round.profitLoss;
@@ -2301,14 +2263,12 @@ function runRule2Simulation(totalRounds, initialCapital) {
         });
     }
     
-    // 2. 生成F列（勝負）- 修改：當開出C時，向前追溯到第一個非C的結果來繼承
+    // 2. 生成F列（勝負）
     for (let i = 0; i < totalRounds; i++) {
         if (i < totalRounds - 1) {
-            // 有下一局可以比較
             let currentResult = rounds[i].result;
             const nextResult = rounds[i + 1].result;
             
-            // 如果當前局是C，則向前追溯到第一個非C的結果來繼承
             if (currentResult === 'C') {
                 currentResult = findLastNonCResult(rounds, i);
             }
@@ -3381,7 +3341,6 @@ function loadFormDataFromStorage() {
             switchMode(savedMode);
         }
     } else {
-        // 首次使用時，不預設勾選N次模擬
         multiSimulationCheckbox.checked = false;
         simulationTimesInput.style.display = 'none';
         simulationTimesInput.value = '1';
@@ -3390,4 +3349,5 @@ function loadFormDataFromStorage() {
 </script>
 </body>
 </html>
+
 
